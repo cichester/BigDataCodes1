@@ -194,7 +194,8 @@ class MatchDataIngestor:
         # --- Relazione Player PLAYED_IN Match con statistiche ---
         session.run(
             """
-            MATCH (p:Player {puuid: $puuid}), (m:Match {id: $match_id})
+            MATCH (p:Player), (m:Match)
+            WHERE p.puuid = $puuid AND m.id = $match_id
             MERGE (p)-[r:PLAYED_IN]->(m)
             ON CREATE SET
                 r.kills = $kills,
