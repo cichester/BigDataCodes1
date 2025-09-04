@@ -2,8 +2,8 @@
 
 import logging
 import json
-from kafka import KafkaConsumer
 import os
+import glob
 
 logger = logging.getLogger(__name__)
 
@@ -11,51 +11,60 @@ class MatchDataIngestor:
     def __init__(self, neo4j_connector, data_dragon_downloader):
         self.db_connector = neo4j_connector
         self.data_dragon_downloader = data_dragon_downloader
-        logger.info("MatchDataIngestor inizializzato per l'ingestione da flusso Kafka.")
-        
-    def close(self):
-        """Chiude la connessione al database Neo4j."""
-        self.db_connector.get_driver().close()
+        logger.info("MatchDataIngestor inizializzato per l'ingestione da dataset Kaggle.")
 
-    def ingest_matches_from_kafka(self, topic_name='lol-matches', bootstrap_servers='localhost:9092'):
+    def ingest_matches_from_kaggle(self, kaggle_data_base_path: str):
         """
-        Acquisisce partite in tempo reale da un topic Kafka, gestendo errori di decodifica JSON.
+        Avvia il processo di ingestione dei dati di partita dal dataset Kaggle.
+        Adattato alla struttura JSON corretta (direttamente [match_objects] o {"match_data": [...]}).
         """
-        consumer = None
-        try:
-            consumer = KafkaConsumer(
-                topic_name,
-                bootstrap_servers=bootstrap_servers,
-                auto_offset_reset='earliest',  # Inizia a leggere dall'inizio del topic
-                group_id='neo4j-ingestor-group' # Per tenere traccia dei messaggi letti
-            )
-            logger.info(f"Consumatore Kafka connesso al topic '{topic_name}'. In attesa di messaggi...")
+        logger.info(f"Inizio ingestione partite dal dataset Kaggle nel percorso: {kaggle_data_base_path}")
 
-            # Itera su ogni messaggio ricevuto dal topic
-            for message in consumer:
-                try:
-                    # Decodifica il valore del messaggio qui, dove l'errore può essere catturato
-                    match_data = json.loads(message.value.decode('utf-8'))
-                    
-                    # Ottieni il match ID per logging
-                    # Assicurati che 'metadata' esista, altrimenti usa un default
-                    match_id = match_data.get('metadata', {}).get('matchId', 'N/A')
-                    
-                    # Riutilizza la tua funzione esistente per l'ingestione del match
-                    self._process_and_ingest_match(match_id, match_data)
-                    logger.info(f"Partita {match_id} ingerita con successo.")
-                except json.JSONDecodeError as e:
-                    # Registra l'errore ma continua l'esecuzione
-                    logger.error(f"Errore di decodifica JSON per un messaggio dal topic. Messaggio ignorato. Errore: {e}")
-                except Exception as e:
-                    logger.error(f"Errore durante l'ingestione della partita: {e}")
-                    
-        except Exception as e:
-            logger.error(f"Errore grave nel consumatore Kafka: {e}")
-        finally:
-            if consumer and consumer.bootstrap_connected():
-                consumer.close()
-            self.close()
+        match_files_pattern = os.path.join(kaggle_data_base_path, '*_matches_*.json')
+        all_match_files = glob.glob(match_files_pattern)
+
+        if not all_match_files:
+            logger.warning(f"Nessun file di partite JSON trovato con il pattern '{match_files_pattern}'. Controlla il percorso e la nomenclatura dei file.")
+            return
+
+        total_ingested_matches = 0
+        for file_path in all_match_files:
+            logger.info(f"Processando file: {file_path}")
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    raw_content = json.load(f)
+
+                    matches_to_process = []
+                    # ** Modifica qui per la struttura corretta: nessuna chiave 'root' **
+                    if isinstance(raw_content, dict) and 'match_data' in raw_content:
+                        matches_to_process = raw_content['match_data']
+                    elif isinstance(raw_content, list): # Se il file JSON è direttamente un array di oggetti match
+                        matches_to_process = raw_content
+                    else:
+                        logger.error(f"Struttura JSON inattesa o mancante 'match_data' o non è una lista nel file {file_path}. Saltando la processazione di questo file.")
+                        continue
+
+                    for match_data in matches_to_process:
+                        # L'ID della partita è 'gameId' nel livello superiore dell'oggetto match
+                        match_id = match_data.get('gameId')
+                        if not match_id:
+                            logger.warning(f"Match ID (gameId) non trovato in una partita dal file {file_path}. Saltando la partita.")
+                            continue
+
+                        try:
+                            self._process_and_ingest_match(match_id, match_data)
+                            total_ingested_matches += 1
+                            logger.debug(f"Partita {match_id} ingesta con successo (Totale: {total_ingested_matches}).")
+                        except Exception as e:
+                            logger.error(f"Errore durante l'ingestione della partita {match_id} dal file {file_path}: {e}")
+
+            except json.JSONDecodeError as e:
+                logger.error(f"Errore di decodifica JSON nel file {file_path}: {e}. Assicurati che sia un JSON valido.")
+            except Exception as e:
+                logger.error(f"Errore generico durante la lettura o processazione del file {file_path}: {e}")
+
+        logger.info(f"Ingestione dati di partita da Kaggle completata. Totale partite ingeste: {total_ingested_matches}.")
+
 
     def _process_and_ingest_match(self, match_id: str, match_data: dict):
         """
@@ -66,78 +75,67 @@ class MatchDataIngestor:
 
         with self.db_connector.get_driver().session() as session:
             # Estrazione delle proprietà del match
-            info_data = match_data.get('info', {})
+            # I timestamp sono float in millisecondi
+            game_creation_timestamp = match_data.get('gameCreation')
+            game_duration = match_data.get('gameDuration')
+            game_end_timestamp = match_data.get('gameEndTimestamp')
+            game_mode = match_data.get('gameMode')
+            game_name = match_data.get('gameName')
+            game_start_timestamp = match_data.get('gameStartTimestamp')
+            game_type = match_data.get('gameType')
+            game_version = match_data.get('gameVersion')
+            map_id = match_data.get('mapId')
             
-            # Utilizza una lista per costruire dinamicamente la query
-            set_clauses = []
-            params = {'match_id': match_id}
-            
-            # Aggiungi i parametri solo se esistono
-            game_creation_timestamp = info_data.get('gameCreation')
-            if game_creation_timestamp is not None:
-                set_clauses.append("m.creation = datetime({epochMillis: $game_creation_timestamp})")
-                params['game_creation_timestamp'] = game_creation_timestamp
-            
-            game_duration = info_data.get('gameDuration')
-            if game_duration is not None:
-                set_clauses.append("m.duration = $game_duration")
-                params['game_duration'] = game_duration
-            
-            game_end_timestamp = info_data.get('gameEndTimestamp')
-            if game_end_timestamp is not None:
-                set_clauses.append("m.endTimestamp = datetime({epochMillis: $game_end_timestamp})")
-                params['game_end_timestamp'] = game_end_timestamp
-            
-            game_mode = info_data.get('gameMode')
-            if game_mode is not None:
-                set_clauses.append("m.mode = $game_mode")
-                params['game_mode'] = game_mode
-                
-            game_name = info_data.get('gameName')
-            if game_name is not None:
-                set_clauses.append("m.name = $game_name")
-                params['game_name'] = game_name
-
-            game_start_timestamp = info_data.get('gameStartTimestamp')
-            if game_start_timestamp is not None:
-                set_clauses.append("m.startTimestamp = datetime({epochMillis: $game_start_timestamp})")
-                params['game_start_timestamp'] = game_start_timestamp
-
-            game_type = info_data.get('gameType')
-            if game_type is not None:
-                set_clauses.append("m.type = $game_type")
-                params['game_type'] = game_type
-            
-            game_version = info_data.get('gameVersion')
-            if game_version is not None:
-                set_clauses.append("m.version = $game_version")
-                params['game_version'] = game_version
-
-            map_id = info_data.get('mapId')
-            if map_id is not None:
-                set_clauses.append("m.mapId = $map_id")
-                params['map_id'] = map_id
-
-            # Costruisci la query finale
-            cypher_query = f"MERGE (m:Match {{id: $match_id}})"
-            if set_clauses:
-                set_clause_str = ", ".join(set_clauses)
-                cypher_query += f" ON CREATE SET {set_clause_str} ON MATCH SET {set_clause_str}"
-            
-            # Esegui la query
-            session.run(cypher_query, **params)
+            session.run(
+                """
+                MERGE (m:Match {id: $match_id})
+                ON CREATE SET
+                    m.creation = datetime({epochMillis: $game_creation_timestamp}),
+                    m.duration = $game_duration,
+                    m.endTimestamp = datetime({epochMillis: $game_end_timestamp}),
+                    m.mode = $game_mode,
+                    m.name = $game_name,
+                    m.startTimestamp = datetime({epochMillis: $game_start_timestamp}),
+                    m.type = $game_type,
+                    m.version = $game_version,
+                    m.mapId = $map_id
+                ON MATCH SET
+                    m.creation = datetime({epochMillis: $game_creation_timestamp}),
+                    m.duration = $game_duration,
+                    m.endTimestamp = datetime({epochMillis: $game_end_timestamp}),
+                    m.mode = $game_mode,
+                    m.name = $game_name,
+                    m.startTimestamp = datetime({epochMillis: $game_start_timestamp}),
+                    m.type = $game_type,
+                    m.version = $game_version,
+                    m.mapId = $map_id
+                """,
+                match_id=match_id,
+                game_creation_timestamp=game_creation_timestamp,
+                game_duration=game_duration,
+                game_end_timestamp=game_end_timestamp,
+                game_mode=game_mode,
+                game_name=game_name,
+                game_start_timestamp=game_start_timestamp,
+                game_type=game_type,
+                game_version=game_version,
+                map_id=map_id
+            )
             
             # Processa i partecipanti
-            participants_data = info_data.get('participants', [])
+            participants_data = match_data.get('participants', [])
             for participant in participants_data:
                 self._process_participant(session, match_id, participant)
 
-            # Processa i team (ora dalla sezione 'info')
-            teams_data = info_data.get('teams', [])
-            for team in teams_data:
-                self._process_team(session, match_id, team)
+            # Il tuo JSON fornito non mostra esplicitamente un array 'teams'
+            # allo stesso livello di 'participants'.
+            # Se esiste nel tuo dataset completo, dovrai trovare il percorso corretto.
+            # Per ora, manterrò la chiamata, ma potresti doverla commentare o adattare.
+            # teams_data = match_data.get('teams', []) # <-- VERIFICA QUESTO PERCORSO
+            # for team in teams_data:
+            #     self._process_team(session, match_id, team)
 
-            logger.debug(f"Ingestione dettagli completata per la partita: {match_id}")
+        logger.debug(f"Ingestione dettagli completata per la partita: {match_id}")
 
     def _process_participant(self, session, match_id: str, participant_data: dict):
         """
@@ -148,15 +146,18 @@ class MatchDataIngestor:
         summoner_id = participant_data.get('summonerId')
         summoner_name = participant_data.get('summonerName')
         champion_id = participant_data.get('championId')
-        champion_name = participant_data.get('championName')
-        team_id = participant_data.get('teamId')
-        team_position = participant_data.get('teamPosition')
+        champion_name = participant_data.get('championName') # Presente nel JSON!
+        team_id = participant_data.get('teamId') # 100 o 200
+        team_position = participant_data.get('teamPosition') # TOP, JUNGLE, MIDDLE, BOTTOM, UTILITY
 
+        # Dati da 'challenges'
         challenges_data = participant_data.get('challenges', {})
         damage_per_minute = challenges_data.get('damagePerMinute')
         deaths_by_enemy_champs = challenges_data.get('deathsByEnemyChamps')
         dragon_takedowns = challenges_data.get('dragonTakedowns')
+        # Aggiungi qui altre proprietà da 'challenges' che ti interessano
 
+        # Se championName è già presente nel JSON, lo usiamo. Altrimenti, fallback a Data Dragon.
         if not champion_name and champion_id:
             champion_info = self.data_dragon_downloader.get_champion_by_id(champion_id)
             champion_name = champion_info.get('name') if champion_info else f"Unknown_Champion_{champion_id}"
@@ -179,6 +180,7 @@ class MatchDataIngestor:
         )
 
         # --- Nodo Champion e relazione PLAYED_AS ---
+        # Si assume che i campioni siano già stati ingeriti da Data Dragon
         session.run(
             """
             MATCH (c:Champion {name: $champion_name})
@@ -220,7 +222,8 @@ class MatchDataIngestor:
                 r.damagePerMinute = $damage_per_minute,
                 r.deathsByEnemyChamps = $deaths_by_enemy_champs,
                 r.dragonTakedowns = $dragon_takedowns
-            ON MATCH SET
+                // Aggiungi qui altre proprietà da 'challenges_data' come desiderato
+            ON MATCH SET // Aggiorna le proprietà se la relazione esiste già
                 r.kills = $kills,
                 r.deaths = $deaths,
                 r.assists = $assists,
@@ -287,13 +290,12 @@ class MatchDataIngestor:
         )
 
         # --- Processa gli Items ---
-        for i in range(7):  # item0, item1, ..., item6
+        for i in range(7): # item0, item1, ..., item6
             item_id = participant_data.get(f'item{i}')
-            if item_id and item_id != 0:  # 0 significa slot vuoto
+            if item_id and item_id != 0: # 0 significa slot vuoto
                 session.run(
                     """
-                    MATCH (p:Player), (m:Match), (item:Item)
-                    WHERE p.puuid = $puuid AND m.id = $match_id AND item.id = $item_id
+                    MATCH (p:Player {puuid: $puuid}), (m:Match {id: $match_id}), (item:Item {id: $item_id})
                     MERGE (p)-[:BOUGHT_ITEM_IN {matchId: $match_id}]->(item)
                     """,
                     puuid=puuid,
@@ -308,8 +310,7 @@ class MatchDataIngestor:
         if summoner_spell1_id:
             session.run(
                 """
-                MATCH (p:Player), (m:Match), (ss:SummonerSpell)
-                WHERE p.puuid = $puuid AND m.id = $match_id AND ss.id = $summoner_spell_id
+                MATCH (p:Player {puuid: $puuid}), (m:Match {id: $match_id}), (ss:SummonerSpell {id: $summoner_spell_id})
                 MERGE (p)-[:USED_SUMMONER_SPELL_IN {matchId: $match_id, slot: 1}]->(ss)
                 """,
                 puuid=puuid,
@@ -319,8 +320,7 @@ class MatchDataIngestor:
         if summoner_spell2_id:
             session.run(
                 """
-                MATCH (p:Player), (m:Match), (ss:SummonerSpell)
-                WHERE p.puuid = $puuid AND m.id = $match_id AND ss.id = $summoner_spell_id
+                MATCH (p:Player {puuid: $puuid}), (m:Match {id: $match_id}), (ss:SummonerSpell {id: $summoner_spell_id})
                 MERGE (p)-[:USED_SUMMONER_SPELL_IN {matchId: $match_id, slot: 2}]->(ss)
                 """,
                 puuid=puuid,
@@ -339,8 +339,7 @@ class MatchDataIngestor:
             if primary_style_id:
                 session.run(
                     """
-                    MATCH (p:Player), (m:Match), (rp:RunePath)
-                    WHERE p.puuid = $puuid AND m.id = $match_id AND rp.id = $rune_path_id
+                    MATCH (p:Player {puuid: $puuid}), (m:Match {id: $match_id}), (rp:RunePath {id: $rune_path_id})
                     MERGE (p)-[:USED_RUNE_PATH_IN {matchId: $match_id}]->(rp)
                     """,
                     puuid=puuid,
@@ -353,8 +352,7 @@ class MatchDataIngestor:
                 if rune_id:
                     session.run(
                         """
-                        MATCH (p:Player), (m:Match), (r:Rune)
-                        WHERE p.puuid = $puuid AND m.id = $match_id AND r.id = $rune_id
+                        MATCH (p:Player {puuid: $puuid}), (m:Match {id: $match_id}), (r:Rune {id: $rune_id})
                         MERGE (p)-[:SELECTED_RUNE_IN {matchId: $match_id}]->(r)
                         """,
                         puuid=puuid,
@@ -386,8 +384,7 @@ class MatchDataIngestor:
             if objective_data.get('kills', 0) > 0:
                 session.run(
                     f"""
-                    MATCH (t:Team), (m:Match)
-                    WHERE t.id = $team_id AND t.matchId = $match_id AND m.id = $match_id
+                    MATCH (t:Team {{id: $team_id, matchId: $match_id}})
                     MERGE (o:{objective_name} {{matchId: $match_id, teamId: $team_id}})
                     ON CREATE SET o.kills = $kills
                     ON MATCH SET o.kills = $kills
@@ -410,8 +407,7 @@ class MatchDataIngestor:
                 
                 session.run(
                     """
-                    MATCH (t:Team), (c:Champion)
-                    WHERE t.id = $team_id AND t.matchId = $match_id AND c.name = $champion_name
+                    MATCH (t:Team {id: $team_id, matchId: $match_id}), (c:Champion {name: $champion_name})
                     MERGE (t)-[:BANNED {pickTurn: $pick_turn}]->(c)
                     """,
                     team_id=team_id,

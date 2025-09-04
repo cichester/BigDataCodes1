@@ -93,7 +93,7 @@ def main():
         ingestor = MatchDataIngestor(neo4j_connector=db_connector, data_dragon_downloader=downloader)
 
         # Chiama il nuovo metodo per l'ingestione dal dataset Kaggle
-        ingestor.ingest_matches_from_kaggle(KAGGLE_DATASET_PATH)
+        ingestor.ingest_matches_from_kafka('lol-matches')
 
         logger.info("Processo di ingestione completato.")
 
