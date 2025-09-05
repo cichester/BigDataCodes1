@@ -26,26 +26,18 @@ class MatchDataIngestor:
             consumer = KafkaConsumer(
                 topic_name,
                 bootstrap_servers=bootstrap_servers,
-                auto_offset_reset='earliest',  # Inizia a leggere dall'inizio del topic
-                group_id='neo4j-ingestor-group' # Per tenere traccia dei messaggi letti
+                auto_offset_reset='earliest',
+                group_id='neo4j-ingestor-group'
             )
             logger.info(f"Consumatore Kafka connesso al topic '{topic_name}'. In attesa di messaggi...")
 
-            # Itera su ogni messaggio ricevuto dal topic
             for message in consumer:
                 try:
-                    # Decodifica il valore del messaggio qui, dove l'errore può essere catturato
                     match_data = json.loads(message.value.decode('utf-8'))
-                    
-                    # Ottieni il match ID per logging
-                    # Assicurati che 'metadata' esista, altrimenti usa un default
-                    match_id = match_data.get('metadata', {}).get('matchId', 'N/A')
-                    
-                    # Riutilizza la tua funzione esistente per l'ingestione del match
+                    match_id = match_data.get('gameId', 'N/A')
                     self._process_and_ingest_match(match_id, match_data)
                     logger.info(f"Partita {match_id} ingerita con successo.")
                 except json.JSONDecodeError as e:
-                    # Registra l'errore ma continua l'esecuzione
                     logger.error(f"Errore di decodifica JSON per un messaggio dal topic. Messaggio ignorato. Errore: {e}")
                 except Exception as e:
                     logger.error(f"Errore durante l'ingestione della partita: {e}")
@@ -60,90 +52,76 @@ class MatchDataIngestor:
     def _process_and_ingest_match(self, match_id: str, match_data: dict):
         """
         Processa i dati di una singola partita e li ingesta in Neo4j.
-        Adattato alla struttura del match object fornita.
         """
         logger.debug(f"Processando dati per la partita: {match_id}")
 
         with self.db_connector.get_driver().session() as session:
-            # Estrazione delle proprietà del match
-            info_data = match_data.get('info', {})
-            
-            # Utilizza una lista per costruire dinamicamente la query
             set_clauses = []
             params = {'match_id': match_id}
             
-            # Aggiungi i parametri solo se esistono
-            game_creation_timestamp = info_data.get('gameCreation')
+            game_creation_timestamp = match_data.get('gameCreation')
             if game_creation_timestamp is not None:
                 set_clauses.append("m.creation = datetime({epochMillis: $game_creation_timestamp})")
                 params['game_creation_timestamp'] = game_creation_timestamp
             
-            game_duration = info_data.get('gameDuration')
+            game_duration = match_data.get('gameDuration')
             if game_duration is not None:
                 set_clauses.append("m.duration = $game_duration")
                 params['game_duration'] = game_duration
             
-            game_end_timestamp = info_data.get('gameEndTimestamp')
+            game_end_timestamp = match_data.get('gameEndTimestamp')
             if game_end_timestamp is not None:
                 set_clauses.append("m.endTimestamp = datetime({epochMillis: $game_end_timestamp})")
                 params['game_end_timestamp'] = game_end_timestamp
             
-            game_mode = info_data.get('gameMode')
+            game_mode = match_data.get('gameMode')
             if game_mode is not None:
                 set_clauses.append("m.mode = $game_mode")
                 params['game_mode'] = game_mode
-                
-            game_name = info_data.get('gameName')
+            
+            game_name = match_data.get('gameName')
             if game_name is not None:
                 set_clauses.append("m.name = $game_name")
                 params['game_name'] = game_name
 
-            game_start_timestamp = info_data.get('gameStartTimestamp')
+            game_start_timestamp = match_data.get('gameStartTimestamp')
             if game_start_timestamp is not None:
                 set_clauses.append("m.startTimestamp = datetime({epochMillis: $game_start_timestamp})")
                 params['game_start_timestamp'] = game_start_timestamp
 
-            game_type = info_data.get('gameType')
+            game_type = match_data.get('gameType')
             if game_type is not None:
                 set_clauses.append("m.type = $game_type")
                 params['game_type'] = game_type
             
-            game_version = info_data.get('gameVersion')
+            game_version = match_data.get('gameVersion')
             if game_version is not None:
                 set_clauses.append("m.version = $game_version")
                 params['game_version'] = game_version
 
-            map_id = info_data.get('mapId')
+            map_id = match_data.get('mapId')
             if map_id is not None:
                 set_clauses.append("m.mapId = $map_id")
                 params['map_id'] = map_id
 
-            # Costruisci la query finale
             cypher_query = f"MERGE (m:Match {{id: $match_id}})"
             if set_clauses:
                 set_clause_str = ", ".join(set_clauses)
                 cypher_query += f" ON CREATE SET {set_clause_str} ON MATCH SET {set_clause_str}"
             
-            # Esegui la query
             session.run(cypher_query, **params)
             
-            # Processa i partecipanti
-            participants_data = info_data.get('participants', [])
+            participants_data = match_data.get('participants', [])
             for participant in participants_data:
                 self._process_participant(session, match_id, participant)
 
-            # Processa i team (ora dalla sezione 'info')
-            teams_data = info_data.get('teams', [])
+            teams_data = match_data.get('teams', [])
             for team in teams_data:
                 self._process_team(session, match_id, team)
 
             logger.debug(f"Ingestione dettagli completata per la partita: {match_id}")
 
     def _process_participant(self, session, match_id: str, participant_data: dict):
-        """
-        Crea nodi Player, Champion e le relazioni per un partecipante,
-        usando le chiavi fornite dal JSON del dataset Kaggle, inclusi i dati di 'challenges'.
-        """
         puuid = participant_data.get('puuid')
         summoner_id = participant_data.get('summonerId')
         summoner_name = participant_data.get('summonerName')
@@ -181,19 +159,19 @@ class MatchDataIngestor:
         # --- Nodo Champion e relazione PLAYED_AS ---
         session.run(
             """
+            MATCH (p:Player {puuid: $puuid})
             MATCH (c:Champion {name: $champion_name})
-            MERGE (p:Player {puuid: $puuid})
             MERGE (p)-[:PLAYED_AS]->(c)
             """,
             puuid=puuid,
             champion_name=champion_name
         )
         
-        # --- Relazione Player PLAYED_IN Match con statistiche ---
+        # --- Relazione Player PLAYED_IN Match con statistiche (ottimizzata) ---
         session.run(
             """
-            MATCH (p:Player), (m:Match)
-            WHERE p.puuid = $puuid AND m.id = $match_id
+            MATCH (p:Player {puuid: $puuid})
+            MATCH (m:Match {id: $match_id})
             MERGE (p)-[r:PLAYED_IN]->(m)
             ON CREATE SET
                 r.kills = $kills,
@@ -274,11 +252,11 @@ class MatchDataIngestor:
             dragon_takedowns=dragon_takedowns
         )
 
-        # --- Relazione Player BELONGS_TO Team (se modelliamo nodi Team) ---
+        # --- Relazione Player BELONGS_TO Team (ottimizzata) ---
         session.run(
             """
-            MERGE (t:Team {id: $team_id, matchId: $match_id}) // Crea nodo Team se non esiste
-            MERGE (p:Player {puuid: $puuid})
+            MATCH (p:Player {puuid: $puuid})
+            MATCH (t:Team {id: $team_id, matchId: $match_id})
             MERGE (p)-[:BELONGS_TO]->(t)
             """,
             puuid=puuid,
@@ -286,14 +264,15 @@ class MatchDataIngestor:
             match_id=match_id
         )
 
-        # --- Processa gli Items ---
-        for i in range(7):  # item0, item1, ..., item6
+        # --- Processa gli Items (query ottimizzata) ---
+        for i in range(7):
             item_id = participant_data.get(f'item{i}')
-            if item_id and item_id != 0:  # 0 significa slot vuoto
+            if item_id and item_id != 0:
                 session.run(
                     """
-                    MATCH (p:Player), (m:Match), (item:Item)
-                    WHERE p.puuid = $puuid AND m.id = $match_id AND item.id = $item_id
+                    MATCH (p:Player {puuid: $puuid})
+                    MATCH (m:Match {id: $match_id})
+                    MATCH (item:Item {id: $item_id})
                     MERGE (p)-[:BOUGHT_ITEM_IN {matchId: $match_id}]->(item)
                     """,
                     puuid=puuid,
@@ -301,15 +280,16 @@ class MatchDataIngestor:
                     item_id=item_id
                 )
         
-        # --- Processa Summoner Spells ---
+        # --- Processa Summoner Spells (query ottimizzata) ---
         summoner_spell1_id = participant_data.get('summoner1Id')
         summoner_spell2_id = participant_data.get('summoner2Id')
 
         if summoner_spell1_id:
             session.run(
                 """
-                MATCH (p:Player), (m:Match), (ss:SummonerSpell)
-                WHERE p.puuid = $puuid AND m.id = $match_id AND ss.id = $summoner_spell_id
+                MATCH (p:Player {puuid: $puuid})
+                MATCH (m:Match {id: $match_id})
+                MATCH (ss:SummonerSpell {id: $summoner_spell_id})
                 MERGE (p)-[:USED_SUMMONER_SPELL_IN {matchId: $match_id, slot: 1}]->(ss)
                 """,
                 puuid=puuid,
@@ -319,8 +299,9 @@ class MatchDataIngestor:
         if summoner_spell2_id:
             session.run(
                 """
-                MATCH (p:Player), (m:Match), (ss:SummonerSpell)
-                WHERE p.puuid = $puuid AND m.id = $match_id AND ss.id = $summoner_spell_id
+                MATCH (p:Player {puuid: $puuid})
+                MATCH (m:Match {id: $match_id})
+                MATCH (ss:SummonerSpell {id: $summoner_spell_id})
                 MERGE (p)-[:USED_SUMMONER_SPELL_IN {matchId: $match_id, slot: 2}]->(ss)
                 """,
                 puuid=puuid,
@@ -328,7 +309,7 @@ class MatchDataIngestor:
                 summoner_spell_id=summoner_spell2_id
             )
 
-        # --- Processa Rune (perks) ---
+        # --- Processa Rune (perks) (query ottimizzata) ---
         perks_data = participant_data.get('perks', {})
         styles = perks_data.get('styles', [])
 
@@ -339,8 +320,9 @@ class MatchDataIngestor:
             if primary_style_id:
                 session.run(
                     """
-                    MATCH (p:Player), (m:Match), (rp:RunePath)
-                    WHERE p.puuid = $puuid AND m.id = $match_id AND rp.id = $rune_path_id
+                    MATCH (p:Player {puuid: $puuid})
+                    MATCH (m:Match {id: $match_id})
+                    MATCH (rp:RunePath {id: $rune_path_id})
                     MERGE (p)-[:USED_RUNE_PATH_IN {matchId: $match_id}]->(rp)
                     """,
                     puuid=puuid,
@@ -353,8 +335,9 @@ class MatchDataIngestor:
                 if rune_id:
                     session.run(
                         """
-                        MATCH (p:Player), (m:Match), (r:Rune)
-                        WHERE p.puuid = $puuid AND m.id = $match_id AND r.id = $rune_id
+                        MATCH (p:Player {puuid: $puuid})
+                        MATCH (m:Match {id: $match_id})
+                        MATCH (r:Rune {id: $rune_id})
                         MERGE (p)-[:SELECTED_RUNE_IN {matchId: $match_id}]->(r)
                         """,
                         puuid=puuid,
@@ -364,54 +347,60 @@ class MatchDataIngestor:
 
     def _process_team(self, session, match_id: str, team_data: dict):
         """
-        Crea nodi Team e le relazioni con Match e obiettivi.
+        Crea nodi Team e le relazioni con Match e obiettivi in modo ottimizzato.
         """
         team_id = team_data.get('teamId')
         win = team_data.get('win')
-        
+
+        # Step 1: Crea o aggiorna il nodo Team e la relazione con Match
         session.run(
             """
+            MATCH (m:Match {id: $match_id})
             MERGE (t:Team {id: $team_id, matchId: $match_id})
             ON CREATE SET t.win = $win
             ON MATCH SET t.win = $win
+            MERGE (t)-[:PLAYED_IN]->(m)
             """,
             team_id=team_id,
             match_id=match_id,
             win=win
         )
 
-        # Processa obiettivi (baronKills, dragonKills, etc.)
+        # Step 2: Processa obiettivi
         objectives = team_data.get('objectives', {})
         for objective_name, objective_data in objectives.items():
             if objective_data.get('kills', 0) > 0:
                 session.run(
-                    f"""
-                    MATCH (t:Team), (m:Match)
-                    WHERE t.id = $team_id AND t.matchId = $match_id AND m.id = $match_id
-                    MERGE (o:{objective_name} {{matchId: $match_id, teamId: $team_id}})
-                    ON CREATE SET o.kills = $kills
-                    ON MATCH SET o.kills = $kills
-                    MERGE (t)-[:ACHIEVED]->(o)
+                    """
+                    MATCH (m:Match {id: $match_id})
+                    MATCH (t:Team {id: $team_id, matchId: m.id})
+                    MERGE (o:Objective {name: $objective_name})
+                    MERGE (t)-[:SECURED {kills: $kills}]->(o)
                     """,
                     team_id=team_id,
                     match_id=match_id,
+                    objective_name=objective_name,
                     kills=objective_data.get('kills')
                 )
-        
-        # Processa i bans
+
+        # Step 3: Processa i bans
         bans = team_data.get('bans', [])
         for ban in bans:
             champion_id = ban.get('championId')
             pick_turn = ban.get('pickTurn')
             
             if champion_id:
-                champion_info = self.data_dragon_downloader.get_champion_by_id(champion_id)
-                champion_name = champion_info.get('name') if champion_info else f"Unknown_Champion_{champion_id}"
+                try:
+                    champion_info = self.data_dragon_downloader.get_champion_by_id(champion_id)
+                    champion_name = champion_info.get('name') if champion_info else f"Unknown_Champion_{champion_id}"
+                except AttributeError:
+                    champion_name = f"Unknown_Champion_{champion_id}"
+                    logger.error("ERRORE: get_champion_by_id non trovato in DataDragonDownloader. Il nome del campione sarà un placeholder.")
                 
                 session.run(
                     """
-                    MATCH (t:Team), (c:Champion)
-                    WHERE t.id = $team_id AND t.matchId = $match_id AND c.name = $champion_name
+                    MATCH (t:Team {id: $team_id, matchId: $match_id})
+                    MATCH (c:Champion {name: $champion_name})
                     MERGE (t)-[:BANNED {pickTurn: $pick_turn}]->(c)
                     """,
                     team_id=team_id,

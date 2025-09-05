@@ -20,10 +20,10 @@ class DataDragonDownloader:
             self.version = version
         else:
             # Se la versione non è specificata, cerca l'ultima
-            self.version = self.get_latest_version()
+            self.version = "13.19.1" # Fallback iniziale
             if not self.version:
                 logger.error("Impossibile recuperare l'ultima versione di Data Dragon. Usando una versione predefinita (15.13.1) come fallback.")
-                self.version = "15.13.1" # Fallback per sicurezza
+                self.version = "13.19.1" # Fallback per sicurezza
 
         self.base_version_language_path = os.path.join(self.data_dir, self.version, self.language)
         os.makedirs(self.base_version_language_path, exist_ok=True)
@@ -150,3 +150,21 @@ class DataDragonDownloader:
         except Exception as e:
             logger.error(f"Errore generico durante la lettura del file {file_path}: {e}")
             return None
+        
+    def get_champion_by_id(self, champion_id: int):
+        """
+        Recupera i dati di un campione dato il suo ID numerico.
+        Usa una cache interna per evitare di ricaricare il file JSON a ogni chiamata.
+        """
+        if self._champion_cache is None:
+            # Scarica o carica tutti i dati dei campioni se la cache è vuota
+            champions_data = self.get_data('champion')
+            if not champions_data:
+                logger.error("Impossibile recuperare i dati dei campioni da Data Dragon.")
+                return None
+                
+            # Popola la cache: mappa gli ID numerici ai dati del campione
+            self._champion_cache = {int(champ['key']): champ for champ in champions_data.values()}
+
+        return self._champion_cache.get(champion_id)
+
