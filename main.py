@@ -18,8 +18,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # --- Nuovo percorso per il dataset Kaggle ---
-# Assicurati che questa cartella contenga tutti i file JSON delle partite scaricati da Kaggle.
-KAGGLE_DATASET_PATH = r'G:\BigDataCodes\kaggle_data'
+
 
 
 def main():

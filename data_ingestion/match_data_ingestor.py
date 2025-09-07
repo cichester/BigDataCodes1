@@ -5,6 +5,10 @@ import json
 from kafka import KafkaConsumer
 import os
 
+logging.basicConfig(
+    level=logging.INFO, # o DEBUG per più dettagli
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 logger = logging.getLogger(__name__)
 
 class MatchDataIngestor:
@@ -75,7 +79,8 @@ class MatchDataIngestor:
                 params['game_end_timestamp'] = game_end_timestamp
             
             game_mode = match_data.get('gameMode')
-            if game_mode is not None:
+            
+            if game_mode == "CLASSIC":                
                 set_clauses.append("m.mode = $game_mode")
                 params['game_mode'] = game_mode
             
@@ -129,7 +134,8 @@ class MatchDataIngestor:
         champion_name = participant_data.get('championName')
         team_id = participant_data.get('teamId')
         team_position = participant_data.get('teamPosition')
-
+        if team_position == "UTILITY":
+            team_position = "SUPPORT"
         challenges_data = participant_data.get('challenges', {})
         damage_per_minute = challenges_data.get('damagePerMinute')
         deaths_by_enemy_champs = challenges_data.get('deathsByEnemyChamps')
@@ -160,7 +166,7 @@ class MatchDataIngestor:
         session.run(
             """
             MATCH (p:Player {puuid: $puuid})
-            MATCH (c:Champion {name: $champion_name})
+            MERGE (c:Champion {name: $champion_name})
             MERGE (p)-[:PLAYED_AS]->(c)
             """,
             puuid=puuid,
@@ -193,7 +199,7 @@ class MatchDataIngestor:
                 r.physicalDamageTaken = $physicalDamageTaken,
                 r.magicDamageTaken = $magicDamageTaken,
                 r.trueDamageTaken = $trueDamageTaken,
-                r.teamPosition = $teamPosition,
+                r.role = $teamPosition,
                 r.teamId = $teamId,
                 r.damagePerMinute = $damage_per_minute,
                 r.deathsByEnemyChamps = $deaths_by_enemy_champs,
@@ -218,7 +224,7 @@ class MatchDataIngestor:
                 r.physicalDamageTaken = $physicalDamageTaken,
                 r.magicDamageTaken = $magicDamageTaken,
                 r.trueDamageTaken = $trueDamageTaken,
-                r.teamPosition = $teamPosition,
+                r.role = $teamPosition,
                 r.teamId = $teamId,
                 r.damagePerMinute = $damage_per_minute,
                 r.deathsByEnemyChamps = $deaths_by_enemy_champs,
@@ -265,20 +271,26 @@ class MatchDataIngestor:
         )
 
         # --- Processa gli Items (query ottimizzata) ---
+        #logger.info(f"Processando gli item per il partecipante: {puuid}")
         for i in range(7):
             item_id = participant_data.get(f'item{i}')
             if item_id and item_id != 0:
+                item_id_str = str(item_id)
+                logger.debug(f"Trovato Item ID {item_id_str}. Eseguendo la query...")
                 session.run(
                     """
                     MATCH (p:Player {puuid: $puuid})
                     MATCH (m:Match {id: $match_id})
-                    MATCH (item:Item {id: $item_id})
+                    MATCH (item:Item {id: $item_id_str})
                     MERGE (p)-[:BOUGHT_ITEM_IN {matchId: $match_id}]->(item)
                     """,
                     puuid=puuid,
                     match_id=match_id,
-                    item_id=item_id
+                    item_id_str=item_id_str
                 )
+            
+            else:
+                logger.debug(f"Item ID {f'item{i}'} non trovato o uguale a 0.")
         
         # --- Processa Summoner Spells (query ottimizzata) ---
         summoner_spell1_id = participant_data.get('summoner1Id')
@@ -289,7 +301,7 @@ class MatchDataIngestor:
                 """
                 MATCH (p:Player {puuid: $puuid})
                 MATCH (m:Match {id: $match_id})
-                MATCH (ss:SummonerSpell {id: $summoner_spell_id})
+                MERGE (ss:SummonerSpell {id: $summoner_spell_id})
                 MERGE (p)-[:USED_SUMMONER_SPELL_IN {matchId: $match_id, slot: 1}]->(ss)
                 """,
                 puuid=puuid,
@@ -301,7 +313,7 @@ class MatchDataIngestor:
                 """
                 MATCH (p:Player {puuid: $puuid})
                 MATCH (m:Match {id: $match_id})
-                MATCH (ss:SummonerSpell {id: $summoner_spell_id})
+                MERGE (ss:SummonerSpell {id: $summoner_spell_id})
                 MERGE (p)-[:USED_SUMMONER_SPELL_IN {matchId: $match_id, slot: 2}]->(ss)
                 """,
                 puuid=puuid,
@@ -322,7 +334,7 @@ class MatchDataIngestor:
                     """
                     MATCH (p:Player {puuid: $puuid})
                     MATCH (m:Match {id: $match_id})
-                    MATCH (rp:RunePath {id: $rune_path_id})
+                    MERGE (rp:RunePath {id: $rune_path_id})
                     MERGE (p)-[:USED_RUNE_PATH_IN {matchId: $match_id}]->(rp)
                     """,
                     puuid=puuid,
@@ -337,7 +349,7 @@ class MatchDataIngestor:
                         """
                         MATCH (p:Player {puuid: $puuid})
                         MATCH (m:Match {id: $match_id})
-                        MATCH (r:Rune {id: $rune_id})
+                        MERGE (r:Rune {id: $rune_id})
                         MERGE (p)-[:SELECTED_RUNE_IN {matchId: $match_id}]->(r)
                         """,
                         puuid=puuid,
