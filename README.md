@@ -23,8 +23,7 @@ cd BigDataCodes1
 python -m venv venv_lolkg
 # Su Windows:
 venv_lolkg\Scripts\activate
-# Su macOS/Linux:
-# source venv_lolkg/bin/activate
+
 
 ### c. Installare le Dipendenze
 Installa tutti i pacchetti necessari con un singolo comando:
