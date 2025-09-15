@@ -22,7 +22,7 @@ cd BigDataCodes1
 
 python -m venv venv_lolkg
 # Su Windows:
-venv_lolkg\Scripts\activate
+venv_lolkg\Scripts\activate.ps1
 
 
 ### c. Installare le Dipendenze
