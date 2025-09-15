@@ -1,0 +1,29 @@
+#File per la gestione delle dipendenze Python del progetto.
+#Eseguire 'pip install -r requirements.txt' per installare.
+#Per la connessione e l'interazione con il database a grafo
+neo4j
+
+#Per l'interazione con Apache Kafka (Producer e Consumer)
+kafka-python
+
+#Per la lettura efficiente (streaming) di file JSON di grandi dimensioni
+ijson
+
+#Per la gestione delle variabili d'ambiente (file .env)
+python-dotenv
+
+#Per le chiamate HTTP (es. DataDragonDownloader)
+requests
+
+#--- Framework di Intelligenza Artificiale ---
+#Core della libreria LangChain
+langchain
+
+#Pacchetto community con catene e logiche aggiuntive (es. GraphCypherQAChain)
+langchain-community
+
+#Connettore specifico per i modelli di Google Gemini
+langchain-google-genai
+
+#Connettore moderno e ottimizzato per l'integrazione con Neo4j
+langchain-neo4j
