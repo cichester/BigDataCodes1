@@ -1,0 +1,641 @@
+Background
+[
+edit
+|
+edit source
+]
+
+Early Life
+[
+edit
+|
+edit source
+]
+
+Viktor was born to a poor family in the fissures below
+Zaun
+, where the air was polluted and toxic. Because of this environment, Viktor was ailed with a rare illness that poisoned him over the course of his life, and he developed a limp in his right leg and was forced to walk around with a cane. This made it difficult for him to play with the other children, but despite his solitude and physical weakness, the young boy was brilliant and inventive, with a knack for constructing machines on the days he spent alone.
+One day, when playing with a toy boat in the Sump waters, Viktor stumbled upon an underground cave with a hidden lab. There, he met a disgraced alchemist known only as
+Singed
+, who took an interest in the boy's craftsmanship. While initially afraid of the old man, Viktor's curiosity got the better of him when he noticed a
+waverider
+named Rio, which Singed described as a "rare mutation" that he was trying to save from death. Viktor offered to help save the creature's life, and the doctor sent Viktor to collect materials for him. Viktor would later turn on Singed when he realized that his method of keeping Rio alive involved a series of tubes and implants that left her in a constant state of pain. The boy was horrified and ran out of Singed's lab, crying.
+[
+4
+]
+Though his introduction to the realm of science had been a frightening one, Viktor's brilliant mind eventually earned him the attention of the revered professor and Council member
+Cecil B. Heimerdinger
+, who discovered the boy ruminating in a tunnel of gears and clockwork over the Sump waters where he used to play. As the dean of the prestigious Piltover Academy, Heimerdinger was able to enroll Viktor for a full education. But when Viktor moved to
+Piltover
+, he was immediately treated as an outsider by the other students, not having a patron, wealth, or name. Still, Viktor managed to thrive in this environment through sheer determination and intellectual aptitude, and was eventually hired by Heimerdinger as his assistant.
+[
+5
+]
+[
+6
+]
+
+Discovery of Hextech
+[
+edit
+|
+edit source
+]
+
+
+One day, after the burglary and explosion at
+Jayce's
+workshop on Academy property,
+Heimerdinger
+sent Viktor to remove anything dangerous, including Jayce. Viktor confiscated the materials, and Jayce was arrested for illegal and reckless experimentation. However, during the trial Viktor became intrigued by the young inventor's speech, in which he described an ambition to create magic through science, which he would make available to the people of the city. Viktor saved Jayce's research notes from disposal behind Heimerdinger's back and left to visit Jayce.
+Viktor found Jayce at his ruined workshop, interrupting his suicide attempt. He offered to help Jayce complete his
+"hextech"
+research, reassuring him that his work would make the world a better place.
+[
+5
+]
+Reinvigorated by Viktor's words, Jayce made Viktor his partner in hextech and together they figured out how to stabilize the hexite crystals, after which they had to break into the Academy to retrieve Jayce's confiscated materials. With the help of Councilor
+Mel Medarda
+, Jayce and Viktor snuck into Heimerdinger's lab and managed to successfully complete Jayce's experiment, just as the two of them were caught by Heimerdinger and the Academy guards.
+[
+7
+]
+Having proven that hextech was a viable practice, the Piltover Council approved the development of hextech technology. Viktor and Jayce would be responsible for numerous hextech innovations over the next few years, most notably the Hexgate, which revolutionized trade and transportation and put Piltover on the map as the global shipping lane. Their inventions would launch Jayce towards fame and status, and he would become renowned across Piltover as the "Man of Progress". Meanwhile, Viktor continued to work in the background, largely avoiding the spotlight as his body grew more haggard and sickly with time.
+[
+8
+]
+
+Piltovan Bicentennial
+[
+edit
+|
+edit source
+]
+
+The Next Chapter
+[
+edit
+|
+edit source
+]
+
+During
+Piltover
+'s bicentennial Progress Day,
+Jayce
+and Viktor showcased what they called "the next chapter of hextech" to
+Heimerdinger
+, including the
+Atlas Gauntlets
+and the
+hexclaw
+, which were designed as tools for easier labor. Though impressed, Heimerdinger advised the two that they needed at least a decade to ensure their inventions were safe for use. Viktor protested, as he believed that it would be better to make these inventions available to the public immediately, as they were designed to improve lives. Jayce initially agreed with Viktor, but later cancelled their plans to unveil their inventions at his Progress Day speech, to Viktor's disappointment.
+Late that night, a
+terrorist
+from the undercity bombed the Academy Square and stole one of the hextech gemstones that was intended to be showcased during Jayce's speech, and in response, the Council elevated Jayce to a seat on their government so he could safeguard the city's hextech operations from any future attack.
+[
+8
+]
+Because of this, Jayce began to neglect his work with Viktor, who was still upset about Jayce's abrupt cancellation of their Progress Day presentation. They had an argument over the matter in the Hexgate, but Viktor's illness gave him a nosebleed and he received a vision in the runes lining the tower's shaft. The vision gave Viktor an idea for a new hextech invention.
+[
+9
+]
+
+Hexcore Experiment
+[
+edit
+|
+edit source
+]
+
+With his vision as inspiration, Viktor theorized that hextech was not limited to runes invoking specific functions to be used like tools; rather, the arcane would speak through the runes, and could thus be made to learn and adapt to any magical function. Putting this theory into practice, Viktor invented the
+hexcore
+, an adaptive runic matrix that could theoretically learn to "evolve" on its own towards any possible function.
+Viktor became obsessed with unlocking the hexcore's potential, refusing to set foot outside his laboratory for a long period of time. Eventually, Viktor overworked himself and collapsed, and at that moment, the blood he coughed up would fuse with the hexcore, finally giving life to the matrix's learning capabilities. Viktor would later awaken in the hospital, where Jayce would inform him he was dying.
+[
+9
+]
+Viktor, depressed that his life would be cut short before he could change the world, returned to a spot overlooking the Sump where he used to play, where he was consoled by Heimerdinger.
+Upon returning to his lab, Viktor discovered that the
+hexcore
+had changed and was now reacting to organic matter. He summoned Jayce, who was eager to find a way to cure Viktor using the device. However, after numerous failed trials to augment the physiology of plants, Viktor became pessimistic, believing he would die before the hexcore could cure him. Stumped by their lack of success, Jayce decided to consult Heimerdinger, but upon seeing the hexcore, the professor immediately demanded its destruction, intending to invoke his political powers if necessary. As Jayce left to handle Heimerdinger on the Council, Viktor left to consult Singed in the undercity, who was still working at his old laboratory.
+[
+4
+]
+
+Augmentation
+[
+edit
+|
+edit source
+]
+
+
+Singed theorized that the failure of Viktor's experiments thus far lay not with the hexcore but with the "subjects" he was using. He offered Viktor a vial of
+shimmer
+, which would allow his body to accept the hexcore's transmutations. Before handing him the shimmer, Singed warned Viktor that self-experimentation would violate the ethos of Piltover's scientific community, which could cost him the love of friends and tarnish his legacy. Viktor was at first certain Jayce would understand his actions, but when he arrived at the blockade at the Bridge of Progress, Viktor became suddenly aware of his partner's prejudices against the undercity, as well as his and Mel's ongoing discussions to weaponize hextech. In light of this, Viktor kept the shimmer a secret from Jayce and proceeded with the experiment on his own.
+[
+10
+]
+Using the shimmer injection, Viktor tested the device on himself, successfully transforming his leg into a hextech augment made of woven organic steel, curing his limp. Emboldened by his early success, Viktor attempted to augment the rest of his body, but was out of shimmer. He recklessly went ahead with the experiment anyway and lost control of the hexcore. Viktor's assistant
+Sky
+happened to be in the area and rescued him, at the cost of her own life.
+[
+11
+]
+After the catastrophic accident, Viktor found himself surrounded by Sky's ashes and the papers from her notebook, which detailed her admiration for him and how he had inspired her to become a scientist. Wracked with guilt, Viktor attempted to destroy the hexcore. He was unable to, as the device had seemingly developed its own will and was now capable of weakening his mind and augments.
+Viktor scattered Sky's ashes into the ravine where they both used to play as kids, and he contemplated suicide before being stopped by Jayce. Viktor made Jayce promise to destroy the hexcore, then lamented their joint failure to save people with their inventions. Viktor then joined Jayce at the next Council meeting to propose a peace treaty with
+Silco
+, which would grant Zaun their independence from Piltover. After a heated debate and some convincing from Mel, the Council decided to approve the peace treaty; right before the
+terrorist attack
+on the Council chamber.
+[
+12
+]
+In the aftermath of the explosion, Viktor was saved from death by Jayce, who used the hexcore's regenerative abilities to transform Viktor's body into a fusion of man and hextech.
+[
+13
+]
+Viktor was left in a comatose state for the next several days, and when he finally awoke he reacted coldly to his friend, demanding to know why he was still alive. When Viktor learned Jayce had broken his promise and used the hexcore to bring him back, Viktor ended their partnership and left Jayce for good, taking his crutch and Sky's notebook with him into the undercity.
+[
+14
+]
+
+The Glorious Evolution
+[
+edit
+|
+edit source
+]
+
+Healer of the Undercity
+[
+edit
+|
+edit source
+]
+
+Viktor remained guilt-ridden for causing the death of
+Sky
+, but was confused by the fact that he could still hear her voice, calling to him. As he followed her voice into
+Zaun
+, he came upon a number of
+shimmer
+-addicts in the lower fringes led by
+Huck
+, who attempted to rob him of his possessions. Instead of fighting back, Viktor reached out his hand and placed it on Huck's forehead, curing his addiction, his tumors, his eyesight, and even restoring his balding hair. The miraculous display of magic struck awe into the suffering addicts, and they knelt before him as a savior.
+[
+14
+]
+This group of new disciples would all be "healed" by Viktor, who restored their bodies and their personalities to an emotionless state as perfect, serene followers to his cause. Over the next few months, Viktor and his cultists built a commune in the area, intended as a peaceful refuge for the broken and suffering.
+[
+6
+]
+Word spread of a "healer" in the undercity, and Councilor
+Salo
+, who had been paralyzed by the
+attack
+on the Council chamber, went to Viktor in hopes that he'd cure his legs and shimmer addiction.
+[
+15
+]
+After "healing" Salo, Viktor sent him to the Hexgate to collect a number of power cells, which had become corrupted by the nearby Anomaly. Viktor, looking through Salo's eyes, was surprised by the sudden appearance of
+Jayce
+, who was haggard and traumatized after returning from the Anomaly. Using Salo's body as a vessel, Viktor spoke to and attempted to reconcile with Jayce, believing he had found the answer to end the world's suffering. Jayce warned Viktor that hextech was a "curse" that needed to be destroyed, but Viktor ignored him, summoning Salo to return to the commune. Jayce then killed Salo with his
+hammer
+,
+[
+16
+]
+surprising Viktor. He began to suspect that another force was at work within Jayce, compelling him to behave in a manner unlike him.
+[
+17
+]
+
+Destruction of the Commune
+[
+edit
+|
+edit source
+]
+
+
+Viktor was soon visited by
+Jinx
+,
+Vi
+, and
+Isha
+, who had gotten word of his healing abilities and requested he restore the mind of their father
+Vander
+, who had been transformed into a bloodthirsty chemtech beast known as
+Warwick
+. While the process proved difficult, Viktor was able to see Vander's memories, which convinced him that Vander was a man worth saving. Unfortunately, Viktor felt his powers begin to wane, as the hexcore was becoming limited from overuse.
+As he was healing Vander, Viktor received a visit from
+Singed
+, who was negotiating on behalf of the
+Noxian
+forces of
+Ambessa Medarda
+and her Piltovan puppet,
+Caitlyn Kiramman
+. Singed offered Viktor a permanent fix to his waning abilities; namely, a transfusion of Warwick's blood, which was imbued with shimmer and regenerative properties. This would theoretically complete Viktor's evolution and remove the limits on his power, but Viktor, able to see that Singed was only after a cure to revive his
+daughter
+, refused to sacrifice Vander's humanity for Singed's cause. After Singed had gone, Viktor went to meditate in his chamber, where he was unexpectedly
+blasted
+through the chest by Jayce. Viktor's followers let out an bloodcurdling shriek and they all seemed to die as Viktor lost consciousness. Vander, who had briefly had his sanity restored, became suddenly
+enraged
+, and Ambessa's Noxians invaded the camp, burning everything to the ground.
+As he lay dying, Viktor watched the carnage through the eyes of his fallen followers, coming to the conclusion that Singed was right. His failure in the commune came not from the approach he'd taken to heal suffering; rather, the fault lay in humanity itself, as an inextricable part of human emotions like rage and compassion.
+[
+17
+]
+With his heart completely devoid of any passion or sentiment, Viktor experienced a moment of clarity and realized his true purpose: A
+Glorious Evolution
+for all humanity, to stop them from destroying themselves. His new mission was a world free from emotion, driven only by logic and reason.
+[
+6
+]
+
+Battle at the Hexgate
+[
+edit
+|
+edit source
+]
+
+Using a spherical cocoon fueled by shimmer and
+chemtech
+, Singed was able to sustain Viktor, who eventually regained consciousness from within his broken state. Speaking through the bodies of his followers, Viktor explained to Ambessa and Singed that his survival depended on the Anomaly beneath the Hexgate, which would allow him the ability to "evolve" others to a higher state of being. Ambessa offered to take Viktor there in exchange for an army of evolved soldiers, and Viktor considered her proposal, first sending a metal puppet made from the body of Huck to negotiate with Jayce.
+Viktor encountered Jayce and
+Mel
+in the rebuilt Council chamber, where he warned them of Ambessa's plan to launch a full-scale invasion of the city. He offered Jayce an alternative: join him in enacting the Glorious Evolution, and he would be able to access the Anomaly without bloodshed. Jayce rejected Viktor's offer, and the encounter quickly turned violent. When Viktor's puppet was defeated, he requested that Singed begin the transfusion with Warwick's blood. Singed then transformed Viktor, as well as his followers and Warwick into an army of metal puppets for him to command.
+[
+18
+]
+During the assault, Jayce directed the Piltovan forces to target and assassinate Viktor, who they believed was being carried by Ambessa's army within the purple sphere. In reality, Viktor had already left the sphere, arriving at the bottom of the Hexgate to confront Jayce as his puppets wreaked havoc on the city above. Though Jayce had attempted to shut down the Hexgate, Viktor quickly reversed Jayce's efforts and stole the Anomaly before easily besting him in combat. The two of them ascended up the tower's shaft until they landed on the roof, where Viktor unleashed the Anomaly into the sky to create a
+massive storm
+, which began to absorb all of Piltover into his hivemind. Viktor then brought Jayce into his hivemind, where he once again explained his vision for perfection, which would see an end to all suffering and conflict. Jayce lamented the loss of his friend as he was subsumed into the hexcore.
+[
+19
+]
+
+Defeat & Legacy
+[
+edit
+|
+edit source
+]
+
+
+Although Viktor had already achieved victory,
+Ekko
+was able to undo his success by
+rewinding time
+, overloading his
+Z-Drive
+well past the limit before throwing it at Viktor, blowing up his mask. The distraction finally bought
+Jayce
+enough time to get through to his old partner, and he showed Viktor a vision of the future he was about to create: a lonely and deserted wasteland where everything had been destroyed by
+hextech
+. Viktor relented after hearing the remorseful words of his future self, and used Jayce's acceleration rune to reverse his
+Glorious Evolution
+. Jayce remained by Viktor's side as the hexcore, Viktor's puppets, and eventually Viktor himself were all sucked into the rune, which popped out of existence.
+[
+19
+]
+After the battle, Viktor was presumed dead by the people of Piltover, having vanished from the city without a trace. While there are some who remember him for his achievements in the realm of hextech, very few can recall anything about his personal life, having been largely overshadowed by his partner, the vaunted Man of Progress. Some time after the the battle at the Hexgate, a treatise would be written by Professor Cristobal Lymere recounting Viktor's contributions to Piltover, though most actual records by the Piltover Council and the Academy have been either lost or destroyed for unknown reasons.
+[
+20
+]
+
+Appearance
+[
+edit
+|
+edit source
+]
+
+Human
+
+As a human, Viktor was a white-skinned, amber-eyed and brown-haired human with a scrawny build, who normally wore a white vest and red tie over brown clothing. Viktor had a limp that forced him to walk around with a cane, which he would eventually replace with a crutch and a metal leg brace as his condition deteriorated. Due to pollution in the fissures beneath Zaun, Viktor had an illness that made his appearance more sickly and haggard as time progressed, and he would eventually start to augment himself using the
+hexcore
+.
+
+Evolved
+
+Using the hexcore, Viktor would start to magically-augment his human biology. Parts of his body would be replaced with dark, grayish metal fused with golden shards and bolts with pulsating purple energy, with his flesh made of thin wiry metal that was woven together like an imitation of organic flesh. While Viktor originally only altered his leg,
+Jayce
+would augment the rest of Viktor's body after
+Jinx's
+attack, leaving Viktor's face and hair as the only remaining parts of his original body. Viktor would abandon his regular clothes after this, instead only wearing a dark blue and red blanket that Jayce had given him as a robe, clasped by a metal brooch that was modeled from a design on
+Sky's
+notebook. Viktor would grow out his hair and continued to carry his old crutch in his hand, which became magically-warped into a staff with a golden helix at the top.
+Once he reached his final form, Viktor's limbs would be stretched to unnatural proportions, making him taller and more alien and skeletal in appearance. He refashioned his robe into a long, tattered cloak with a tall collar, still clasped with the same brooch, and he would place the Anomaly into his staff as a power source. His human face, which turned gray and was still visible, was split apart by a dark metal mask in the shape of a skull jutting out from his forehead, which had glowing yellow lights peeking out through the sockets like eyes. An appendage that resembled Viktor's
+hexclaw
+invention grew from the center of Viktor's back, which could project glowing holographic runes in a purple halo around Viktor's head and fire beams of light.
+
+Personality
+[
+edit
+|
+edit source
+]
+
+Human
+
+Viktor was an idealist, a workaholic, and a genius with a passion for science and its ability to improve lives. Growing up in
+Zaun
+, Viktor experienced hardship from a young age, so he understood the suffering that people in the undercity had to endure. He was a pacifist who refused to invent weapons or resort to violence, and he was always ambitious, with a desire to solve every problem he found in society. He found a worthy outlet by pledging his support to
+hextech
+, which both he and
+Jayce
+believed would benefit all people. Viktor's ambition to change the world left him dissatisfied with his legacy, so Viktor would often rush his experiments with little regard for his own safety, believing the possible benefits to society would outweigh the potential harm to himself. This led to quarrels with Jayce and
+Heimerdinger
+, who sometimes withheld hextech from the masses until they could establish viable regulations, or would get distracted over petty political issues. Viktor was very bold in his pursuit of discoveries, and in his desperation to cure his illness he grew increasingly willing to bend
+Piltovan
+law to yield results.
+Due to his soft-spoken nature, Viktor wouldn't normally interact with others, preferring to stay in his lab obsessing over his research. Even as a child, he was described as a "loner", and as a student in Piltover, he was an outsider who relied on his natural genius and determination to make a name for himself. He often deferred to Jayce to act as their spokesperson for public speaking events while supporting him from behind the scenes. His inability to be a public figure also meant he was often overshadowed by Jayce as a founding father of hextech. Viktor seemed content to devote his entire life to developing hextech and saw its progress and the popularization of the science as the most important use of his and Jayce's time.
+
+Evolved
+
+Once Viktor had completed his transformation into the Herald, his obsessive tendencies heightened, and he reportedly became devoid of fear, love, bitterness, joy, hatred, or compassion. He became colder as a result, but remained scientifically curious, as well as committed to his original goal of saving lives. Now a being of pure logic, Viktor's goal became twisted when he decided that human nature and emotions were the cause of human suffering, compelling him to forcibly absorb all of humanity into a peaceful, serene state within his hivemind. Viktor remained cordial and polite in the presence of his enemies, but was more than willing to use violence if necessary, which was a stark contrast to his previous nature as a pacifist. Despite being supposedly free of emotion, Viktor maintained shreds of his humanity in this form, implied by the fact that he kept the blanket
+Jayce
+had given him and wore a brooch based on the design on
+Sky's
+notebook. After
+Ekko
+attacked Viktor with the
+Z-Drive
+, Jayce was given the opportunity to get through to these last remaining bits of the old Viktor, successfully reverting him back to his original personality.
+
+Abilities
+[
+edit
+|
+edit source
+]
+
+Inventor:
+A brilliant mind, Viktor has a long list of achievements in the field of hextech and engineering, especially those made to utilize hextech gemstones. As a founding father who perfected
+hextech
+, he is one of the leading scientists in innovations in Piltover, and was able to utilize his understanding of the arcane to create and effectively utilize a self-learning hextech matrix known as the
+hexcore
+, which would become the source of his powers.
+Evolved
+:
+Being biomechanically augmented, Viktor has strength, durability, and agility superior to that of a human, and he is no longer vulnerable to most human emotions or weaknesses. While this is able to empower Viktor with a number of cosmic, reality-breaking abilities, the extent of this is unconfirmed, as he appears to still be susceptible to death.
+Hexcore:
+The source of Viktor's transformation, the hexcore is an adapting rune matrix that contains the power to transmutate living organic matter into biomechanical metal. With its power, he is able to heal sicknesses and remove emotion with a simple touch, as well as place that person into a dreamlike trance. The hexcore is constantly
+evolving
+, allowing Viktor to augment his own abilities over time.
+Hexclaw
+:
+The hexclaw was a mechanical arm that is able to shoot a ray of concentrated magical light, originally designed as a crafting tool. After Viktor's transformation, an appendage resembling the hexclaw grew from Viktor's back, and it obtained the ability to project holographic runes and telekinetically move metal objects at will. It retains its original ability to shoot lasers, which are strong enough to cut through metal.
+Hivemind:
+Viktor is able to form a psychic connection with people, which is activated by physical touch. He is able to see a person's memories, and even manipulate their minds at will, removing their emotions and physical imperfections by absorbing them into his hivemind. Once a person is absorbed into Viktor's hivemind, he is able to see through their eyes and puppeteer their movements, including speaking through them. After Viktor's commune was attacked, his followers' souls were emptied out and he took direct control over them, "evolving" them into puppet soldiers that resembled metal doll-like mannequins.
+Levitation:
+Viktor is able to
+manipulate gravity
+, allowing him the ability to hover in the air without support, and to suspend his enemies in midair.
+Teleportation:
+Viktor is able to blink from one location to another, making him difficult to defeat in physical combat.
+Time Travel:
+While Viktor does not appear to have this ability in his current form, it is implied he is able to see glimpses into the past and future in the form of temporal visions. Viktor's future self was able to fully-evolve this ability to its fullest potential, making him able to jump through multiple realities in order to defeat his past self.
+Anomaly:
+After Viktor retrieved the Anomaly from under the Hexgate, he was able to use it to create an
+arcane storm
+around the entirety of Piltover. The storm grew in size and extended tendrils from the darkened clouds, which would have allowed Viktor to fully evolve the entire city beneath it into his hivemind.
+
+Relations
+[
+edit
+|
+edit source
+]
+
+Jayce Talis
+[
+edit
+|
+edit source
+]
+
+
+Viktor met the young inventor as the representative of the Academy after the explosion in his workshop. He was initially indifferent to Jayce, but after hearing his speech at the trial, Viktor was inspired by his ambition to change the world and saved Jayce's notes from being destroyed. Viktor vowed to help Jayce complete his research, and Jayce named him his partner in
+hextech
+, which marked the beginning of a friendship that would revolutionize
+Piltover
+. That night, the aspiring young inventors would successfully figure out a way to stabilize the hexite using a cranking mechanism. Viktor risked his job at the Academy to help Jayce break into
+Heimerdinger's
+laboratory. Their revolutionary partnership would grow into a true friendship, and they became "brothers in all but blood".
+Jayce and Viktor collaborated for many years as partners with a shared hextech dream. However, Viktor was also overshadowed by Jayce, who became famous as the public face of their inventions, as Viktor did not like the attention and refused his offers to join him on stage. Their bond would be tested when Jayce was given a seat on the Council, which would prevent him from working in the lab with Viktor.
+[
+9
+]
+Jayce and Viktor began to get into arguments about Heimerdinger's guidance and Jayce's Council work.
+[
+10
+]
+Viktor, driven by principle, refused to build hextech weapons to defend Piltover, while Jayce was more willing to resort to drastic measures to protect his people. Because they were close, Viktor expected Jayce to support his self-experimentation with the
+hexcore
+, but he kept the illegal
+shimmer
+dosage a secret after
+Jinx's
+bombings revealed Jayce's prejudices against
+Zaun
+. Ultimately, Viktor and Jayce lost themselves and their dream in the pursuit of progress, and they lamented their shared failure together. To make amends, they tried to end the crisis by granting Zaun their independence from Piltover, but this was prevented by forces beyond their control.
+Despite their diverging paths, Jayce was always willing to come back to Viktor when his life was threatened. When he learned Viktor was terminally ill, Jayce dropped everything to help him find a cure and even betrayed his mentor, Heimerdinger, when Viktor's experiment was threatened.
+[
+4
+]
+Viktor, however, valued his principles over his own life, and was disappointed with Jayce when he broke his promise to destroy the hexcore, since it was responsible for killing
+Sky
+. This caused Viktor to abruptly end their partnership and leave him for Zaun.
+[
+14
+]
+When they met again, they had become enemies, as Jayce had just witnessed the apocalyptic future Viktor would create.
+[
+21
+]
+To prevent this, Jayce attempted to kill Viktor in his commune, driven forth by violent visions that tormented his mind.
+[
+17
+]
+Despite their hostility, Viktor always remained cordial with Jayce, requesting moments of "civility" and informing Jayce that he was "pleased" to see him, and he tried unsuccessfully to convince his old partner to join his cause. Jayce claimed that his partner had "died" in Jinx's attack, but held onto hope that Viktor was still in there. Jayce's belief in Viktor eventually paid off and the two were able to reconcile, after Viktor realized he would be lonely in his perfect future with no problems left to solve. Viktor attempted to spare Jayce as he sacrificed himself to end the
+Glorious Evolution
+, but Jayce remained by his side so he wouldn't be alone in his final moments.
+[
+19
+]
+
+Sky Young
+[
+edit
+|
+edit source
+]
+
+Sky once noticed the young Viktor playing alone by the Sump waters, expressing a passing curiosity in the toy boat he had built. When they were both adults, Viktor would employ Sky to work for him and
+Jayce
+as his assistant. She was an aspiring scientist who had a crush on Viktor, but Viktor seemed mostly oblivious to her feelings for him. Sky would try to get closer to Viktor, even suggesting they walk home together, but he would always refuse, preferring to remain focused on his work. Sky would later save Viktor's life from the
+hexcore
+after he lost control over it. It would end up disintegrating her instead, and Viktor was devastated over causing her death.
+Sky had a notebook that detailed her own independent research, which she had been planning to show to Viktor to gain his insight. These notes revealed her admiration for him, always being inspired by the tireless work he put in to make the world a better place. Wracked with guilt, Viktor tried to destroy the hexcore, but was unable to. He scattered Sky's ashes into the Sump waters where they both used to play before contemplating suicide. He was stopped by Jayce, and Viktor made him promise to destroy the hexcore. Jayce broke this promise, and Viktor coldly ended their partnership after explaining that it killed Sky.
+After returning to Zaun, Viktor would follow a voice and apparition resembling Sky, which guided the guilt-ridden inventor on the path to becoming the Herald. The apparition was only visible to Viktor, and taught him how to use his healing abilities and engaged in scientific discussions with him from within his hivemind. The apparition disappeared when Viktor committed to his final transformation, with its last words being that he wouldn't miss her.
+
+Piltover
+[
+edit
+|
+edit source
+]
+
+While Viktor was known to be an esteemed colleague of both
+Jayce
+and
+Heimerdinger
+, his contributions to Piltovan society remain largely forgotten to the wider public, with records of his existence remaining scarce, though it is unknown if it is because these records were lost or simply never kept to begin with. Still, he remains a point of interest for Piltovan scholars who want to study the legacy of
+hextech
+and the ones who invented it, often remembered as the mysterious counterpart to the "Man of Progress".
+
+Blitzcrank
+[
+edit
+|
+edit source
+]
+
+
+Viktor is the inventor of Blitzcrank, a great behemoth of burnished metal and crackling electricity built from
+hextech
+. They are said to have "evolved" all on their own.
+[
+3
+]
+
+Singed
+[
+edit
+|
+edit source
+]
+
+
+Viktor met Singed by the Sump waters when he was a child and was once been an admirer of his.
+[
+3
+]
+As the doctor's pupil, Viktor would aid in saving a
+waverider
+named Rio from dying. Later on he would find out that Singed's method for keeping Rio alive left her in a constant state of agony, and traumatized by the doctor's disturbing and extreme methods, Viktor would part ways with him for several years, treating this formative experience as a lesson about the boundaries of progress. As years passed however, and Viktor's health began to further deteriorate, he came to understand Singed's actions and sought him out for guidance in his
+hexcore
+experiment. Singed offered him a vial of
+shimmer
+, which would make it easier for Viktor's body to accept the hexcore's transmutation. Singed encouraged Viktor to dabble in self-experimentation, but warned him he would violate the Ethos of
+Piltover
+'s scientific community, which could cost him the love of friends and tarnish his legacy. Following Singed's advice, Viktor would alter the nature of his body and forever change the course of his life.
+Viktor would eventually run into Singed again after he became the Herald, as Singed was the one visited him to negotiate on
+Ambessa's
+behalf. Singed offered Viktor a blood transfusion from
+Warwick
+, which would combine the apex forms of hextech and shimmer and thereby complete Viktor's transformation. With his new powers, Viktor was able to see Singed's past and learned about his daughter,
+Orianna
+. Singed claimed to see Viktor as a fellow "man of science", and the two of them discussed theoretical concepts like fate and evolution, with Singed espousing hard scientific theory in contrast to Viktor's more enlightened, spiritual mindset. Viktor would then reject Singed's offer, as the process would destroy the last remaining pieces of Vander's humanity. Singed would later save Viktor's life after Jayce's attack in the commune, for which he would earn Viktor's gratitude. After completing the process of Viktor's full transformation, Singed would successfully replicate the same transformation to resurrect his daughter.
+
+Cecil B. Heimerdinger
+[
+edit
+|
+edit source
+]
+
+
+Heimerdinger found Viktor and brought him the Academy to better pursue his passions as an inventor. Viktor greatly respected his mentor, becoming a trusted assistant to the professor. However, Viktor would sometimes disagree with Heimerdinger's ideas, particularly Heimerdinger's dismissal of harnessing magic for the public good, even though Viktor believed he was more than capable of making it happen. Their disagreement would lead him to disobey Heimerdinger and join forces with
+Jayce
+, and they successfully won the support of the Council for their endeavour, despite Heimerdinger's reservations.
+As the years passed, Viktor attempted to hasten the progress of his scientific achievements, only to be rebuffed by Heimerdinger, who believed that progress could be dangerous if enacted too quickly. Heimerdinger was seemingly unaware of Viktor's deteriorating health and assured him that a decade would pass in the "blink of an eye," remaining more concerned with the city's safety than Viktor's desire to change the world. When Viktor learned he was dying, Heimerdinger attempted to comfort him by expressing pride in his accomplishments, but Viktor described his work as "figments" compared to everything Heimerdinger had achieved. When Viktor attempted to save his own life by inventing the
+hexcore
+, Heimerdinger opposed the device's use and demanded its destruction, and claimed it had "changed" Viktor without his knowledge. Viktor would come to view the professor as dogmatic and rigid as a result of his outburst, and he would reject his advice, pursuing his hexcore research with the help of
+Singed
+instead.
+
+Mel Medarda
+[
+edit
+|
+edit source
+]
+
+Viktor met Mel while he and
+Jayce
+were sneaking into the Academy to complete Jayce's
+hextech
+experiment, and she offered to help them, believing their brilliant minds would prove to be a valuable investment. Years later, Mel would attempt to convince Viktor and Jayce to develop hextech weapons for Piltover, a suggestion that enraged and disgusted Viktor as it went against his principles. Jayce would be caught between the two of them, with Viktor imploring his friend to return to improving lives with hextech, and Mel actively working against Viktor to drag Jayce into the realm of politics. Mel would eventually have a change of heart and support Viktor and Jayce's proposal for peace with the undercity, just before they were all caught in
+Jinx's
+terrorist attack.
+Mel expressed concern for Viktor's wellbeing as he recovered from the attack, coming to visit Jayce in the laboratory with the comatose Viktor. Later on, when Viktor attacked the Council chamber, he would express interest in Mel's connection with the arcane before she and Jayce destroyed his puppet. As with everyone else, Viktor later attempted to absorb Mel into his hivemind, but would have a change of heart and end the Glorious Evolution before it started.
+
+Jinx
+[
+edit
+|
+edit source
+]
+
+Viktor was always impressed with Jinx's chemtech engineering, describing her devices as "crude in form" yet "inspired". After she nearly killed him in the attack on the Council, Viktor seemingly harbored no ill will towards Jinx and even offered her a place in his commune, if she would use her inventions to build instead of destroy. He also snidely referred to her as
+Powder
+, despite this not being her preferred name, and this seemed to shock her momentarily. Jinx didn't seem to have much outward respect for Viktor and made fun of him to his face, but trusted in his healing abilities enough to bring her
+father
+to him. Viktor would later betray Jinx's trust by transforming Vander into one of his mindless soldiers, and then puppeteering him in battle against Jinx and her sister,
+Vi
+.
+
+Warwick
+[
+edit
+|
+edit source
+]
+
+Viktor met Warwick when he was brought to his commune by
+Jinx
+,
+Vi
+, and
+Isha
+, and after seeing into his memories, decided that
+Vander
+was a man worth saving due to his past as a father and heroic leader of
+Zaun
+. Viktor tried to cure Vander's sanity for a long time, despite the overexertion of his abilities. He initially refused
+Singed's
+offer to sacrifice Vander's humanity to save himself, but later changed his mind when he was dying and
+Jayce
+refused to let him anywhere near the Anomaly, eliminating his only other option for survival. Singed erasing Vander's memories with the transfusion caused Viktor a great deal of pain, as they had become linked within Viktor's hivemind. When he reached his final evolved form, Viktor puppeted the evolved husk of Warwick against his daughters, seemingly unbothered by the fact that he was forcing them to fight each other.
+
+Ambessa Medarda
+[
+edit
+|
+edit source
+]
+
+Viktor had little respect for Ambessa, referring to her as a "warmonger" and suspecting she was driven by nothing but greed and hatred. When Ambessa invaded and destroyed Viktor's commune, it convinced him that "humanity" had to be done away with, fully-radicalizing him towards his vision for the
+Glorious Evolution
+. However, after Ambessa and
+Singed
+resuscitated him, Viktor would accept Ambessa's deal for an alliance, where she would take him to the Anomaly beneath the Hexgate and in return for her own army of evolved soldiers. When Viktor began the
+final stage
+of his Glorious Evolution, he did not spare any of Ambessa's warband nor her daughter
+Mel
+, and it is implied that he would evolved Ambessa too had she not perished in the battle beforehand.
+
+Arcane Show Appearances
+[
+edit
+|
+edit source
+]

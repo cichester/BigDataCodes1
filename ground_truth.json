@@ -1,0 +1,311 @@
+[
+        {
+        "allies": [
+            "Varus",
+            "Rhaast",
+            "Naafiri",
+            "Joraal",
+            "Taarosh",
+            "Praa",
+            "Baalkux",
+            "Anaakca",
+            "Horazi",
+            "Naganeka",
+            "Styraatu"
+        ],
+        "rivals": [
+            "Xolaani",
+            "Pantheon",
+            "Kayle",
+            "Morgana",
+            "Tryndamere",
+            "Mihira",
+            "Ryze",
+            "Myisha"
+        ],
+        "champion_name": "Aatrox"
+    },
+        {
+        "allies": [
+            "Ayelia",
+            "other gladiators"
+        ],
+        "rivals": [
+            "Noxian empire",
+            "House Tewain",
+            "Jericho Swain"
+        ],
+       "champion_name": "Alistar"
+    },
+        {
+        "allies": [
+            "Alune",
+            "Yuumi",
+            "Diana"
+        ],
+        "rivals": [
+            "Solari",
+            "Burning Ones"
+        ],
+        "champion_name": "Aphelios"
+    },
+        {
+        "allies": [
+            "Malzahar",
+            "Voidborn remora",
+            "Xer'Sai hatchlings",
+            "Callers"
+        ],
+        "rivals": [
+            "Kai'Sa",
+            "Kassadin",
+            "Rek'Sai",
+            "Dunebreaker",
+            "Taliyah",
+            "Vel'Koz"
+        ],
+        "champion_name": "Bel'Veth"
+    },
+        {
+            "allies": [
+            "Ryze",
+            "Zvanna",
+            "Krezia Rodhe"
+        ],
+        "rivals": [
+            "Rygann's Reach Villagers",
+            "Ryze"
+        ],
+        "champion_name": "Brand"
+    },
+
+    {        
+        "allies": [
+            "Jayce Talis",
+            "Vi",
+            "Ekko",
+            "Loris",
+            "Steb",
+            "Mel Medarda",
+            "Sheriff Grayson",
+            "Tobias Kiramman",
+            "Huck",
+            "Jericho",
+            "Babette"
+        ],
+        "rivals": [
+            "Jinx",
+            "Silco",
+            "Sevika",
+            "Marcus",
+            "Renni",
+            "Smeech",
+            "Chross",
+            "Margot",
+            "Warwick",
+            "Singed",
+            "Viktor",
+            "Ambessa Medarda",
+            "Rictus",
+            "Maddie Nolen"
+        ],
+       "champion_name": "Caitlyn"
+    },
+    {        
+        "allies": [
+            "Ekko",
+            "Hakim Naderi",
+            "Future Ekko"
+        ],
+        "rivals": [
+            "Jinx",
+            "Stevan Ferros",
+            "Poingdestres",
+            "Jhin"
+        ],
+         "champion_name": "Camille"
+    },
+        {
+        "allies": [
+            "Kai'Sa",
+            "Kasdjar",
+            "Januk"
+        ],
+        "rivals": [
+            "Januk",
+            "Piltover Explorers Guild"
+        ],
+        "champion_name": "Ezreal"
+    },
+    
+    {
+        "allies": [
+            "Jax",
+            "Garen",
+            "Lux"
+        ],
+        "rivals": [
+            "Tianna Crownguard"
+        ],
+       "champion_name": "Fiora"
+    },
+    
+    {
+        "allies": [
+            "Luxanna Crownguard",
+            "Garen",
+            "Demacian soldiers"
+        ],
+        "rivals": [
+            "Sylas",
+            "Winter's Claw",
+            "Arcane Fist",
+            "Vladimir",
+            "Noxian army",
+            "Freljordian barbarians"
+        ],
+        "champion_name": "Galio"
+    },
+    {
+        "factions": [
+            "Yordles",
+            "Freljord tribes"
+        ],
+        "allies": [
+            "Lulu",
+            "Pix",
+            "Annie",
+            "Lux",
+            "Poros",
+            "Heimerdinger"
+        ],
+        "rivals": [
+            "Lissandra"
+        ],
+        "champion_name": "Gnar"
+    },
+        {
+        "allies": [
+            "Hwei"
+        ],
+        "rivals": [
+            "Zed",
+            "Shen",
+            "Akali",
+            "Sona",
+            "Usan",
+            "Master Kusho",
+            "Camille"
+        ],
+        "champion_name": "Jhin"
+    },
+    
+    {
+        "allies": [
+            "Tope"
+        ],
+        "rivals": [
+            "Xerath",
+            "Azir"
+        ],
+        "champion_name": "K'Sante"
+    },
+    
+    {
+        "allies": [
+            "Illi",
+            "Taliyah",
+            "Ezreal"
+        ],
+        "rivals": [
+            "Malzahar",
+            "Rek'Sai",
+            "Bel'Veth"
+        ],
+        "champion_name": "Kai'Sa"
+    },
+    {
+        "allies": [
+            "Ledros",
+            "Isolde",
+            "Ryze"
+        ],
+        "rivals": [
+            "Viego",
+            "Hecarim",
+            "Vladimir",
+            "Thresh"
+        ],
+        "champion_name": "Kalista"
+    },
+    
+    {
+        "allies": [
+            "Mihira",
+            "Ryze",
+            "Kilam",
+            "Ronas"
+        ],
+        "rivals": [
+            "Morgana",
+            "Aatrox",
+            "Xolaani"
+        ],
+        "champion_name": "Kayle"
+    },
+    
+    {
+        "allies": [
+            "Zed",
+            "Nakuri",
+            "Royce"
+        ],
+        "rivals": [
+            "Rhaast",
+            "Jhin",
+            "Kusho",
+            "Master Yi"
+        ],
+        "champion_name": "Kayn"
+    },
+        {
+        "allies": [
+            "Cho'Gath",
+            "Kha'Zix",
+            "Rek'Sai",
+            "Vel'Koz",
+            "Malzahar",
+            "Watchers"
+        ],
+        "rivals": [
+        ],
+        "champion_name": "Kog'Maw"
+    },
+       {
+        "allies": [
+            "Pix",
+            "Tristana",
+            "Corki",
+            "Teemo",
+            "Poppy",
+            "Twisted Fate",
+            "Veigar"
+        ],
+        "rivals": [
+            "Draven",
+            "Tamara",
+            "Graves"
+        ],
+        "champion_name": "Lulu"
+    },
+        {
+        "allies": [
+            "Dune Hounds"
+        ],
+        "rivals": [
+            "Myisha",
+            "other Darkin"
+        ],
+        "champion_name": "Naafiri"
+    }
+]

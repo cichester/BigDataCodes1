@@ -1,0 +1,3571 @@
+[
+    {
+        "factions": [
+            "Ascended Host",
+            "Sunborn",
+            "Darkin"
+        ],
+        "allies": [
+            "Varus",
+            "Rhaast",
+            "Naafiri",
+            "Joraal",
+            "Taarosh",
+            "Praa",
+            "Baalkux",
+            "Anaakca",
+            "Horazi",
+            "Naganeka",
+            "Styraatu"
+        ],
+        "rivals": [
+            "Xolaani",
+            "Pantheon",
+            "Kayle",
+            "Morgana",
+            "Tryndamere"
+        ],
+        "summary": "Aatrox was a powerful warrior in Shurima who became one of the first Ascended, later known as a Darkin after the Shuriman Empire's fall.  Imprisoned in his blade, he seeks oblivion, wreaking havoc across Runeterra and clashing with various champions and deities.",
+        "champion_name": "Aatrox"
+    },
+    {
+        "factions": [
+            "Vesani"
+        ],
+        "allies": [
+            "Yasuo",
+            "Sarah Fortune",
+            "Braum",
+            "Illaoi",
+            "Pyke",
+            "Maokai",
+            "Himon'she",
+            "Gai'sh",
+            "Sai'nen Thousand-Tailed"
+        ],
+        "rivals": [
+            "Hirin",
+            "Thresh",
+            "Viego",
+            "Gangplank",
+            "Necrit"
+        ],
+        "summary": "Ahri is a vastaya, a magical fox spirit, who feeds on the spiritual essence of others, gaining their memories and emotions.  After a tragic loss, she seeks to understand her origins and control her powers, eventually joining a crew to defeat the resurrected Ruined King, Viego.",
+        "champion_name": "Ahri"
+    },
+    {
+        "factions": [
+            "Kinkou Order",
+            "Shadow Order",
+            "Navori Brotherhood",
+            "Kashuri faction"
+        ],
+        "allies": [
+            "Shen",
+            "Kennen",
+            "Maymm Jhomen Tethi",
+            "Faey",
+            "Irelia",
+            "Karma",
+            "Yasuo",
+            "Bo'lii"
+        ],
+        "rivals": [
+            "Zed",
+            "Khada Jhin",
+            "Sion",
+            "Noxian invaders"
+        ],
+        "summary": "Akali, a prodigy of the Kinkou Order, became the Fist of Shadow after her father's death at the hands of Zed and the Shadow Order.  She later left the Kinkou, becoming an independent assassin dedicated to protecting Ionia and fighting those who threaten its balance.",
+        "champion_name": "Akali"
+    },
+    {
+        "factions": [
+            "Sentinels of Light",
+            "Undead"
+        ],
+        "allies": [
+            "Shadya",
+            "Lucian",
+            "Senna",
+            "Gwen",
+            "Queen Isolde"
+        ],
+        "rivals": [
+            "Viego",
+            "Thresh",
+            "Vayne"
+        ],
+        "summary": "Akshan, an orphan from Shurima, was trained by Shadya, a Sentinel of Light, after she saved his life.  Following Shadya's murder, Akshan uses the Absolver, a weapon capable of reviving the recently deceased, to avenge her, eventually joining the Sentinels of Light in their final battle against Viego.",
+        "champion_name": "Akshan"
+    },
+    {
+        "factions": [
+            "Minotaur clans",
+            "Noxian empire"
+        ],
+        "allies": [
+            "Ayelia",
+            "other gladiators"
+        ],
+        "rivals": [
+            "Noxian empire",
+            "House Tewain",
+            "Jericho Swain"
+        ],
+        "summary": "Alistar, a Minotaur warrior, was betrayed by his own kind who allied with the Noxian empire.  He was forced into the Noxian arenas as a Reckoner, but escaped with the help of Ayelia, a servant girl, though he later lost her and now fights against Noxus while searching for her.",
+        "champion_name": "Alistar"
+    },
+    {
+        "factions": [
+            "House Medarda",
+            "Wolf's Reapers",
+            "Suns of Bel'zhun",
+            "Black Rose",
+            "Kindred"
+        ],
+        "allies": [
+            "Rictus",
+            "Quench",
+            "Temper",
+            "Azizi",
+            "Kino",
+            "Mel",
+            "Caprian",
+            "Rell",
+            "Amenesce",
+            "Boram Darkwill",
+            "Alistar",
+            "Maddie",
+            "Singed",
+            "Viktor",
+            "Jayce Talis",
+            "Salo",
+            "Caitlyn Kiramman",
+            "Vi"
+        ],
+        "rivals": [
+            "Ta'Fik",
+            "Zoya",
+            "Lady Mion",
+            "Gintara",
+            "Smik",
+            "Trannit",
+            "Fallgren",
+            "Hanek",
+            "Inyene",
+            "LeBlanc",
+            "Warwick",
+            "Jinx",
+            "Silco",
+            "Renni"
+        ],
+        "summary": "Ambessa Medarda, a ruthless Noxian general, rose through the ranks to lead House Medarda, overcoming rivals and engaging in political maneuvering and warfare.  Her ambition led her to Piltover, where she manipulated events and clashed with both its leaders and the Black Rose, ultimately sacrificing much for power before meeting her end.",
+        "champion_name": "Ambessa"
+    },
+    {
+        "factions": [
+            "Shurima"
+        ],
+        "allies": [],
+        "rivals": [],
+        "summary": "Amumu is a mummy cursed with eternal loneliness due to a deadly touch, wandering the desert in search of a friend.  Numerous legends surround his origins, some depicting him as a young undead prince, a wandering spirit, or a Yordle, but all agree on his curse of solitude.",
+        "champion_name": "Amumu"
+    },
+    {
+        "factions": [
+            "Freljordian demi-gods",
+            "Iceborn",
+            "Avarosan",
+            "Notai",
+            "Mourncrow",
+            "Yeti"
+        ],
+        "allies": [
+            "Ashe",
+            "Udyr",
+            "Nunu & Willump",
+            "Ulla Shatter-Spear",
+            "Avarosa",
+            "Serylda"
+        ],
+        "rivals": [
+            "Lissandra",
+            "Balestriders"
+        ],
+        "summary": "Anivia is an ancient demi-god representing the cycle of life and seasons in the Freljord.  She has been reborn multiple times throughout history, each time marking a new era and often intervening in conflicts between mortals and other powerful beings.",
+        "champion_name": "Anivia"
+    },
+    {
+        "factions": [
+            "Black Rose",
+            "Noxus"
+        ],
+        "allies": [
+            "Tibbers",
+            "Gregori Hastur",
+            "Amoline Kiosar",
+            "Daisy Hastur",
+            "Daani",
+            "Sydell",
+            "Faye"
+        ],
+        "rivals": [
+            "Leanna Hastur",
+            "Boram Darkwill",
+            "Bounty hunter",
+            "Headmistress Telsi",
+            "Mordekaiser",
+            "LeBlanc"
+        ],
+        "summary": "Annie is a young girl with powerful fire magic, fueled by a demon residing in her teddy bear, Tibbers. After the deaths of her family, she wanders Noxus, burning down anything that threatens her or Tibbers.",
+        "champion_name": "Annie"
+    },
+    {
+        "factions": [
+            "Lunari",
+            "Solari"
+        ],
+        "allies": [
+            "Alune",
+            "Yuumi",
+            "Diana"
+        ],
+        "rivals": [
+            "Solari",
+            "Burning Ones"
+        ],
+        "summary": "Aphelios and his twin sister Alune, born during a lunar convergence, are devout Lunari zealots who fight against the oppressive Solari.  Aphelios, a mute assassin, uses moonstone weapons empowered by Alune's magic from the spirit realm to protect his people.",
+        "champion_name": "Aphelios"
+    },
+    {
+        "factions": [
+            "Avarosan"
+        ],
+        "allies": [
+            "Tryndamere",
+            "Anivia",
+            "Nunu",
+            "Willump"
+        ],
+        "rivals": [
+            "Sejuani",
+            "Lissandra",
+            "Trundle"
+        ],
+        "summary": "Ashe, an Iceborn warrior, became the leader of the Avarosan tribe after her mother's death.  She aims to unite the Freljord through alliances and diplomacy, facing challenges from rival tribes and a hidden threat, Lissandra.",
+        "champion_name": "Ashe"
+    },
+    {
+        "factions": [
+            "Celestials",
+            "Solari",
+            "Lunari"
+        ],
+        "allies": [
+            "Zoe",
+            "Pantheon",
+            "6 Inviolus Vox",
+            "8 The Infinite Mindsplitter",
+            "8 The Immortal Fire",
+            "1 The Charger",
+            "3 The Trickster",
+            "2 The Messenger",
+            "10 The Scourge",
+            "0 The Serpent",
+            "9 The Great Beyond",
+            "Bard",
+            "Soraka"
+        ],
+        "rivals": [
+            "Aspects",
+            "Targon people",
+            "Leona",
+            "Diana",
+            "Atreus"
+        ],
+        "summary": "Aurelion Sol, a celestial being who creates stars, was imprisoned by the Aspects of Runeterra and forced to serve them. After escaping, he seeks revenge and displays immense cosmic power, but also shows disdain for the mortals' petty conflicts.",
+        "champion_name": "Aurelion Sol"
+    },
+    {
+        "factions": [
+            "Bryni"
+        ],
+        "allies": [
+            "Ornn",
+            "Udyr",
+            "Haestryr"
+        ],
+        "rivals": [],
+        "summary": "Aurora, a Vastayan from the isolated Bryni tribe, possesses the unique ability to interact with the Spirit Realm.  She seeks to help lost spirits, leading her to encounter powerful figures like Ornn, who forges a wand for her, enhancing her abilities.",
+        "champion_name": "Aurora"
+    },
+    {
+        "factions": [
+            "Shurima",
+            "Ascended"
+        ],
+        "allies": [
+            "Xerath",
+            "Renekton",
+            "Nasus",
+            "Sivir"
+        ],
+        "rivals": [
+            "Xerath",
+            "Cassiopeia",
+            "Ezreal"
+        ],
+        "summary": "Azir, the last son of Shurima's emperor, unexpectedly ascended to the throne but his ascension was sabotaged by Xerath, leading to Shurima's destruction.  After centuries, Azir is resurrected and seeks to reclaim his throne and rebuild his empire.",
+        "champion_name": "Azir"
+    },
+    {
+        "factions": [
+            "Celestial"
+        ],
+        "allies": [
+            "meeps",
+            "Aurelion Sol",
+            "Ryze"
+        ],
+        "rivals": [
+            "Noxians",
+            "Darkin"
+        ],
+        "summary": "Bard is a Celestial being who travels Runeterra, safeguarding powerful artifacts to maintain cosmic balance. He perceives the universe as music and intervenes only when events threaten the cosmos, often appearing mysteriously to those who witness his actions.",
+        "champion_name": "Bard"
+    },
+    {
+        "factions": [
+            "Voidborn",
+            "Watchers",
+            "Xer'Sai"
+        ],
+        "allies": [
+            "Malzahar",
+            "Vel'Koz",
+            "Voidborn remora",
+            "Lamplights",
+            "Xer'Sai hatchlings",
+            "Callers"
+        ],
+        "rivals": [
+            "Kai'Sa",
+            "Kassadin",
+            "Rek'Sai",
+            "Dunebreaker",
+            "Taliyah"
+        ],
+        "summary": "Bel'Veth is a Voidborn Empress born from the Lavender Sea, a sentient pocket of the Void beneath Shurima.  She aims to consume and remake all of reality, defying her creators, the Watchers, and offering a reluctant alliance to Kai'Sa to achieve her goals.",
+        "champion_name": "Bel'Veth"
+    },
+    {
+        "factions": [
+            "Zaun"
+        ],
+        "allies": [
+            "Viktor",
+            "Ekko",
+            "Zeri"
+        ],
+        "rivals": [],
+        "summary": "Blitzcrank is a golem created by Viktor in Zaun after a chem-spill.  After being implanted with a hextech crystal, Blitzcrank gained sentience and now independently protects Zaun's citizens.",
+        "champion_name": "Blitzcrank"
+    },
+    {
+        "factions": [
+            "Freljord"
+        ],
+        "allies": [
+            "Ryze",
+            "Zvanna"
+        ],
+        "rivals": [
+            "Rygann",
+            "Rygann's Reach Villagers"
+        ],
+        "summary": "Brand, born Kegan Rodhe, was ostracized in his village and after his mother's death, he burned down his hometown in revenge.  After being found and healed by Ryze, Kegan was transformed into Brand by a World Rune, becoming a pyromaniac obsessed with power and vengeance.",
+        "champion_name": "Brand"
+    },
+    {
+        "factions": [
+            "Avarosan",
+            "Frostguard"
+        ],
+        "allies": [
+            "Ashe",
+            "Tryndamere",
+            "Nunu",
+            "Willump",
+            "Ahri",
+            "Yasuo",
+            "Miss Fortune",
+            "Illaoi",
+            "Pyke",
+            "Maokai",
+            "Yuumi"
+        ],
+        "rivals": [
+            "Lissandra",
+            "Viego"
+        ],
+        "summary": "Braum is a kind-hearted Freljordian who believes in unity and helping others.  He has aided various champions, notably helping unite Ashe and Tryndamere and fighting against the Ruined King alongside several Bilgewater champions.",
+        "champion_name": "Braum"
+    },
+    {
+        "factions": [
+            "Black Rose"
+        ],
+        "allies": [
+            "Young janitor"
+        ],
+        "rivals": [
+            "Jericho Swain",
+            "Sion"
+        ],
+        "summary": "Briar, a blood magic-created assassin, was imprisoned after a failed mission.  Escaping, she now wanders Noxus, having developed a more independent and curious personality while still battling her bloodlust.",
+        "champion_name": "Briar"
+    },
+    {
+        "factions": [
+            "Piltover Enforcers",
+            "Firelights",
+            "Silco's criminal empire",
+            "Zaunite resistance",
+            "Ambessa's warband",
+            "Noxians"
+        ],
+        "allies": [
+            "Jayce Talis",
+            "Vi",
+            "Ekko",
+            "Maddie Nolen",
+            "Loris",
+            "Steb",
+            "Mel Medarda",
+            "Singed",
+            "Isha",
+            "Orianna",
+            "Sheriff Grayson",
+            "Tobias Kiramman",
+            "Huck",
+            "Jericho",
+            "Babette"
+        ],
+        "rivals": [
+            "Jinx",
+            "Silco",
+            "Sevika",
+            "Marcus",
+            "Renni",
+            "Smeech",
+            "Chross",
+            "Margot",
+            "Warwick",
+            "Viktor",
+            "Ambessa Medarda",
+            "Rictus",
+            "Cassandra Kiramman"
+        ],
+        "summary": "Caitlyn Kiramman, a Piltover Enforcer, investigates a criminal conspiracy led by Silco, which leads her into Zaun's undercity and forces her to confront her complicated relationship with Vi, Jinx, and the moral compromises necessary to bring justice to both cities.",
+        "champion_name": "Caitlyn"
+    },
+    {
+        "factions": [
+            "Clan Ferros",
+            "Bluewind Court"
+        ],
+        "allies": [
+            "Ekko",
+            "Hakim Naderi",
+            "Future Ekko"
+        ],
+        "rivals": [
+            "Jinx",
+            "Stevan Ferros",
+            "Poingdestres"
+        ],
+        "summary": "Camille Ferros, eldest of Clan Ferros, is a hextech-augmented agent who prioritizes family above all else.  After a betrayal by her brother, Stevan, and undergoing extensive cybernetic enhancements, she now leads the family's affairs, dealing with both public relations and clandestine operations.",
+        "champion_name": "Camille"
+    },
+    {
+        "factions": [
+            "Black Rose",
+            "Noxian Du Couteau family"
+        ],
+        "allies": [
+            "Sivir",
+            "Soreana"
+        ],
+        "rivals": [
+            "Jericho Swain",
+            "Boram Darkwill",
+            "Katarina",
+            "Noxian soldier",
+            "Renekton",
+            "Xerath"
+        ],
+        "summary": "Cassiopeia Du Couteau, a former noble of Noxus, was initiated into the Black Rose cult by her mother and transformed into a half-snake creature after seeking godlike power in Shurima.  She is now a treacherous and manipulative individual who uses others to achieve her goals, while also showing a degree of moral standards.",
+        "champion_name": "Cassiopeia"
+    },
+    {
+        "factions": [
+            "Voidborn"
+        ],
+        "allies": [],
+        "rivals": [],
+        "summary": "Cho'Gath is a Voidborn creature driven by an insatiable hunger, constantly consuming matter to grow in size and power. It seeks to invade Runeterra and bring about chaos and destruction.",
+        "champion_name": "Cho'Gath"
+    },
+    {
+        "factions": [
+            "Bandle City",
+            "Bandle Scouts"
+        ],
+        "allies": [
+            "Teemo",
+            "Tristana",
+            "Lulu",
+            "Twisted Fate"
+        ],
+        "rivals": [
+            "Malcolm Graves"
+        ],
+        "summary": "Corki is a decorated Bandle City aeronaut known for his daring flights and eccentric personality.  He's friends with many Bandle Scouts, often assisting them on missions, and has a particularly close relationship with Teemo and Tristana.",
+        "champion_name": "Corki"
+    },
+    {
+        "factions": [
+            "Noxus",
+            "Triarian Legion",
+            "Winter's Claw"
+        ],
+        "allies": [
+            "Draven",
+            "Swain",
+            "Cyrus",
+            "Invetia Varn",
+            "Quilletta Varn",
+            "Decius"
+        ],
+        "rivals": [
+            "Jericho Swain",
+            "Trundle",
+            "Garen",
+            "Sion",
+            "Samira",
+            "Viego",
+            "Boram Darkwill"
+        ],
+        "summary": "Orphaned in Basilich, Darius rose through the ranks of the Noxian army, becoming the Hand of Noxus.  His unwavering loyalty to Noxus was tested by the loss of his wife and son, and conflicts with rivals like Trundle and Swain.",
+        "champion_name": "Darius"
+    },
+    {
+        "factions": [
+            "Solari",
+            "Lunari",
+            "Rakkor",
+            "Tribes of the Last Sun",
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Leona",
+            "Nami",
+            "Lyra",
+            "Cygnus",
+            "Aphelios",
+            "Alune",
+            "Soraka",
+            "Sentinels of Light"
+        ],
+        "rivals": [
+            "Leona",
+            "Voidborn",
+            "Solari high priests",
+            "Ra'Horak guardians"
+        ],
+        "summary": "Diana, found as a baby and raised among the Solari, questions their faith after discovering evidence of the Lunari, a moon-worshipping tribe.  She becomes the Aspect of the Moon, leading to conflict with her lover Leona, the Aspect of the Sun, and a war between the Solari and Lunari.",
+        "champion_name": "Diana"
+    },
+    {
+        "factions": [
+            "Noxian army",
+            "Darius' warband",
+            "Reckoning Pits"
+        ],
+        "allies": [
+            "Darius",
+            "Jericho Swain",
+            "Tamara Lautari",
+            "2 Karl"
+        ],
+        "rivals": [
+            "Riven",
+            "Viego",
+            "Lulu",
+            "Tristana"
+        ],
+        "summary": "Draven, a Noxian orphan, rose through the ranks of the Noxus army alongside his brother Darius.  After a career as a gladiator in the Reckoning Pits and a period of decline, he gained renown and allies through his skills and involvement in Noxian politics.",
+        "champion_name": "Draven"
+    },
+    {
+        "factions": [
+            "Zaun"
+        ],
+        "allies": [],
+        "rivals": [
+            "Ekko"
+        ],
+        "summary": "Dr. Mundo, a large man from Zaun, was a henchman who was experimented on in Osweld Asylum, resulting in amnesia and a delusion of being a doctor.  He believes he is treating patients but actually injures or kills them, displaying a caring yet psychotic personality.",
+        "champion_name": "Dr. Mundo"
+    },
+    {
+        "factions": [
+            "Firelights"
+        ],
+        "allies": [
+            "Vi",
+            "Caitlyn",
+            "Heimerdinger",
+            "Powder",
+            "Mylo",
+            "Claggor",
+            "Benzo",
+            "Vander",
+            "Scar",
+            "Sevika",
+            "Jinx"
+        ],
+        "rivals": [
+            "Silco",
+            "Jinx",
+            "Deckard",
+            "Sheriff Grayson",
+            "Sheriff Marcus",
+            "Viktor",
+            "Jayce",
+            "Ambessa",
+            "Warwick"
+        ],
+        "summary": "Ekko, a brilliant Zaunite inventor, leads the Firelights, a resistance group fighting Silco's oppressive regime.  After a series of battles and time travel, he confronts his past, reconciles with Jinx (his childhood friend Powder), and ultimately contributes to saving Piltover from a catastrophic attack.",
+        "champion_name": "Ekko"
+    },
+    {
+        "factions": [
+            "House Kythera",
+            "House Zaavan",
+            "Black Rose"
+        ],
+        "allies": [
+            "LeBlanc",
+            "Vilemaw",
+            "Spiderlings",
+            "Lord Emet",
+            "No-Face Nyam",
+            "Renata Glasc",
+            "Samira",
+            "Jarro Lightfeather",
+            "Vladimir"
+        ],
+        "rivals": [
+            "Berholdt",
+            "Sahn-Uzal",
+            "Katarina"
+        ],
+        "summary": "Elise, a cunning Noxian aristocrat, rose through the ranks of the Black Rose after murdering her husband and making a pact with the Spider God, Vilemaw.  She uses her seductive charm and monstrous spider-hybrid form to acquire power and eternal youth, sacrificing others to Vilemaw to maintain her immortality.",
+        "champion_name": "Elise"
+    },
+    {
+        "factions": [
+            "demon"
+        ],
+        "allies": [],
+        "rivals": [
+            "Vayne",
+            "Tahm Kench"
+        ],
+        "summary": "Evelynn is a primordial demon who feeds on the pain and agony of others, transforming from a shapeless entity into a seductive predator.  She seeks to plunge the world into chaos to relive the ecstasy she experienced during the Rune Wars, and is hunted by Vayne for killing her parents.",
+        "champion_name": "Evelynn"
+    },
+    {
+        "factions": [
+            "Piltover Explorers Guild",
+            "Black Rose",
+            "Avarosans",
+            "Southern Dune Wanderers",
+            "Buhru"
+        ],
+        "allies": [
+            "Kai'Sa",
+            "Kasdjar",
+            "Januk"
+        ],
+        "rivals": [
+            "Januk",
+            "Avarosans",
+            "Piltover Explorers Guild",
+            "Ne'Zuk"
+        ],
+        "summary": "Ezreal is a treasure-seeking explorer from Piltover who uses a magical gauntlet to travel and battle. His parents disappeared while on an expedition, leading him to pursue his own adventures in hopes of finding them.",
+        "champion_name": "Ezreal"
+    },
+    {
+        "factions": [
+            "Noxian",
+            "Demacian",
+            "Freljordian",
+            "Targonian"
+        ],
+        "allies": [],
+        "rivals": [
+            "Kindred",
+            "Zoe"
+        ],
+        "summary": "Fiddlesticks' origin is shrouded in mystery, with tales suggesting it was accidentally released by a mage or a Noxian farmboy blamed for a bad harvest.  It is a demon that feeds on fear, its form changing based on its environment, and is linked to other demons in Runeterra.",
+        "champion_name": "Fiddlesticks"
+    },
+    {
+        "factions": [
+            "House Crownguard",
+            "Dauntless Vanguard",
+            "Kohari"
+        ],
+        "allies": [
+            "Jax",
+            "Garen",
+            "Lux"
+        ],
+        "rivals": [
+            "Tianna Crownguard"
+        ],
+        "summary": "Fiora Laurent is a Demacian noblewoman and skilled swordswoman known for her elegance and lethality.  She rejected a marriage to House Crownguard, leading to conflict and a death duel involving her father, and she has a complex relationship with other Demacian figures like Garen and Jax.",
+        "champion_name": "Fiora"
+    },
+    {
+        "factions": [
+            "Yordles"
+        ],
+        "allies": [
+            "Shellshocker",
+            "Coral Creatures",
+            "Bubble Bear",
+            "Zap Sprayfin",
+            "Longtooth",
+            "Nami"
+        ],
+        "rivals": [
+            "Nautilus",
+            "Pyke",
+            "Gangplank"
+        ],
+        "summary": "Fizz is an ancient amphibious yordle who survived the destruction of his underwater civilization.  Now a trickster in Bilgewater, he's known for his playful chaos and control over water magic.",
+        "champion_name": "Fizz"
+    },
+    {
+        "factions": [
+            "Demacia"
+        ],
+        "allies": [
+            "Luxanna Crownguard",
+            "Garen",
+            "Demacian soldiers"
+        ],
+        "rivals": [
+            "Sylas",
+            "Winter's Claw",
+            "Arcane Fist",
+            "Vladimir",
+            "Noxian army",
+            "Freljordian barbarians"
+        ],
+        "summary": "Galio is a colossal golem created to defend Demacia, awakened periodically by powerful magic.  He formed a bond with Luxanna Crownguard, and has fought alongside Demacian forces against various enemies, including Sylas and the Noxian army.",
+        "champion_name": "Galio"
+    },
+    {
+        "factions": [
+            "Saltwater Scourge",
+            "Reaver King of Bilgewater",
+            "Shadow Order"
+        ],
+        "allies": [
+            "Thresh",
+            "Illaoi"
+        ],
+        "rivals": [
+            "Miss Fortune",
+            "Swain",
+            "Zed",
+            "Ahri",
+            "Braum",
+            "Pyke",
+            "Yasuo",
+            "Viego"
+        ],
+        "summary": "Gangplank is a cruel pirate captain known for his brutality and fearsome reputation.  He has a complex history with various champions, including a past relationship with Illaoi and bitter rivalries with Miss Fortune, Swain, and Zed.",
+        "champion_name": "Gangplank"
+    },
+    {
+        "factions": [
+            "Dauntless Vanguard",
+            "First Shield",
+            "Demacian military",
+            "Shield of Valoran"
+        ],
+        "allies": [
+            "Quinn",
+            "Cithria",
+            "Lux Crownguard",
+            "Jarvan IV",
+            "Taric",
+            "Galio",
+            "Fiora"
+        ],
+        "rivals": [
+            "Katarina",
+            "Sylas",
+            "Nocturne"
+        ],
+        "summary": "Garen is a Demacian soldier who rose through the ranks to become the leader of the Dauntless Vanguard.  He is known for his unwavering loyalty and his strong sense of duty, often clashing with rivals while protecting his allies and his family, especially his sister Lux.",
+        "champion_name": "Garen"
+    },
+    {
+        "factions": [
+            "Yordles",
+            "Freljord tribes"
+        ],
+        "allies": [
+            "Lulu",
+            "Pix",
+            "Annie",
+            "Lux",
+            "Poros",
+            "Heimerdinger"
+        ],
+        "rivals": [
+            "Lissandra",
+            "Watchers"
+        ],
+        "summary": "Gnar is a prehistoric yordle who befriended the tribes of the Freljord before a cataclysmic event caused by Lissandra froze him.  Upon awakening, he is small and alone but retains his childlike wonder and fierce protective instincts, transforming into a powerful beast when angered.",
+        "champion_name": "Gnar"
+    },
+    {
+        "factions": [
+            "Avarosan",
+            "Iceborn"
+        ],
+        "allies": [
+            "Ashe"
+        ],
+        "rivals": [],
+        "summary": "Gragas, a master brewer, sought the perfect ale, leading him to the Freljord where he discovered a unique ice shard enhancing his brew.  His accidental involvement in a tribal dispute, resolved with his ale, forged a loose alliance with the Avarosan.",
+        "champion_name": "Gragas"
+    },
+    {
+        "factions": [
+            "Bilgewater",
+            "Shurima",
+            "Noxus",
+            "Piltover",
+            "Zaun"
+        ],
+        "allies": [
+            "Twisted Fate",
+            "Miss Fortune"
+        ],
+        "rivals": [
+            "Gangplank",
+            "Teemo",
+            "Corki",
+            "Lulu",
+            "Tristana"
+        ],
+        "summary": "Malcolm Graves, raised in Bilgewater's wharf alleys, became a renowned criminal alongside Twisted Fate.  Their partnership fractured after a heist, leading Graves to seek revenge, but they eventually reunited and continued their adventures, facing various challenges and rivals.",
+        "champion_name": "Graves"
+    },
+    {
+        "factions": [
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Isolde",
+            "Senna",
+            "Lucian",
+            "Akshan",
+            "Diana",
+            "Graves",
+            "Irelia",
+            "Olaf",
+            "Pyke",
+            "Rengar",
+            "Riven",
+            "Vayne",
+            "Ahri",
+            "Braum",
+            "Illaoi",
+            "Miss Fortune",
+            "Yasuo"
+        ],
+        "rivals": [
+            "Viego",
+            "Thresh",
+            "Gangplank"
+        ],
+        "summary": "Gwen, a doll brought to life by a fragment of her creator Isolde's soul and the Hallowed Mist, fights Viego and the Black Mist to protect the world.  She joins the Sentinels of Light, aiding them in their battle against Viego and ultimately helping to defeat him.",
+        "champion_name": "Gwen"
+    },
+    {
+        "factions": [
+            "Iron Order",
+            "Undead"
+        ],
+        "allies": [
+            "King Viego"
+        ],
+        "rivals": [
+            "Kalista",
+            "Miss Fortune",
+            "Illaoi"
+        ],
+        "summary": "Hecarim was a lieutenant in the Iron Order who betrayed his commander and subsequently led the Order in brutal conquests.  After the Ruination of Helia, he was consumed by the Black Mist, transforming into an undead centaur-like wraith bound to the Shadow Isles.",
+        "champion_name": "Hecarim"
+    },
+    {
+        "factions": [
+            "Piltover Council",
+            "Firelights"
+        ],
+        "allies": [
+            "Stanwick Pididly",
+            "Corin Reveck",
+            "Jayce",
+            "Viktor",
+            "Mel Medarda",
+            "Ekko",
+            "Powder"
+        ],
+        "rivals": [
+            "Jinx",
+            "Singed"
+        ],
+        "summary": "Heimerdinger is a brilliant yordle inventor and former dean of Piltover Academy who helped found Piltover.  His cautious nature and reluctance to embrace hextech led to conflict with his students Jayce and Viktor, ultimately resulting in his dismissal from the Piltover Council.",
+        "champion_name": "Heimerdinger"
+    },
+    {
+        "factions": [
+            "Koyehn"
+        ],
+        "allies": [],
+        "rivals": [
+            "Khada Jhin"
+        ],
+        "summary": "Hwei, heir to the Temple of Koyehn, possessed unique paint magic that influenced emotions.  After a fateful encounter with Jhin, a tragedy struck Koyehn, leaving Hwei to embark on a journey of self-discovery and redemption, tracking down those responsible.",
+        "champion_name": "Hwei"
+    },
+    {
+        "factions": [
+            "Buhru tribe"
+        ],
+        "allies": [
+            "Gangplank",
+            "Miss Fortune",
+            "Braum",
+            "Pyke"
+        ],
+        "rivals": [
+            "Hecarim",
+            "Sion",
+            "Mordekaiser",
+            "Undead",
+            "Black Mist",
+            "Tahm Kench"
+        ],
+        "summary": "Illaoi is the Truth Bearer of Nagakabouros, a powerful spirit goddess, and a priestess of the Buhru tribe.  She is known for her indomitable faith and her ability to test the spirits of others, helping those who live life to the fullest and opposing those who embody stagnation like the undead.",
+        "champion_name": "Illaoi"
+    },
+    {
+        "factions": [
+            "Ionian resistance",
+            "Navori Brotherhood",
+            "Navori Militia",
+            "Kinkou Order"
+        ],
+        "allies": [
+            "Zed",
+            "his order",
+            "Liana",
+            "Sona",
+            "the Blossoming Blade",
+            "Ionians",
+            "Sentinels of Light",
+            "Riven"
+        ],
+        "rivals": [
+            "Noxus",
+            "Swain",
+            "Jericho Swain",
+            "Riven",
+            "Duqal",
+            "Karma",
+            "Ivern",
+            "Navori Brotherhood"
+        ],
+        "summary": "Irelia, an Ionian dancer, became a resistance leader against the Noxian invasion after her family was murdered.  She eventually defeated Admiral Duqal but Ionia remains divided with factions fighting amongst themselves.",
+        "champion_name": "Irelia"
+    },
+    {
+        "factions": [
+            "Iceborn",
+            "Frozen Watchers"
+        ],
+        "allies": [
+            "Bard",
+            "Kindred",
+            "forest creatures"
+        ],
+        "rivals": [
+            "Dragon",
+            "Rift Herald",
+            "Three Sisters",
+            "Lissandra",
+            "Vastayans"
+        ],
+        "summary": "Ivern, once a cruel warlord, sought to defeat the Iceborn but instead felled the God-Willow, transforming him into the Green Father, a nature-loving being who protects the forest and its inhabitants.",
+        "champion_name": "Ivern"
+    },
+    {
+        "factions": [
+            "Shurima",
+            "Zaun",
+            "Piltover"
+        ],
+        "allies": [
+            "Nilah"
+        ],
+        "rivals": [
+            "Iascylla",
+            "Piltovan citizen"
+        ],
+        "summary": "Janna is a wind spirit, worshipped in Zaun since ancient times.  Despite periods of diminished faith, she continues to protect Zaun and its people, using her powers to quell disasters and aid those in need.",
+        "champion_name": "Janna"
+    },
+    {
+        "factions": [
+            "Demacia"
+        ],
+        "allies": [
+            "Jarvan III",
+            "Xin Zhao",
+            "Garen Crownguard",
+            "Shyvana",
+            "Luxanna Crownguard",
+            "Tianna Crownguard"
+        ],
+        "rivals": [
+            "Sion",
+            "Sylas of Dregbourne"
+        ],
+        "summary": "Jarvan IV is the son of Jarvan III and the former king of Demacia. He is involved in a conflict with Sylas, who seeks to overthrow the Demacian elite, and has alliances with various other Demacian figures such as Garen and Shyvana.",
+        "champion_name": "Jarvan IV"
+    },
+    {
+        "factions": [
+            "Kohari",
+            "Shuriman Empire"
+        ],
+        "allies": [],
+        "rivals": [
+            "Aatrox",
+            "Nasus",
+            "Renekton",
+            "Varus",
+            "Rhaast",
+            "Fiora"
+        ],
+        "summary": "Jax, formerly Saijax Cail-Rynx Icath’un, is a warrior from Icathia who fought against the Shuriman Empire. After the destruction of his homeland due to the Void, he seeks to rebuild the Kohari and combat the Void.",
+        "champion_name": "Jax"
+    },
+    {
+        "factions": [
+            "House Talis",
+            "Piltover Council",
+            "Piltover Enforcers",
+            "Clan Kiramman",
+            "Zaun",
+            "Noxian military",
+            "Firelights"
+        ],
+        "allies": [
+            "Viktor",
+            "Heimerdinger",
+            "Mel Medarda",
+            "Caitlyn Kiramman",
+            "Vi",
+            "Ekko",
+            "Marcus",
+            "Ximena Talis"
+        ],
+        "rivals": [
+            "Silco",
+            "Jinx",
+            "Renni",
+            "Ambessa Medarda",
+            "Salo"
+        ],
+        "summary": "Jayce, a brilliant inventor from Piltover, discovers hextech, a way to combine magic and science.  His work, though initially controversial, eventually revolutionizes Piltover, but leads him into conflict with Zaun and forces him to confront his own moral compromises.",
+        "champion_name": "Jayce"
+    },
+    {
+        "factions": [
+            "Kinkou",
+            "Navori Brotherhood",
+            "Order of Shadow",
+            "Kashuri Armories"
+        ],
+        "allies": [
+            "Hwei",
+            "Kusho"
+        ],
+        "rivals": [
+            "Zed",
+            "Shen",
+            "Akali",
+            "Sona",
+            "Usan",
+            "Master Kusho"
+        ],
+        "summary": "Jhin, a meticulous serial killer with a theatrical flair, was imprisoned for his crimes but later released by unknown patrons. He uses his artistic skills and custom-made weapons to create elaborate murder scenes, terrorizing Ionia and targeting those who oppose him.",
+        "champion_name": "Jhin"
+    },
+    {
+        "factions": [
+            "Silco's henchmen",
+            "Firelights",
+            "Piltover Enforcers",
+            "Noxian forces",
+            "Jinxers"
+        ],
+        "allies": [
+            "Vander",
+            "Vi",
+            "Silco",
+            "Mylo",
+            "Claggor",
+            "Ekko",
+            "Benzo",
+            "Isha",
+            "Sevika"
+        ],
+        "rivals": [
+            "Jayce",
+            "Viktor",
+            "Caitlyn",
+            "Marcus",
+            "Sheriff Grayson",
+            "Deckard",
+            "Smeech",
+            "Rictus",
+            "Warwick",
+            "Ambessa"
+        ],
+        "summary": "Powder, a young Zaunite girl, accidentally kills her foster family with an explosive device. Traumatized and believing her sister Vi abandoned her, she becomes Jinx, a ruthless henchwoman for Silco, and a symbol of Zaunite resistance.",
+        "champion_name": "Jinx"
+    },
+    {
+        "factions": [
+            "Nazumah",
+            "Shurima",
+            "Marrowmark",
+            "Xerath's followers",
+            "Azir's followers"
+        ],
+        "allies": [
+            "Tope"
+        ],
+        "rivals": [
+            "Xerath",
+            "Azir"
+        ],
+        "summary": "K'Sante, a warrior-hunter from the independent city-state of Nazumah, is renowned for slaying a cobra-lion created by Xerath's experiments.  He later reunites with his former lover, Tope, and continues to protect Nazumah from threats posed by the Ascended and their followers.",
+        "champion_name": "K'Sante"
+    },
+    {
+        "factions": [
+            "Voidborn",
+            "Watchers"
+        ],
+        "allies": [
+            "Illi",
+            "Taliyah",
+            "Ezreal"
+        ],
+        "rivals": [
+            "Malzahar",
+            "Rek'Sai",
+            "Bel'Veth"
+        ],
+        "summary": "Kaisa, a Shuriman girl, survived a Void rift that destroyed her village, bonding with a Void symbiote that grants her powers.  She fights to protect Shurima from the Void, forging alliances and facing formidable enemies like Bel'Veth.",
+        "champion_name": "Kai'Sa"
+    },
+    {
+        "factions": [
+            "Camavor",
+            "Shadow Isles",
+            "Iron Order"
+        ],
+        "allies": [
+            "Ledros",
+            "Isolde",
+            "Ryze"
+        ],
+        "rivals": [
+            "Viego",
+            "Hecarim",
+            "Vladimir",
+            "Thresh"
+        ],
+        "summary": "Kalista, niece of Viego, served loyally as a general until a tragic event involving Viego's wife led to her betrayal and death.  Now a vengeful spirit of the Shadow Isles, she seeks vengeance on those who wronged her, absorbing the souls of those who make pacts with her.",
+        "champion_name": "Kalista"
+    },
+    {
+        "factions": [
+            "Ionia",
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Irelia",
+            "Akali",
+            "Kennen",
+            "Yasuo",
+            "Watai",
+            "the Lasting Altar monks",
+            "Sentinels of Light"
+        ],
+        "rivals": [
+            "Noxus",
+            "Viego",
+            "Sion",
+            "Vex",
+            "Draven",
+            "the Ruined King"
+        ],
+        "summary": "Karma is an ancient Ionian spirit who has been reincarnated many times, currently inhabiting Darha.  She strives for peace but was forced to fight during the Noxian invasion and later corrupted by Viego during the Ruination event.",
+        "champion_name": "Karma"
+    },
+    {
+        "factions": [
+            "Shadow Isles",
+            "Kindred"
+        ],
+        "allies": [],
+        "rivals": [],
+        "summary": "Karthus, fascinated by death since childhood, joined the tally-men of Kindred in Noxus. After his transformation in the Shadow Isles, he became a wraith dedicated to bringing death to the world, seeing it as liberation.",
+        "champion_name": "Karthus"
+    },
+    {
+        "factions": [
+            "Shurima",
+            "Zaun",
+            "Ionia"
+        ],
+        "allies": [
+            "Ionian spirit-healers"
+        ],
+        "rivals": [
+            "Malzahar",
+            "Void"
+        ],
+        "summary": "Kassadin, once a guide in the deserts of Shurima, seeks vengeance against the Void after it destroyed his family and home.  He travels across Valoran, gathering powerful artifacts to combat the Void's influence, despite his body and mind being corrupted by it.",
+        "champion_name": "Kassadin"
+    },
+    {
+        "factions": [
+            "Noxus",
+            "Demacia"
+        ],
+        "allies": [
+            "Swain",
+            "Luxana Crownguard",
+            "Drann",
+            "Sylas"
+        ],
+        "rivals": [
+            "Talon Du Couteau",
+            "Marcus Du Couteau",
+            "Elise",
+            "Garen Crownguard",
+            "Jaredan",
+            "Demetrius",
+            "King Jarvan III"
+        ],
+        "summary": "Katarina Du Couteau, a Noxian assassin, strives for her father's approval but ultimately carves her own path, becoming one of Swain's most trusted assassins while battling family betrayals and political intrigue.",
+        "champion_name": "Katarina"
+    },
+    {
+        "factions": [
+            "Judicator Order",
+            "Solari",
+            "Lunari"
+        ],
+        "allies": [
+            "Mihira",
+            "Ryze",
+            "Kilam",
+            "Kayle"
+        ],
+        "rivals": [
+            "Morgana",
+            "Aatrox",
+            "Xolaani",
+            "Sylas",
+            "Ronas"
+        ],
+        "summary": "Kayle, a winged celestial being, is a twin sister of Morgana, and daughter of Mihira, the Aspect of Justice.  Together, they served as Demacia's protectors, but their differing views on justice caused a rift that ultimately led to tragedy and Kayle's journey to Targon to find greater clarity.",
+        "champion_name": "Kayle"
+    },
+    {
+        "factions": [
+            "Noxian",
+            "Yánléi",
+            "Shadow Order",
+            "Wuju"
+        ],
+        "allies": [
+            "Zed",
+            "Nakuri",
+            "Royce"
+        ],
+        "rivals": [
+            "Rhaast",
+            "Jhin",
+            "Kusho",
+            "Master Yi"
+        ],
+        "summary": "Shieda Kayn, a Noxian child soldier, was found by Zed and trained in the Yánléi.  He later obtained a Darkin Scythe, becoming host to the Darkin Rhaast, and now battles for control of his body.",
+        "champion_name": "Kayn"
+    },
+    {
+        "factions": [
+            "Kinkou Order",
+            "Shadow Order"
+        ],
+        "allies": [
+            "Shen",
+            "Akali",
+            "Irelia",
+            "Yasuo",
+            "Karma",
+            "Teemo",
+            "Mayym"
+        ],
+        "rivals": [
+            "Zed",
+            "Sion"
+        ],
+        "summary": "Kennen, a Yordle from Bandle City, found solace in Ionia's pursuit of balance and joined the Kinkou Order, where he served as the Heart of the Tempest.  He played a pivotal role in guiding the order through the Noxian invasion and the subsequent internal strife, mentoring Akali and advising Shen.",
+        "champion_name": "Kennen"
+    },
+    {
+        "factions": [
+            "Voidborn",
+            "Watchers"
+        ],
+        "allies": [],
+        "rivals": [
+            "Rengar",
+            "Kiilash"
+        ],
+        "summary": "Kha'Zix, a Voidborn creature created by the Watchers, is a relentless predator constantly evolving through consumption.  His most significant rivalry is with Rengar, a hunter who managed to injure him, fueling Kha'Zix's desire to consume and conquer him.",
+        "champion_name": "Kha'Zix"
+    },
+    {
+        "factions": [
+            "Lamb",
+            "Wolf",
+            "Kindred"
+        ],
+        "allies": [
+            "Grey Man",
+            "Mask Mother",
+            "Ambessa Medarda",
+            "Karthus"
+        ],
+        "rivals": [
+            "Tryndamere",
+            "Ashe",
+            "Fiddlesticks",
+            "Etherfiend"
+        ],
+        "summary": "Kindred is a spirit god of death in Runeterra, originally a single being who split into two entities: Lamb and Wolf.  Lamb offers a swift, painless death, while Wolf hunts those who resist, working together to guide souls to the afterlife.",
+        "champion_name": "Kindred"
+    },
+    {
+        "factions": [
+            "Noxus",
+            "Trifarix"
+        ],
+        "allies": [
+            "Skaarl",
+            "Sion",
+            "Riven"
+        ],
+        "rivals": [
+            "Darius",
+            "Katarina",
+            "The Yordle Species"
+        ],
+        "summary": "Kled is a yordle from Noxus known for his violent and chaotic personality.  He considers all of Noxus his property and fights alongside Noxian forces, despite having complex relationships with other champions.",
+        "champion_name": "Kled"
+    },
+    {
+        "factions": [
+            "Voidborn"
+        ],
+        "allies": [
+            "Cho'Gath",
+            "Kha'Zix",
+            "Rek'Sai",
+            "Vel'Koz"
+        ],
+        "rivals": [
+            "Tryndamere"
+        ],
+        "summary": "Kog'Maw is a Voidborn creature created by the same entity that corrupted Malzahar. Driven by insatiable hunger, Kog'Maw devours everything in his path and is mysteriously drawn towards Malzahar, with the consequences of their meeting unknown.",
+        "champion_name": "Kog'Maw"
+    },
+    {
+        "factions": [
+            "Nazumah",
+            "Shurima",
+            "Marrowmark",
+            "Xerath's followers",
+            "Azir's followers"
+        ],
+        "allies": [
+            "Tope"
+        ],
+        "rivals": [
+            "Xerath",
+            "Azir"
+        ],
+        "summary": "K'Sante, a warrior-hunter from the independent city-state of Nazumah, rose to fame after slaying a monstrous cobra-lion created by Xerath.  He now serves as the Pride of Nazumah, protecting his city from threats like Xerath and Azir, while maintaining a complex relationship with his former lover and hunting partner, Tope.",
+        "champion_name": "K'Sante"
+    },
+    {
+        "factions": [
+            "Black Rose",
+            "Noxii",
+            "Noxus",
+            "Solari"
+        ],
+        "allies": [
+            "Vladimir",
+            "Lady Elise",
+            "Boram Darkwill",
+            "Sion",
+            "Rudo",
+            "Inyene",
+            "Ta'Fik Medarda",
+            "Rell Canwell",
+            "Mel Medarda",
+            "Amara",
+            "Captain Indari",
+            "Atakhan",
+            "Tybaulk",
+            "Cassiopeia"
+        ],
+        "rivals": [
+            "Mordekaiser",
+            "Ambessa Medarda",
+            "Jericho Swain",
+            "Riven Konte",
+            "Garen",
+            "Quinn",
+            "King Jarvan I",
+            "King Jarvan III",
+            "Ambessa Medarda",
+            "Kino Medarda",
+            "Jayce",
+            "Elora",
+            "Lady Mion",
+            "Rudo"
+        ],
+        "summary": "LeBlanc is a powerful sorceress and the leader of the Black Rose, a cabal of mages who secretly manipulate events in Runeterra.  She has a long history of intrigue and betrayal, manipulating powerful figures like Mordekaiser and Boram Darkwill to achieve her own ends.",
+        "champion_name": "LeBlanc"
+    },
+    {
+        "factions": [
+            "Shojin Order",
+            "Shadow Order"
+        ],
+        "allies": [
+            "Udyr",
+            "Ying Yue"
+        ],
+        "rivals": [
+            "Noxian invaders",
+            "members of the Shadow Order"
+        ],
+        "summary": "Lee Sin is a martial arts master and spirit magic user who fought alongside Udyr to repel Noxian invaders from his homeland.  He is connected to the Shojin Order and has clashed with the Shadow Order for disrupting Ionia's balance.",
+        "champion_name": "Lee Sin"
+    },
+    {
+        "factions": [
+            "Solari",
+            "Ra'Horak"
+        ],
+        "allies": [
+            "Iasur",
+            "Melia",
+            "Aidonel",
+            "Kespina",
+            "Soraka"
+        ],
+        "rivals": [
+            "Diana",
+            "Pantheon",
+            "Atreus",
+            "Alune",
+            "Aphelios"
+        ],
+        "summary": "Leona, a Solari warrior from Mount Targon, became the Aspect of the Sun after a trial on the mountain.  Her close friend Diana became the Aspect of the Moon, and their differing beliefs led to conflict, setting them against each other.",
+        "champion_name": "Leona"
+    },
+    {
+        "factions": [
+            "Fae Fawn"
+        ],
+        "allies": [
+            "Ivern",
+            "Yone",
+            "Aisha",
+            "Sprite Mother",
+            "Alina",
+            "Allay"
+        ],
+        "rivals": [
+            "Nocturne"
+        ],
+        "summary": "Lillia is a Fae Fawn born from the Dreaming Tree in Ionia.  After the Noxian invasion and her mother tree's sickness, Lillia leaves the Garden of Forgetting to bring dreams to her mother, helping mortals realize their dreams and forging bonds along the way.",
+        "champion_name": "Lillia"
+    },
+    {
+        "factions": [
+            "Frostguard",
+            "Iceborn",
+            "Watchers",
+            "Winter's Claw",
+            "Avarosan",
+            "Notai tribe"
+        ],
+        "allies": [
+            "Trundle",
+            "Frost Trolls",
+            "Watchers",
+            "Yeti"
+        ],
+        "rivals": [
+            "Avarosa",
+            "Serylda",
+            "Volibear",
+            "Ornn",
+            "Anivia",
+            "Ivern",
+            "Ashe",
+            "Sejuani",
+            "Udyr",
+            "Nunu",
+            "Willump"
+        ],
+        "summary": "Lissandra, one of the three Iceborn sisters, made a pact with the Watchers, extradimensional entities, to prepare Runeterra for the Void's arrival.  After her sisters rebelled, Lissandra sacrificed them to seal the Watchers away, founding the Frostguard to maintain the seal and erase the truth of her actions.",
+        "champion_name": "Lissandra"
+    },
+    {
+        "factions": [
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Senna",
+            "Gwen",
+            "Diana",
+            "Graves",
+            "Irelia",
+            "Olaf",
+            "Pyke",
+            "Rengar",
+            "Riven",
+            "Vayne",
+            "Akshan",
+            "Miss Fortune"
+        ],
+        "rivals": [
+            "Thresh",
+            "Viego"
+        ],
+        "summary": "Lucian, a Sentinel of Light, seeks vengeance against Thresh for killing his wife, Senna, and later joins forces with other Sentinels to battle Viego.  After freeing Senna's soul, they work together to defeat Viego and his Black Mist.",
+        "champion_name": "Lucian"
+    },
+    {
+        "factions": [
+            "Yordles",
+            "Shadow Order",
+            "Noxians"
+        ],
+        "allies": [
+            "Pix",
+            "Tristana",
+            "Corki",
+            "Teemo",
+            "Poppy",
+            "Twisted Fate",
+            "Veigar"
+        ],
+        "rivals": [
+            "Draven",
+            "Tamara",
+            "Graves"
+        ],
+        "summary": "Lulu is a Yordle who, after discovering a magical glade, gained powerful abilities to transform things.  She travels Runeterra with her fae companion Pix, causing playful chaos and helping her friends while often unintentionally creating more problems than she solves.",
+        "champion_name": "Lulu"
+    },
+    {
+        "factions": [
+            "Crownguard",
+            "Illuminators"
+        ],
+        "allies": [
+            "Garen",
+            "Tianna",
+            "Galio",
+            "Sona",
+            "Kahina",
+            "Jarvan IV"
+        ],
+        "rivals": [
+            "Sylas",
+            "Nocturne",
+            "Mageseekers"
+        ],
+        "summary": "Lux, a Demacian noblewoman with hidden magical abilities, struggles to reconcile her powers with Demacia's anti-magic laws.  She forms alliances and confronts rivals while fighting for mage acceptance and protecting others from persecution.",
+        "champion_name": "Lux"
+    },
+    {
+        "factions": [
+            "Ixtali"
+        ],
+        "allies": [
+            "Chip",
+            "Taliyah",
+            "other stone golems"
+        ],
+        "rivals": [
+            "Void"
+        ],
+        "summary": "Malphite is a colossal stone golem created by the Ixtali mage Ne'Zuk to combat the Void.  After the Monolith's destruction, he became its last surviving fragment, driven by a mission to protect Runeterra from the Void, despite his loneliness and self-doubt.",
+        "champion_name": "Malphite"
+    },
+    {
+        "factions": [
+            "Cult of the Void"
+        ],
+        "allies": [
+            "Bel'Veth",
+            "Kog'Maw",
+            "Voidborn"
+        ],
+        "rivals": [
+            "Kassadin",
+            "Azir"
+        ],
+        "summary": "Malzahar, a former Shuriman fortune teller, discovered the Void in Icathia and became its prophet.  He now seeks to bring about the Void's destruction of Runeterra, using his powers to gather followers and unleash Void creatures.",
+        "champion_name": "Malzahar"
+    },
+    {
+        "factions": [
+            "Treant"
+        ],
+        "allies": [
+            "Yorick",
+            "Kalista"
+        ],
+        "rivals": [
+            "Vladimir",
+            "Viego"
+        ],
+        "summary": "Maokai is the oldest Treant, an ancient elemental spirit who survived the Ruination by fleeing to the coast.  He seeks to defeat Viego and restore the Blessed Isles.",
+        "champion_name": "Maokai"
+    },
+    {
+        "factions": [
+            "Wuju"
+        ],
+        "allies": [
+            "Master Doran",
+            "Wukong",
+            "Yasuo",
+            "Yone"
+        ],
+        "rivals": [],
+        "summary": "Yi, a master swordsman from the destroyed Ionian village of Wuju, is known for his mastery of the Wuju fighting style, which utilizes spirit magic to enhance his combat abilities.  After the Noxian invasion, he became the sole survivor of his village, and later taught his style to Wukong.",
+        "champion_name": "Master Yi"
+    },
+    {
+        "factions": [
+            "House Medarda",
+            "Black Rose",
+            "Suns of Bel'zhun",
+            "Piltover Council"
+        ],
+        "allies": [
+            "Azizi Medarda",
+            "Kino Medarda",
+            "Tivadar Medarda",
+            "Elora",
+            "Jayce Talis",
+            "Viktor",
+            "Caitlyn Kiramman",
+            "Vi",
+            "Salo",
+            "Shoola",
+            "Lest"
+        ],
+        "rivals": [
+            "Ambessa Medarda",
+            "Ta'Fik",
+            "Gintara",
+            "Silco",
+            "Jinx",
+            "Renni",
+            "LeBlanc",
+            "Viktor (as the Herald)"
+        ],
+        "summary": "Mel Medarda, born into the Noxian House Medarda, grappled with her compassion amidst her family's brutality.  Exiled to Piltover, she rose to power, championed hextech, and eventually confronted her mother's aggression and her own magical heritage.",
+        "champion_name": "Mel"
+    },
+    {
+        "factions": [
+            "Yun Tal"
+        ],
+        "allies": [
+            "Nidalee",
+            "Neeko",
+            "Fuemigos",
+            "his family",
+            "Lupé"
+        ],
+        "rivals": [
+            "Luné",
+            "Zyra",
+            "Malphite"
+        ],
+        "summary": "Milio is an Ixtali boy who discovered a new healing fire axiom and traveled to Ixaocan to restore his family's honor.  Along the way, he befriended various creatures and people, including Nidalee and Neeko, while facing challenges and overcoming his initial struggles with elemental magic.",
+        "champion_name": "Milio"
+    },
+    {
+        "factions": [
+            "Bilgewater's Crew"
+        ],
+        "allies": [
+            "Twisted Fate",
+            "Graves",
+            "Lucian",
+            "Ryze",
+            "Vi",
+            "Caitlyn",
+            "Ahri",
+            "Illaoi",
+            "Braum",
+            "Pyke",
+            "Yasuo"
+        ],
+        "rivals": [
+            "Gangplank",
+            "Olaf",
+            "Illaoi",
+            "Hecarim",
+            "Viego"
+        ],
+        "summary": "Miss Fortune, born to a weapons manufacturer, survived Gangplank's attack that killed her mother.  She rose through Bilgewater's criminal underworld, eventually overthrowing Gangplank and ruling the city, though she later allied with Viego.",
+        "champion_name": "Miss Fortune"
+    },
+    {
+        "factions": [
+            "Noxus",
+            "Black Rose",
+            "Trifarix"
+        ],
+        "allies": [
+            "Atakhan",
+            "Tybaulk",
+            "Veigar",
+            "Januk",
+            "Lord Mallat"
+        ],
+        "rivals": [
+            "LeBlanc",
+            "Vladimir",
+            "Kindred",
+            "Viego",
+            "Ezreal",
+            "Annie Hastur"
+        ],
+        "summary": "Mordekaiser, initially a warlord named Sahn-Uzal, sought a place among the gods but found only emptiness. After death, he returned as the Iron Revenant, conquering with necromancy and an army of the dead until his betrayal and subsequent return to his self-created afterlife, Mitna Rachnun.",
+        "champion_name": "Mordekaiser"
+    },
+    {
+        "factions": [
+            "Winged Protectors",
+            "Veiled Lady's followers",
+            "Demacian mages"
+        ],
+        "allies": [
+            "Nilah",
+            "Nilah's crew",
+            "outcast mages",
+            "Lisa",
+            "Sylas"
+        ],
+        "rivals": [
+            "Kayle",
+            "Aatrox",
+            "Ronas",
+            "Mageseekers",
+            "Judicator Order"
+        ],
+        "summary": "Morgana and her twin sister Kayle, born on Mount Targon, were blessed and cursed with celestial power.  Their differing approaches to justice led to a falling out, culminating in their father's death and Morgana becoming the Veiled Lady, a secretive figure who secretly protects Demacia.",
+        "champion_name": "Morgana"
+    },
+    {
+        "factions": [
+            "Ascended",
+            "God-Warriors",
+            "Shurima",
+            "Sunborn",
+            "Darkin"
+        ],
+        "allies": [
+            "Dune Hounds",
+            "Zoe"
+        ],
+        "rivals": [
+            "Myisha",
+            "other Darkin"
+        ],
+        "summary": "Naafiri was a powerful Ascended warrior of Shurima who, after the empire's fall, became a Darkin. Imprisoned for centuries, she was inadvertently freed by a pack of dune hounds and now seeks to unite the remaining Darkin.",
+        "champion_name": "Naafiri"
+    },
+    {
+        "factions": [
+            "Marai",
+            "Vastaya"
+        ],
+        "allies": [
+            "Loto",
+            "Tama",
+            "Fizz",
+            "Longtooth",
+            "Diana",
+            "Greatmother",
+            "Ai'la",
+            "Journeying Sandhopper",
+            "Leo'lei"
+        ],
+        "rivals": [
+            "Rasho"
+        ],
+        "summary": "Nami is a Vastaya Marai, a powerful water mage who became the Tidecaller of her tribe after retrieving a pearl from the deep sea.  She now seeks the Aspect of the Moon to obtain a moonstone essential for her people's survival.",
+        "champion_name": "Nami"
+    },
+    {
+        "factions": [
+            "Ascended",
+            "Shurima Empire"
+        ],
+        "allies": [
+            "Azir",
+            "Sivir",
+            "Taliyah",
+            "Myisha",
+            "Ryze",
+            "Setaka"
+        ],
+        "rivals": [
+            "Renekton",
+            "Xerath",
+            "Darkin",
+            "Ta'anari"
+        ],
+        "summary": "Nasus is an ascended being, a powerful immortal warrior-scholar from the fallen Shurima empire.  His brother Renekton, driven mad, seeks revenge, while Nasus strives to restore Shurima and heal his brother.",
+        "champion_name": "Nasus"
+    },
+    {
+        "factions": [
+            "Bilgewater"
+        ],
+        "allies": [
+            "Sea Creatures",
+            "2 Coral Creatures",
+            "3 Bubble Bear",
+            "1 Admiwal Shelly and Nurtle"
+        ],
+        "rivals": [
+            "Fizz",
+            "Gangplank"
+        ],
+        "summary": "Nautilus, once a superstitious human sailor, is now a titanic undead being bound to his diving suit, patrolling the depths and enforcing his interpretation of the ocean's will by sinking ships that don't pay their due. He has a fondness for many sea creatures but harbors hatred for Fizz and a tense relationship with Gangplank.",
+        "champion_name": "Nautilus"
+    },
+    {
+        "factions": [
+            "Oovi-Kat",
+            "Vastaya"
+        ],
+        "allies": [
+            "Nidalee",
+            "Krete",
+            "Pakaas",
+            "Anura",
+            "Froop",
+            "other wildlife",
+            "Yordles"
+        ],
+        "rivals": [
+            "Noxians",
+            "Piltovan poachers",
+            "Captain Rowain"
+        ],
+        "summary": "Neeko is a Vastaya from the Oovi-Kat tribe whose home was destroyed by a cataclysm.  After escaping, she travels to Ixtal, where she befriends Nidalee and eventually sets out to rebuild her tribe, encountering various allies and rivals along the way.",
+        "champion_name": "Neeko"
+    },
+    {
+        "factions": [
+            "pakaa",
+            "Vastaya",
+            "Kiilash",
+            "Oovi-Kat"
+        ],
+        "allies": [
+            "Neeko",
+            "Kuulcan",
+            "Milio",
+            "Anura",
+            "pakaa"
+        ],
+        "rivals": [
+            "Kiilash",
+            "Rengar",
+            "Piltovans",
+            "Captain Rowain",
+            "Percy",
+            "Humans"
+        ],
+        "summary": "Abandoned as a cub, Nidalee was raised by a pack of pakaa and later became their leader.  She possesses shapeshifting abilities and fiercely protects her jungle home from poachers and other outsiders.",
+        "champion_name": "Nidalee"
+    },
+    {
+        "factions": [
+            "Sentinels of Light",
+            "Black Rose"
+        ],
+        "allies": [
+            "Oyster Bill",
+            "Janna",
+            "Morgana",
+            "Malcolm Graves"
+        ],
+        "rivals": [
+            "Viego",
+            "Ashlesh",
+            "Grandmother Viper",
+            "Imago",
+            "Nabavelicus",
+            "Noxians",
+            "Iascylla",
+            "Volibear",
+            "Mordekaiser",
+            "Lord Mallat",
+            "Mageseekers",
+            "Ursine",
+            "Deep Eaters"
+        ],
+        "summary": "Nilah, a Kathkani woman, became obsessed with the legends of her homeland, particularly the demon Ashlesh. After a mysterious ten-year disappearance, she resurfaced with Ashlesh's power, becoming a legendary monster hunter who now seeks to defeat powerful foes to protect Runeterra.",
+        "champion_name": "Nilah"
+    },
+    {
+        "factions": [
+            "shadow mages",
+            "demons"
+        ],
+        "allies": [],
+        "rivals": [
+            "Garen",
+            "Lux",
+            "Sylas"
+        ],
+        "summary": "Nocturne, a demon born from shadow magic during the Rune Wars, feeds on the fear from nightmares.  After terrorizing Demacia, it was sealed away but later awakened, only to be defeated by Sylas during the Great Mage Rebellion.",
+        "champion_name": "Nocturne"
+    },
+    {
+        "factions": [
+            "Notai",
+            "Frostguard",
+            "Avarosan"
+        ],
+        "allies": [
+            "Willump",
+            "Lissandra",
+            "Anivia",
+            "Braum",
+            "Ashe"
+        ],
+        "rivals": [],
+        "summary": "Nunu is a young Notai boy who, after losing his tribe, befriended a yeti named Willump.  Together, they travel the Freljord, inspired by legends and striving for peace and unification.",
+        "champion_name": "Nunu & Willump"
+    },
+    {
+        "factions": [
+            "Winter's Claw",
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Sejuani",
+            "Lucian",
+            "Miss Fortune",
+            "Akshan",
+            "Senna",
+            "Vayne",
+            "Diana",
+            "Graves",
+            "Irelia",
+            "Pyke",
+            "Rengar",
+            "Riven"
+        ],
+        "rivals": [
+            "Volibear",
+            "Vex",
+            "Krakenwyrm"
+        ],
+        "summary": "Olaf, a Freljordian warrior seeking a glorious death, repeatedly challenges formidable foes. After a stalemate with Sejuani, he joins her tribe, later aiding the Sentinels of Light against Viego's Ruination.",
+        "champion_name": "Olaf"
+    },
+    {
+        "factions": [
+            "Piltover",
+            "Zaun"
+        ],
+        "allies": [
+            "Professor Cecil B. Heimerdinger",
+            "Warwick",
+            "Viktor"
+        ],
+        "rivals": [],
+        "summary": "Orianna was the daughter of Dr. Corin Reveck (Singed), a Piltovan alchemist. After her death, Singed used unethical experiments and the blood of Warwick to revive her in a hextech body using Viktor's hexcore, resulting in Orianna's transformation into a mechanical being.",
+        "champion_name": "Orianna"
+    },
+    {
+        "factions": [
+            "Hearthblood",
+            "Frostguard"
+        ],
+        "allies": [
+            "Aurora",
+            "Braum",
+            "Three Sisters",
+            "Grubgrack the Hideous"
+        ],
+        "rivals": [
+            "Volibear",
+            "Lissandra",
+            "Serylda",
+            "Avarosa"
+        ],
+        "summary": "Ornn is a demigod of the Freljord known for his exceptional forging skills and his connection to the primordial flame.  He is known for creating legendary items, but also for his solitary nature and a devastating conflict with his brother, Volibear.",
+        "champion_name": "Ornn"
+    },
+    {
+        "factions": [
+            "Rakkor",
+            "Ra'Horak",
+            "Solari",
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Pylas",
+            "Iula",
+            "Leona",
+            "Tor",
+            "Eshiyme",
+            "Diana"
+        ],
+        "rivals": [
+            "Aatrox",
+            "Xerath",
+            "Viego",
+            "Camphor"
+        ],
+        "summary": "Atreus, a Rakkor warrior, climbed Mount Targon with his friend Pylas to gain power against invaders, but Pylas died. Atreus became the host of the Aspect of War, Pantheon, but after battles with Aatrox and Viego, he eventually reclaimed his body and found renewed purpose as a protector of mortals.",
+        "champion_name": "Pantheon"
+    },
+    {
+        "factions": [
+            "Demacia",
+            "Yordles"
+        ],
+        "allies": [
+            "Orlon",
+            "Lulu",
+            "Tristana",
+            "Vayne"
+        ],
+        "rivals": [
+            "Viego",
+            "Kled"
+        ],
+        "summary": "Poppy, a Yordle, is on a centuries-long quest to find the Hero of Demacia, worthy of wielding Orlon's hammer, unaware that she is the hero.  Her journey has led her to numerous encounters with other champions, often helping to protect Demacia from various threats.",
+        "champion_name": "Poppy"
+    },
+    {
+        "factions": [
+            "Red Dock Ripper"
+        ],
+        "allies": [
+            "Ahri",
+            "Braum",
+            "Illaoi",
+            "Miss Fortune",
+            "Yasuo",
+            "Sentinels of Light"
+        ],
+        "rivals": [
+            "Miss Fortune",
+            "Gangplank",
+            "Olaf",
+            "Illaoi"
+        ],
+        "summary": "Pyke, a former harpooner, was killed and resurrected by a magical fish, becoming the vengeful Red Dock Ripper who targets captains and those involved in shady businesses in Bilgewater.  His path crosses with Illaoi, who tries to stop him but ultimately finds him worthy, influencing his actions somewhat.",
+        "champion_name": "Pyke"
+    },
+    {
+        "factions": [
+            "Yun Tal",
+            "Ixaocan",
+            "Ixtal"
+        ],
+        "allies": [
+            "elementalists of the high court",
+            "Ixaocan citizens who admired her"
+        ],
+        "rivals": [
+            "Inessa",
+            "Piltovans",
+            "her parents",
+            "Mara"
+        ],
+        "summary": "Qiyana, a powerful elemental mage from Ixtal, was born into the royal family of Ixaocan but neglected due to being the youngest.  After crippling her sister in a ritual combat and conducting a massacre of Piltovan miners, she eventually becomes Prefect of Tikras.",
+        "champion_name": "Qiyana"
+    },
+    {
+        "factions": [
+            "Demacian Rangers",
+            "Dauntless Vanguard"
+        ],
+        "allies": [
+            "Valor",
+            "Garen",
+            "Tianna Crownguard",
+            "Lestara Buvelle",
+            "Dalin",
+            "Genevieve Elmheart",
+            "Cern",
+            "Betrand",
+            "Beemer",
+            "Rigby"
+        ],
+        "rivals": [
+            "Sylas",
+            "Lord Barrett Buvelle (formerly, due to the circumstances of Caleb's death)",
+            "Noxian army"
+        ],
+        "summary": "Quinn, a Demacian ranger-knight, is known for her exceptional tracking skills and close bond with her eagle companion, Valor. After the death of her brother, she dedicated herself to serving Demacia, becoming a respected leader of the Demacian Rangers and working alongside figures like Garen.",
+        "champion_name": "Quinn"
+    },
+    {
+        "factions": [
+            "Lhotlan",
+            "Vastaya"
+        ],
+        "allies": [
+            "Xayah"
+        ],
+        "rivals": [
+            "Zed",
+            "Order of the Shadow"
+        ],
+        "summary": "Rakan is a Lhotlan Vastaya battle-dancer who, disillusioned by broken treaties with humans, initially sought to show them the beauty of wild magic through performance.  After meeting Xayah, he joined her rebellion to reclaim lost Vastayan lands, their differing approaches complementing each other.",
+        "champion_name": "Rakan"
+    },
+    {
+        "factions": [
+            "Shurima"
+        ],
+        "allies": [
+            "Ojan",
+            "Zyama",
+            "Nyam"
+        ],
+        "rivals": [
+            "Kmiros beetles"
+        ],
+        "summary": "Rammus is a mysterious, ancient being depicted in Shuriman ruins, possibly a harbinger of change or guardian spirit.  Throughout history, he's intervened in events, sometimes appearing to offer aid, leaving a lasting impact wherever he goes.",
+        "champion_name": "Rammus"
+    },
+    {
+        "factions": [
+            "Xer'Sai",
+            "Voidborn"
+        ],
+        "allies": [],
+        "rivals": [
+            "Noxian",
+            "Bel'Veth",
+            "Kai'Sa",
+            "Taliyah",
+            "Yuumi"
+        ],
+        "summary": "Rek'Sai is the queen of the Xer'Sai, a Void-born species that dwells in Shurima.  She and her brood are fearsome predators who hunt and devour anyone they find in the desert, causing destruction and terror among the Shuriman people.",
+        "champion_name": "Rek'Sai"
+    },
+    {
+        "factions": [
+            "Noxian",
+            "House Canwell",
+            "Reckoners",
+            "House Medarda",
+            "Trannit",
+            "Vindoran",
+            "Light Vindorans",
+            "Great Houses",
+            "Wolf's Reapers",
+            "Black Rose"
+        ],
+        "allies": [
+            "Ambessa Medarda",
+            "Rictus",
+            "Caprian",
+            "Zishani",
+            "Steward Amenesce",
+            "Tora"
+        ],
+        "rivals": [
+            "Boram Darkwill",
+            "Navus",
+            "Ta'Fik",
+            "Steward Smik",
+            "Gintara",
+            "LeBlanc",
+            "Saida"
+        ],
+        "summary": "Rell Canwell, a Noxian Reckoner, joins Ambessa Medarda's warband after escaping an abusive upbringing.  Betrayed and captured by the Black Rose, she develops ferromancy powers and vows revenge on those who wronged her.",
+        "champion_name": "Rell"
+    },
+    {
+        "factions": [
+            "chem-baron"
+        ],
+        "allies": [
+            "Viktor",
+            "Baron Spindlow",
+            "Elodat's Family"
+        ],
+        "rivals": [
+            "Janna",
+            "Camille",
+            "Ekko",
+            "Zeri"
+        ],
+        "summary": "Renata Glasc is a ruthless businesswoman from Zaun who seeks revenge for her parents' murder by Piltovan nobles.  She uses manipulation and cunning to achieve her goals, building a powerful empire through her company Glasc Industries.",
+        "champion_name": "Renata Glasc"
+    },
+    {
+        "factions": [
+            "Shuriman army",
+            "God-Warriors",
+            "Sandthrashers"
+        ],
+        "allies": [
+            "Nasus",
+            "Azir",
+            "Aatrox",
+            "Sivir"
+        ],
+        "rivals": [
+            "Xerath",
+            "Sai-Surtha",
+            "Raz Bloodmane"
+        ],
+        "summary": "Renekton, a powerful Ascended being, served Shurima loyally alongside his brother Nasus.  Imprisoned with Xerath for millennia, Renekton's mind was corrupted, leading him to seek revenge on Nasus after his release.",
+        "champion_name": "Renekton"
+    },
+    {
+        "factions": [
+            "Kiilash",
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Lucian",
+            "Sentinel Rookie"
+        ],
+        "rivals": [
+            "Kha'Zix",
+            "Viego"
+        ],
+        "summary": "Rengar, a leonine Vastayan from the Kiilash tribe, is a fierce and skilled hunter who rose to become chieftain after killing his cowardly father.  He now seeks revenge against Kha'Zix, the Void creature that took his eye, and fights alongside the Sentinels of Light against Viego.",
+        "champion_name": "Rengar"
+    },
+    {
+        "factions": [
+            "Noxian Empire",
+            "Fury Company",
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Boram Darkwill",
+            "Lucian",
+            "Senna",
+            "Vayne",
+            "Asa Konte",
+            "Arrel",
+            "Marit",
+            "Teneff"
+        ],
+        "rivals": [
+            "Singed",
+            "Yasuo",
+            "Elder Souma",
+            "LeBlanc",
+            "Darius",
+            "Draven",
+            "Irelia",
+            "Emystan",
+            "Quilletta Varn",
+            "Viego"
+        ],
+        "summary": "Riven, a Noxian soldier, experienced a traumatic event in Ionia involving Singed's chemicals, leading her to question her loyalty and exile herself.  She later faced trial for the unintentional death of Elder Souma, eventually finding redemption and a new life.",
+        "champion_name": "Riven"
+    },
+    {
+        "factions": [
+            "Yordles"
+        ],
+        "allies": [
+            "Anaktu",
+            "Tristana"
+        ],
+        "rivals": [
+            "Heimerdinger",
+            "Kesu Rance"
+        ],
+        "summary": "Rumble, a yordle from Bandle City, was bullied as a child and left to build his mech, Tristy, from scraps.  He encountered and helped Anaktu, a Shuriman cripple, against bullies, showing his resourcefulness and compassion.",
+        "champion_name": "Rumble"
+    },
+    {
+        "factions": [
+            "Noxii",
+            "Helia",
+            "Runeterra",
+            "Valoran",
+            "Shurima",
+            "Freljord",
+            "Ionia",
+            "Camavor"
+        ],
+        "allies": [
+            "Tyrus",
+            "Kayle",
+            "Mihira",
+            "Nasus",
+            "Miss Fortune",
+            "Sona"
+        ],
+        "rivals": [
+            "Brand",
+            "Aatrox",
+            "Xolaani",
+            "Navori Brotherhood",
+            "Trundle",
+            "Viego"
+        ],
+        "summary": "Ryze, a mage from Noxus, dedicated his life to gathering and securing World Runes after witnessing the devastation caused by these powerful artifacts, including the death of his mentor, Tyrus.  His journey has led him across Runeterra, facing various challenges and encountering allies and rivals alike.",
+        "champion_name": "Ryze"
+    },
+    {
+        "factions": [
+            "Noxian military",
+            "Indari's private warband"
+        ],
+        "allies": [
+            "Indari",
+            "Lani",
+            "Miel",
+            "Darius",
+            "Sett (?)"
+        ],
+        "rivals": [
+            "Xerath",
+            "Rell",
+            "Viego",
+            "Jack",
+            "Wraiths"
+        ],
+        "summary": "Samira, a Noxian mercenary, rose from a street performer in Amakra to a celebrated soldier known for her daring feats and reckless bravery.  She works alongside Captain Indari, unknowingly manipulated by LeBlanc for her strategic value to the Noxian empire.",
+        "champion_name": "Samira"
+    },
+    {
+        "factions": [
+            "Winter's Claw",
+            "Avarosan",
+            "Frostguard",
+            "Ebrataal Tribe",
+            "Noxus",
+            "Ursine"
+        ],
+        "allies": [
+            "Ashe",
+            "Grena",
+            "Bristle",
+            "Udyr",
+            "Olaf"
+        ],
+        "rivals": [
+            "Kalkia",
+            "Heijan",
+            "Volibear",
+            "Lissandra"
+        ],
+        "summary": "Sejuani, born into a Freljordian political marriage, rose to become the Warmother of the Winter's Claw after overcoming challenges and rivalries, including a conflict with her own mother and former friend Ashe.  Now, facing starvation in her tribe, she seeks the legendary Cauldron of Ornn to save her people.",
+        "champion_name": "Sejuani"
+    },
+    {
+        "factions": [
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Lucian",
+            "Gwen",
+            "Diana",
+            "Graves",
+            "Irelia",
+            "Olaf",
+            "Pyke",
+            "Rengar",
+            "Riven",
+            "Vayne",
+            "Urias"
+        ],
+        "rivals": [
+            "Thresh",
+            "Viego",
+            "Akshan"
+        ],
+        "summary": "Senna, a Sentinel of Light, was cursed by the Black Mist and trapped in Thresh's lantern before being rescued by her husband, Lucian.  Together, they fight against the Black Mist and its master, Viego, to protect the world.",
+        "champion_name": "Senna"
+    },
+    {
+        "factions": [
+            "Piltover",
+            "Zaun"
+        ],
+        "allies": [
+            "Acorn",
+            "Caitlyn",
+            "Millie",
+            "Brackern",
+            "Skarner"
+        ],
+        "rivals": [
+            "Scratch"
+        ],
+        "summary": "Seraphine is a musical prodigy from Piltover with magical abilities that allow her to hear and manipulate emotions through music.  She gained popularity in Zaun through her soulful concerts, aiming to unite the two cities with her music.",
+        "champion_name": "Seraphine"
+    },
+    {
+        "factions": [
+            "Noxus",
+            "Ionia"
+        ],
+        "allies": [
+            "Unnamed Mother"
+        ],
+        "rivals": [
+            "Unnamed Father",
+            "8 The Old Timer"
+        ],
+        "summary": "Sett is a half-Vastayan, half-human man born in Ionia, ostracized for his hybrid heritage. He became a formidable pit fighter, driven by a desire to provide for his mother and a rivalry with his absent father.",
+        "champion_name": "Sett"
+    },
+    {
+        "factions": [],
+        "allies": [],
+        "rivals": [],
+        "summary": "Shaco, originally a toy belonging to a prince, gained sentience after the prince's death through dark magic.  He became a notorious criminal, delighting in violence and leaving his origins and motives largely unknown.",
+        "champion_name": "Shaco"
+    },
+    {
+        "factions": [
+            "Kinkou Order",
+            "Order of Shadow"
+        ],
+        "allies": [
+            "Kennen",
+            "Akali",
+            "Zed"
+        ],
+        "rivals": [
+            "Zed",
+            "Jhin"
+        ],
+        "summary": "Shen, son of the former Eye of Twilight, is a Kinkou leader who maintains balance between the spirit and physical realms.  His conflict with Zed, a former brother and now rival, stems from differing philosophies and the death of their master.",
+        "champion_name": "Shen"
+    },
+    {
+        "factions": [
+            "Dragonguard",
+            "Mageseekers",
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Jarvan IV",
+            "Senna",
+            "Lucian"
+        ],
+        "rivals": [
+            "Sylas",
+            "Vayne",
+            "Viego",
+            "Yvva"
+        ],
+        "summary": "Shyvana, a half-human half-dragon, was raised by a mage after her dragon mother, Yvva, couldn't retrieve her egg. After Yvva destroyed her home, Shyvana saved Prince Jarvan IV, forming a strong bond and later joining the Demacian Dragonguard.  She fought against Sylas and was later corrupted by Viego, but ultimately freed.",
+        "champion_name": "Shyvana"
+    },
+    {
+        "factions": [
+            "Piltover",
+            "Zaun",
+            "Firelights",
+            "Jinxers",
+            "chemgoons",
+            "Enforcers",
+            "Noxian"
+        ],
+        "allies": [
+            "Silco",
+            "Ambessa Medarda",
+            "Viktor",
+            "Orianna",
+            "Jayce"
+        ],
+        "rivals": [
+            "Heimerdinger",
+            "Vander",
+            "Caitlyn Kiramman",
+            "Ekko",
+            "Warwick",
+            "Powder",
+            "Deckard",
+            "Rictus"
+        ],
+        "summary": "Singed, formerly a Piltovan scholar, became a Zaunite chemist obsessed with resurrecting his deceased daughter. His unethical experiments led to the creation of Warwick and the invention of the addictive drug, shimmer, which fueled Silco's empire and impacted numerous characters in Runeterra.",
+        "champion_name": "Singed"
+    },
+    {
+        "factions": [
+            "Noxus",
+            "Black Rose"
+        ],
+        "allies": [
+            "Swain",
+            "LeBlanc",
+            "Vladimir"
+        ],
+        "rivals": [
+            "Jarvan I",
+            "Irelia",
+            "Karma",
+            "Akali",
+            "Kennen",
+            "Yasuo",
+            "Boram Darkwill"
+        ],
+        "summary": "Sion was a powerful Noxian general who died battling Demacia's King Jarvan I.  Resurrected by the Black Rose, he became an undead killing machine, used by Noxus as a weapon of war.",
+        "champion_name": "Sion"
+    },
+    {
+        "factions": [
+            "Shuriman mercenaries"
+        ],
+        "allies": [
+            "Azir",
+            "Nasus",
+            "Taliyah"
+        ],
+        "rivals": [
+            "Cassiopeia",
+            "Xerath"
+        ],
+        "summary": "Sivir, a Shuriman mercenary, was betrayed and left for dead after finding the ancient relic, Chalikar.  She was saved by Azir, the resurrected emperor of Shurima, and now faces a choice between embracing her destiny or continuing her life as a mercenary.",
+        "champion_name": "Sivir"
+    },
+    {
+        "factions": [
+            "Yun Tal",
+            "Shuriman Empire"
+        ],
+        "allies": [],
+        "rivals": [
+            "Milio",
+            "Qiyana"
+        ],
+        "summary": "Skarner, a giant scorpion-like creature, is a founding member of the Yun Tal, a ruling caste in Ixtal.  He fiercely protects Ixtal, choosing to isolate it from the rest of the world due to his distrust of outsiders and fear of future threats.",
+        "champion_name": "Skarner"
+    },
+    {
+        "factions": [
+            "Camavor",
+            "Noxus"
+        ],
+        "allies": [
+            "Smolder's Mom",
+            "Marinos"
+        ],
+        "rivals": [],
+        "summary": "Smolder, a young dragon from Camavor, was separated from his mother after being captured by Noxians. He befriended a human boy named Marinos who taught him to speak and inspired him to become a powerful dragon, eventually reuniting with his mother and beginning his journey to restore Camavor.",
+        "champion_name": "Smolder"
+    },
+    {
+        "factions": [
+            "House Buvelle",
+            "Navori Brotherhood",
+            "Mageseekers"
+        ],
+        "allies": [
+            "Ryze",
+            "Irelia",
+            "Taric",
+            "House Buvelle (Lestara, Lord Barrett, Kahina)",
+            "other children in the monastery"
+        ],
+        "rivals": [],
+        "summary": "Sona, a young woman with magical musical abilities, was left as an infant in an Ionian monastery and later adopted by the Buvelle family in Demacia. After her adoptive father's death, she returned to Ionia, aided Ryze against the Navori Brotherhood, and eventually returned to Demacia.",
+        "champion_name": "Sona"
+    },
+    {
+        "factions": [
+            "celestial being",
+            "ottrani tribe",
+            "vastaya"
+        ],
+        "allies": [
+            "Aurelion Sol",
+            "Taric",
+            "Pantheon",
+            "Tyari",
+            "Arbiter of the Peak",
+            "Ottrani Tribe",
+            "Illi",
+            "Hakan",
+            "Lidari",
+            "Vin"
+        ],
+        "rivals": [
+            "Syndra",
+            "Diana",
+            "Leona",
+            "Aphelios",
+            "Alune"
+        ],
+        "summary": "Soraka, a celestial being, descended to Runeterra to help mortals, initially aiming to restore order.  Witnessing their capacity for both cruelty and kindness, she shifted her focus to inspiring and guiding them, embracing their unpredictable potential.",
+        "champion_name": "Soraka"
+    },
+    {
+        "factions": [
+            "Black Rose",
+            "Trifarix"
+        ],
+        "allies": [
+            "Darius",
+            "Draven",
+            "Katarina",
+            "Sion"
+        ],
+        "rivals": [
+            "LeBlanc",
+            "Gangplank",
+            "Vladimir",
+            "Mordekaiser",
+            "Black Rose"
+        ],
+        "summary": "Jericho Swain, born into a powerful Noxian family, rose through the ranks after exposing the Black Rose cabal, only to be betrayed and gravely wounded. He forged a pact with the demon Raum, gaining immense power, and orchestrated a coup, establishing the Trifarix council to rule Noxus.",
+        "champion_name": "Swain"
+    },
+    {
+        "factions": [
+            "Mageseekers",
+            "Crownguard House",
+            "Dauntless Vanguard",
+            "Winter's Claw"
+        ],
+        "allies": [
+            "Luxanna Crownguard",
+            "Morgana",
+            "Leilani",
+            "Winter's Claw"
+        ],
+        "rivals": [
+            "Jarvan IV Lightshield",
+            "Garen Crownguard",
+            "King Jarvan III",
+            "Kayle"
+        ],
+        "summary": "Sylas, a mage imprisoned by Demacia's Mageseekers, escapes with the help of Luxanna Crownguard and leads a rebellion against the kingdom's persecution of mages.  His rebellion, though initially fueled by vengeance, evolves as he learns to value his allies and fight for a better future for mages.",
+        "champion_name": "Sylas"
+    },
+    {
+        "factions": [
+            "Ionians",
+            "Noxians"
+        ],
+        "allies": [],
+        "rivals": [
+            "Ionians",
+            "Vastaya",
+            "Kalan"
+        ],
+        "summary": "Syndra, a powerful mage from Ionia, was exiled from her village and later imprisoned for hundreds of years after unleashing her dark magic.  Upon her release, she displayed immense power, killing her captors and lifting a temple into the air.",
+        "champion_name": "Syndra"
+    },
+    {
+        "factions": [
+            "demons"
+        ],
+        "allies": [
+            "Aatrox"
+        ],
+        "rivals": [
+            "Evelynn",
+            "Kalista"
+        ],
+        "summary": "Tahm Kench is a demon who feeds on human emotions, specifically greed and despair. He is a manipulative being who makes deals with others, often leading them to their doom.",
+        "champion_name": "Tahm Kench"
+    },
+    {
+        "factions": [
+            "Naasaj",
+            "Noxians",
+            "Ionians",
+            "Shurimans",
+            "Xer'Sai"
+        ],
+        "allies": [
+            "Yasuo",
+            "Sivir",
+            "Nasus",
+            "Kai'Sa",
+            "Samir",
+            "Kadira",
+            "Zaifa"
+        ],
+        "rivals": [
+            "Xerath",
+            "Rek'Sai"
+        ],
+        "summary": "Taliyah, a Shuriman with geomantic abilities, fled her tribe after a traumatic incident.  After encounters with Noxians, Yasuo, and various Shuriman conflicts, she works to protect her people from threats like the Void and Xerath.",
+        "champion_name": "Taliyah"
+    },
+    {
+        "factions": [
+            "Noxus",
+            "House Du Couteau"
+        ],
+        "allies": [
+            "General Du Couteau",
+            "Marcus Du Couteau"
+        ],
+        "rivals": [
+            "Katarina",
+            "Swain"
+        ],
+        "summary": "Talon, a Noxian assassin with a mysterious past, rose through the ranks by his skills and loyalty to General Du Couteau.  His complex relationship with Katarina, marked by betrayal and conflict, highlights his ambition and loyalty to House Du Couteau, even against Noxus itself.",
+        "champion_name": "Talon"
+    },
+    {
+        "factions": [
+            "Demacia",
+            "Dauntless Vanguard",
+            "Illuminators"
+        ],
+        "allies": [
+            "Garen",
+            "Sona",
+            "Tyari"
+        ],
+        "rivals": [
+            "Aurelion Sol",
+            "The Void"
+        ],
+        "summary": "Taric, a Demacian soldier, was exiled to Mount Targon for abandoning his post during a battle.  His journey to the top led him to become the Aspect of the Protector, tasked with defending Valoran.",
+        "champion_name": "Taric"
+    },
+    {
+        "factions": [
+            "Bandle Scouts"
+        ],
+        "allies": [
+            "Tristana",
+            "Corki",
+            "Lulu",
+            "Kennen",
+            "Kled"
+        ],
+        "rivals": [
+            "Graves",
+            "Twisted Fate",
+            "Viego"
+        ],
+        "summary": "Teemo is a yordle and the leader of the Bandle Scouts, known for his scouting expertise, and his use of traps and poisons. He has a close bond with Tristana and is friends with other yordles, while having conflicts with Graves and Viego.",
+        "champion_name": "Teemo"
+    },
+    {
+        "factions": [
+            "Brotherhood of Dusk",
+            "Wraiths",
+            "Sentinels of Light",
+            "Crew of the Charming Lady"
+        ],
+        "allies": [
+            "Viego",
+            "Gangplank",
+            "Bort"
+        ],
+        "rivals": [
+            "Lucian",
+            "Senna",
+            "Rastofir",
+            "Ahri",
+            "Braum",
+            "Illaoi",
+            "Miss Fortune",
+            "Pyke",
+            "Yasuo",
+            "Ledros",
+            "Kalista"
+        ],
+        "summary": "Thresh, originally a monk named Erlok Grael, became a cruel wraith after the Ruination of the Blessed Isles. He imprisons souls in his lantern, notably that of Senna, leading to conflicts with her husband Lucian and other champions.",
+        "champion_name": "Thresh"
+    },
+    {
+        "factions": [
+            "Bandle Gunners"
+        ],
+        "allies": [
+            "Teemo",
+            "Lulu",
+            "Corki",
+            "Rumble"
+        ],
+        "rivals": [
+            "Graves",
+            "Draven"
+        ],
+        "summary": "Tristana, a yordle fascinated by the outside world, became a guardian of the bandlewoods after witnessing the destruction of one.  She protects these gateways to Bandle City and inspired other yordles to join her, forming the Bandle Gunners.",
+        "champion_name": "Tristana"
+    },
+    {
+        "factions": [
+            "Frostguard",
+            "Noxian",
+            "Avarosan",
+            "trolls"
+        ],
+        "allies": [
+            "Lissandra"
+        ],
+        "rivals": [
+            "Darius",
+            "Ashe",
+            "Yettu",
+            "Grubgrack the Wise"
+        ],
+        "summary": "Trundle, an Iceborn troll, was exiled from his tribe for his wisdom.  After meeting Lissandra, he gained a powerful weapon and united the trolls, becoming their king after defeating rivals through cunning and strength.",
+        "champion_name": "Trundle"
+    },
+    {
+        "factions": [
+            "Avarosan",
+            "Winter's Claw",
+            "Noxian"
+        ],
+        "allies": [
+            "Braum",
+            "Ashe",
+            "Avarosan"
+        ],
+        "rivals": [
+            "Aatrox",
+            "Winter's Claw"
+        ],
+        "summary": "Tryndamere, a barbarian warrior, survived a massacre by the Darkin Aatrox and sought refuge with the Avarosan. He later formed a political marriage with Ashe and developed a friendship with Braum.",
+        "champion_name": "Tryndamere"
+    },
+    {
+        "factions": [
+            "Noxus",
+            "Piltover",
+            "Bilgewater"
+        ],
+        "allies": [
+            "Malcolm Graves",
+            "Miss Fortune"
+        ],
+        "rivals": [
+            "Gangplank",
+            "Teemo",
+            "Corki",
+            "Lulu",
+            "Tristana"
+        ],
+        "summary": "Born in the Serpentine Delta, Tobias Felix, later known as Twisted Fate, was exiled for his actions and became a skilled gambler and con artist.  He formed a partnership with Malcolm Graves, engaging in heists across Valoran, facing betrayal and reconciliation, and encountering various figures like Miss Fortune and Gangplank.",
+        "champion_name": "Twisted Fate"
+    },
+    {
+        "factions": [
+            "Zaun"
+        ],
+        "allies": [],
+        "rivals": [
+            "Piltover",
+            "scuttle crabs"
+        ],
+        "summary": "Twitch is a plague rat from Zaun who collects garbage and creates deadly poisons. He is a mischievous and unpredictable character with no regard for human life, known for attacking scientists and killing response teams.",
+        "champion_name": "Twitch"
+    },
+    {
+        "factions": [
+            "Winter's Claw",
+            "Freljord",
+            "Frostguard",
+            "Avarosans",
+            "Ursine"
+        ],
+        "allies": [
+            "Kalkia",
+            "Hejian",
+            "Lee Sin",
+            "Anivia",
+            "Ornn",
+            "Seal Sister",
+            "the Iron Boar"
+        ],
+        "rivals": [
+            "Ice Witch",
+            "Noxian invaders",
+            "Volibear",
+            "diseased rimefang wolves"
+        ],
+        "summary": "Udyr, a Freljordian spirit walker with a unique connection to multiple spirits, struggled to control his powers.  He eventually found guidance and friendship with Lee Sin, and now mentors Sejuani, the warmother of the Winter's Claw, while navigating the conflicts of the Freljord.",
+        "champion_name": "Udyr"
+    },
+    {
+        "factions": [
+            "Noxus",
+            "Zaun",
+            "Sump Riders"
+        ],
+        "allies": [],
+        "rivals": [
+            "Swain",
+            "Chem-Baron Crimson",
+            "Vi",
+            "Caitlyn",
+            "Piltover"
+        ],
+        "summary": "Urgot, a Noxian executioner, was betrayed and imprisoned in Zaun's chemtech prison, The Dredge.  He escaped, becoming a revolutionary figure who seeks to plunge the world into chaos to eliminate the weak and create a new order.",
+        "champion_name": "Urgot"
+    },
+    {
+        "factions": [
+            "Ascended Host",
+            "Sunborn",
+            "Darkin",
+            "The Fallen"
+        ],
+        "allies": [
+            "Aatrox",
+            "Rhaast",
+            "Naafiri",
+            "Valeeva",
+            "Valmar",
+            "Kai"
+        ],
+        "rivals": [
+            "Icathians",
+            "Noxians",
+            "Xolaani"
+        ],
+        "summary": "Varus was a loyal Shuriman temple warden who, after his family was killed during the Icathian Uprising, became an Ascended being consumed by vengeance.  He later fought in the Great Darkin War, and after being imprisoned, he was reborn as a hybrid with two Ionian hunters' souls, constantly battling for control.",
+        "champion_name": "Varus"
+    },
+    {
+        "factions": [
+            "House Vayne",
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Poppy",
+            "Gwen",
+            "Lucian",
+            "Senna",
+            "Sentinel Rookie",
+            "Malcom Graves"
+        ],
+        "rivals": [
+            "Evelynn",
+            "Viego",
+            "Shyvana",
+            "Ice Witch",
+            "Frey",
+            "Thresh"
+        ],
+        "summary": "Shauna Vayne, a noblewoman from Demacia, seeks revenge on the demon that murdered her parents.  After training with a Freljordian mentor, she becomes a monster hunter and eventually joins the Sentinels of Light to fight Viego.",
+        "champion_name": "Vayne"
+    },
+    {
+        "factions": [
+            "Yordles",
+            "Mordekaiser's servants",
+            "Noxii tribes"
+        ],
+        "allies": [
+            "minions",
+            "Twisted Catalyzer",
+            "Wizened Wizard",
+            "Stilted Robemaker",
+            "Tenor of Terror",
+            "Bass of Burden",
+            "Mirror Mage"
+        ],
+        "rivals": [
+            "Mordekaiser",
+            "LeBlanc",
+            "Vixis the Cruel"
+        ],
+        "summary": "Veigar, a Yordle dissatisfied with traditional magic, was captured and tortured by the warlord Mordekaiser. After Mordekaiser's defeat, Veigar embraced his corrupted identity, becoming a dark sorcerer who leads a legion of followers and uses powerful artifacts in his pursuit of power.",
+        "champion_name": "Veigar"
+    },
+    {
+        "factions": [
+            "Voidborn",
+            "Shurimans",
+            "Watchers"
+        ],
+        "allies": [
+            "Malzahar"
+        ],
+        "rivals": [
+            "Kassadin"
+        ],
+        "summary": "Vel'Koz, a Voidborn created by the Watchers, observes and studies Runeterra's inhabitants, absorbing their knowledge and leaving behind withered husks.  Driven by curiosity, its actions, though seemingly cruel, are fueled by a desire to understand the world through observation and experimentation.",
+        "champion_name": "Vel'Koz"
+    },
+    {
+        "factions": [
+            "Shadow Isles"
+        ],
+        "allies": [
+            "Viego",
+            "Shadow",
+            "Unnamed Parents",
+            "Allay",
+            "Grimm"
+        ],
+        "rivals": [
+            "Milty"
+        ],
+        "summary": "Vex, a gloomy yordle from Bandle City, found solace in the Shadow Isles' darkness and formed an alliance with Viego.  After discovering Viego's true motives, she returned to Bandle City, only to leave again after her parents' unconditional love failed to satisfy her nihilistic nature.",
+        "champion_name": "Vex"
+    },
+    {
+        "factions": [
+            "Piltover Enforcers",
+            "Firelights"
+        ],
+        "allies": [
+            "Felicia",
+            "Connol",
+            "Powder",
+            "Vander",
+            "Mylo",
+            "Claggor",
+            "Ekko",
+            "Caitlyn Kiramman",
+            "Jayce Talis",
+            "Loris",
+            "Maddie",
+            "Steb",
+            "Isha"
+        ],
+        "rivals": [
+            "Deckard",
+            "Grayson",
+            "Marcus",
+            "Silco",
+            "Sevika",
+            "Renni",
+            "Smeech",
+            "Margot",
+            "Chross",
+            "Gustove \"the Scowler\" Jowler",
+            "Warwick",
+            "Ambessa Medarda"
+        ],
+        "summary": "Vi, a Zaunite street brawler, is fiercely protective of her adopted family and her younger sister, Powder. After a tragic event leading to the death of her family, Vi is imprisoned, then teams up with Caitlyn to take down Silco, ultimately facing conflicts with her own sister, Jinx, while navigating a complex relationship with Caitlyn and the ongoing struggles of Zaun and Piltover.",
+        "champion_name": "Vi"
+    },
+    {
+        "factions": [
+            "Iron Order",
+            "Sentinels of Light",
+            "Brethren of the Dusk"
+        ],
+        "allies": [
+            "Hecarim",
+            "Thresh",
+            "Gangplank",
+            "Vex",
+            "Miss Fortune",
+            "Draven",
+            "Karma",
+            "Pantheon",
+            "Shyvana"
+        ],
+        "rivals": [
+            "Kalista",
+            "Isolde",
+            "Ahri",
+            "Braum",
+            "Illaoi",
+            "Miss Fortune",
+            "Pyke",
+            "Yasuo",
+            "Lucian",
+            "Senna",
+            "Gwen",
+            "Akshan",
+            "Maokai",
+            "Yorick",
+            "The Maiden of the Mist",
+            "Darius",
+            "Poppy",
+            "Samira",
+            "Vayne",
+            "Diana",
+            "Graves",
+            "Irelia",
+            "Olaf",
+            "Rengar",
+            "Riven"
+        ],
+        "summary": "Viego, the Ruined King, was a Camavor king driven mad by grief after his queen's death.  He unleashed the Black Mist, corrupting the Blessed Isles into the Shadow Isles, and later attempted to reunite with his queen by possessing champions and gathering fragments of her soul.",
+        "champion_name": "Viego"
+    },
+    {
+        "factions": [
+            "Piltover",
+            "Zaun",
+            "Noxian"
+        ],
+        "allies": [
+            "Heimerdinger",
+            "Jayce",
+            "Mel Medarda",
+            "Sky",
+            "Singed",
+            "Vander",
+            "Salo",
+            "Huck"
+        ],
+        "rivals": [
+            "Jinx",
+            "Vi",
+            "Caitlyn Kiramman",
+            "Silco",
+            "Warwick",
+            "Ambessa Medarda"
+        ],
+        "summary": "Viktor, a brilliant inventor from Zaun, partnered with Jayce to revolutionize Piltover with hextech.  However, his obsession with perfecting the hexcore led to a catastrophic transformation, turning him into a being seeking a 'Glorious Evolution' for humanity, even if it meant sacrificing their individuality.",
+        "champion_name": "Viktor"
+    },
+    {
+        "factions": [
+            "Black Rose",
+            "Crimson Circle",
+            "Noxii",
+            "Noxus"
+        ],
+        "allies": [
+            "LeBlanc",
+            "Sion",
+            "Briar",
+            "Boram Darkwill"
+        ],
+        "rivals": [
+            "Swain",
+            "Galio",
+            "Mordekaiser",
+            "Viego",
+            "Kalista",
+            "Demacia",
+            "Trifarix"
+        ],
+        "summary": "Vladimir, once a Camavor prince, was given as a hostage to a Darkin and later killed his father to prove loyalty. After absorbing his master's power, he helped establish Noxus and became a powerful, immortal blood mage, constantly scheming and manipulating from the shadows of the Black Rose.",
+        "champion_name": "Vladimir"
+    },
+    {
+        "factions": [
+            "Winter's Claw",
+            "Ursine"
+        ],
+        "allies": [
+            "Sejuani",
+            "Udyr",
+            "Anivia",
+            "Ivern"
+        ],
+        "rivals": [
+            "Lissandra",
+            "Ornn",
+            "Ashe"
+        ],
+        "summary": "Volibear is a proud and brutal god of war and storms in Runeterra, believing strength defines worth. He is allied with Sejuani and Udyr against Lissandra and Ashe but has his own agenda for the Freljord.",
+        "champion_name": "Volibear"
+    },
+    {
+        "factions": [
+            "Zaunite revolutionaries",
+            "Enforcers",
+            "Kiramman Clan",
+            "Piltover's ruling council",
+            "Silco's gang",
+            "Noxian battalion"
+        ],
+        "allies": [
+            "Silco",
+            "Felicia",
+            "Violet",
+            "Powder",
+            "Mylo",
+            "Claggor",
+            "Vi",
+            "Jinx",
+            "Isha",
+            "Benzo",
+            "Grayson",
+            "Deckard"
+        ],
+        "rivals": [
+            "Piltover",
+            "Enforcers",
+            "Silco",
+            "Singed",
+            "Jayce",
+            "Sevika",
+            "Ambessa Medarda",
+            "Rictus"
+        ],
+        "summary": "Vander, a Zaunite revolutionary, fought for his people's freedom alongside Silco, but a failed uprising led to tragedy.  After adopting Vi and Powder, he abandoned violence, only to be captured, experimented on, and transformed into the monstrous Warwick.",
+        "champion_name": "Warwick"
+    },
+    {
+        "factions": [
+            "Shimon",
+            "Vastaya",
+            "Wuju",
+            "Noxians"
+        ],
+        "allies": [
+            "Master Yi",
+            "Ahri",
+            "Ting"
+        ],
+        "rivals": [
+            "Noxians"
+        ],
+        "summary": "Wukong, originally named Kong, was a mischievous Shimon Vastaya who was exiled from his tribe. After being defeated by Master Yi, the last Wuju master, Kong became his student, adopting the name Wukong and learning the ways of Wuju, dedicating himself to fighting injustice alongside his master.",
+        "champion_name": "Wukong"
+    },
+    {
+        "factions": [
+            "Vastayan",
+            "Lhotlan tribe"
+        ],
+        "allies": [
+            "Rakan"
+        ],
+        "rivals": [
+            "Zed",
+            "Order of the Shadow"
+        ],
+        "summary": "Xayah is a Vastayan freedom fighter who, after her tribe mysteriously vanished, dedicated her life to restoring her people's power and reclaiming their lands.  She fights alongside her partner Rakan against those who threaten Ionia's magic and the Vastaya people.",
+        "champion_name": "Xayah"
+    },
+    {
+        "factions": [
+            "Shurima",
+            "Noxian"
+        ],
+        "allies": [
+            "Renekton"
+        ],
+        "rivals": [
+            "Azir",
+            "Nasus",
+            "Pantheon",
+            "Ryze",
+            "Samira",
+            "Sivir"
+        ],
+        "summary": "Xerath, initially a slave who befriended Prince Azir, became a powerful magus.  After betraying and killing Azir to seize the power of Ascension, he was imprisoned but eventually escaped, seeking to restore Shurima and dominate the world.",
+        "champion_name": "Xerath"
+    },
+    {
+        "factions": [
+            "Reckoners",
+            "Noxian",
+            "Demacian",
+            "Kinkou Order",
+            "House Lightshield"
+        ],
+        "allies": [
+            "Jarvan III",
+            "Jarvan IV",
+            "Kennen",
+            "Yunara",
+            "Tianna",
+            "Shen",
+            "Mayym"
+        ],
+        "rivals": [
+            "Boram Darkwill",
+            "Sylas of Dregbourne",
+            "demonkin",
+            "wicked forces"
+        ],
+        "summary": "Xin Zhao, originally an Ionian gladiator in Noxus, was spared by Jarvan III of Demacia and became a loyal servant to the House Lightshield.  After decades of service, he faced a demon invasion in Ionia and later dealt with the fallout of a mage rebellion in Demacia that cost Jarvan III's life.",
+        "champion_name": "Xin Zhao"
+    },
+    {
+        "factions": [
+            "Ionian"
+        ],
+        "allies": [
+            "Elder Souma",
+            "Taliyah",
+            "Akali",
+            "Karma",
+            "Kennen",
+            "Irelia",
+            "Ahri",
+            "Braum",
+            "Illaoi",
+            "Miss Fortune",
+            "Pyke",
+            "Yone"
+        ],
+        "rivals": [
+            "Riven",
+            "Viego",
+            "Noxians",
+            "Sion"
+        ],
+        "summary": "Yasuo, an Ionian swordsman, was wrongly accused of murdering his master and forced to kill his brother. He later helped defend Ionia from the Noxian invasion and teamed up with various champions to stop Viego in the Shadow Isles.",
+        "champion_name": "Yasuo"
+    },
+    {
+        "factions": [
+            "Ionian"
+        ],
+        "allies": [
+            "Lillia",
+            "Elder Souma"
+        ],
+        "rivals": [
+            "Yasuo",
+            "Azakana"
+        ],
+        "summary": "Yone is the older brother of Yasuo, a skilled swordsman who died in a duel with his brother but was resurrected.  Now he hunts Azakana, demonic entities, using a mask formed from a defeated Azakana and a blade forged from its essence.",
+        "champion_name": "Yone"
+    },
+    {
+        "factions": [
+            "Brethren of the Dusk",
+            "Sentinels of Light"
+        ],
+        "allies": [
+            "Sentinels of Light",
+            "Maiden of the Mist",
+            "Illaoi"
+        ],
+        "rivals": [
+            "Viego",
+            "Black Mist"
+        ],
+        "summary": "Yorick, a monk able to see and communicate with spirits, was changed by the Black Mist, gaining the ability to control them.  He seeks to end the curse of the Shadow Isles and aid the dead, even allying with the Sentinels of Light against Viego but ultimately finding that it didn't remove the Black Mist's curse.",
+        "champion_name": "Yorick"
+    },
+    {
+        "factions": [
+            "Kinkou Order",
+            "Darkin",
+            "demonkin"
+        ],
+        "allies": [
+            "Xin Zhao",
+            "Kennen",
+            "Shen",
+            "Great Spirit"
+        ],
+        "rivals": [
+            "Darkin Kanmei",
+            "demonkin",
+            "Grovemother",
+            "Rhaast",
+            "Varus"
+        ],
+        "summary": "Yunara, a Kinkou Order member, fought the Darkin during the Darkin War, eventually exiling a Darkin spirit to the Spirit Realm. Centuries later, she returned to Ionia and aided Xin Zhao in battling demonkin invaders.",
+        "champion_name": "Yunara"
+    },
+    {
+        "factions": [
+            "Yordles"
+        ],
+        "allies": [
+            "Norra",
+            "Book of Thresholds",
+            "Braum",
+            "Alune",
+            "Aphelios"
+        ],
+        "rivals": [
+            "Warwick",
+            "Nasus",
+            "Rek'Sai"
+        ],
+        "summary": "Yuumi, a magical Yordle cat, embarks on a journey with the Book of Thresholds to find her missing master, Norra.  Along the way, she encounters various allies and rivals while exploring different realms.",
+        "champion_name": "Yuumi"
+    },
+    {
+        "factions": [
+            "Zaunites"
+        ],
+        "allies": [
+            "Adoptive parents",
+            "Zaunite children"
+        ],
+        "rivals": [
+            "Saito Takeda",
+            "Takeda's henchmen",
+            "Takeda's alchemists"
+        ],
+        "summary": "Zac is a sentient ooze created in Zaun by Chem-Baron Saito Takeda as a super soldier. After escaping, he was raised by two kind alchemists who taught him morality but was later forced to live in the sewers after his parents were killed by Takeda's men.",
+        "champion_name": "Zac"
+    },
+    {
+        "factions": [
+            "Kinkou",
+            "Shadow Order"
+        ],
+        "allies": [
+            "Shen",
+            "Kayn"
+        ],
+        "rivals": [
+            "Khada Jhin",
+            "Noxus"
+        ],
+        "summary": "Zed, originally Govos, was a peasant boy who rose through the ranks of the Kinkou before leaving to form the Shadow Order, a group dedicated to defending Ionia through extreme means.  He wields shadow magic and is a skilled warrior, driven by a desire to protect his homeland.",
+        "champion_name": "Zed"
+    },
+    {
+        "factions": [
+            "Zaunite"
+        ],
+        "allies": [
+            "Ekko",
+            "Blitzcrank"
+        ],
+        "rivals": [
+            "Jinx",
+            "Piltovans"
+        ],
+        "summary": "Zeri is a teenage Zaunite girl with electric powers who fights for her city.  She is friends with Ekko and has a complicated relationship with other champions, including rivals like Jinx and a general distrust of Piltovans.",
+        "champion_name": "Zeri"
+    },
+    {
+        "factions": [
+            "Yordles",
+            "Piltover",
+            "Zaun"
+        ],
+        "allies": [
+            "Heimerdinger",
+            "captured yordles"
+        ],
+        "rivals": [
+            "Jinx"
+        ],
+        "summary": "Ziggs is a yordle scientist known for his chaotic experiments and love of explosions.  After saving captured yordle professors from a Zaunite prison using his powerful bombs, he earned the title of Dean of Demolitions and now lives in Zaun with Jinx.",
+        "champion_name": "Ziggs"
+    },
+    {
+        "factions": [
+            "Icathia",
+            "Shurima"
+        ],
+        "allies": [
+            "Jax",
+            "Yun of Ixtal"
+        ],
+        "rivals": [],
+        "summary": "Zilean, an Icathian mage, attempted to save his people from the Void's destruction but accidentally trapped them in a time anomaly.  Now, he seeks to save Runeterra from an impending catastrophe.",
+        "champion_name": "Zilean"
+    },
+    {
+        "factions": [
+            "Rakkor tribe of Mount Targon"
+        ],
+        "allies": [
+            "Aurelion Sol",
+            "Bard",
+            "Lulu",
+            "Ezreal"
+        ],
+        "rivals": [
+            "Lux",
+            "Aatrox",
+            "Pantheon",
+            "Darkin",
+            "God-Warriors"
+        ],
+        "summary": "Zoe, the Aspect of Twilight, is a mischievous and imaginative girl from the Rakkor tribe on Mount Targon.  She possesses celestial magic and the ability to manipulate time and dimensions, often playing tricks on mortals while protecting those she considers friends, such as Aurelion Sol.",
+        "champion_name": "Zoe"
+    },
+    {
+        "factions": [],
+        "allies": [],
+        "rivals": [
+            "Humans",
+            "Spirits"
+        ],
+        "summary": "Zyra is a hybrid creature born from a magical explosion during the Rune Wars, combining plant and human elements.  Her ultimate goal is to cover the world with her plants, eliminating all that isn't her.",
+        "champion_name": "Zyra"
+    }
+]
