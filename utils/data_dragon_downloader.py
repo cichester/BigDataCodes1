@@ -6,29 +6,28 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Nessun bisogno di configurare il logger qui se è già fatto nel main.py o globalmente
-
 class DataDragonDownloader:
     BASE_URL = "https://ddragon.leagueoflegends.com/cdn"
-    VERSIONS_URL = "https://ddragon.leagueoflegends.com/api/versions.json" # Nuovo URL per le versioni
+    VERSIONS_URL = "https://ddragon.leagueoflegends.com/api/versions.json"
 
     def __init__(self, version=None, language="en_US", data_dir="data"):
         self.language = language
         self.data_dir = data_dir
+        
+        # Inizializza la cache per i dati dei campioni
+        self._champion_cache = None
 
         if version:
             self.version = version
         else:
-            # Se la versione non è specificata, cerca l'ultima
-            self.version = "13.19.1" # Fallback iniziale
-            if not self.version:
-                logger.error("Impossibile recuperare l'ultima versione di Data Dragon. Usando una versione predefinita (15.13.1) come fallback.")
-                self.version = "13.19.1" # Fallback per sicurezza
+            self.version = self.get_latest_version() or "13.19.1"
+            if self.version is None:
+                logger.error("Impossibile recuperare l'ultima versione di Data Dragon. Usando la versione predefinita (13.19.1) come fallback.")
+                self.version = "13.19.1"
 
         self.base_version_language_path = os.path.join(self.data_dir, self.version, self.language)
         os.makedirs(self.base_version_language_path, exist_ok=True)
         logger.info(f"Data Dragon Downloader inizializzato per versione: {self.version}, lingua: {self.language}")
-
 
     def get_latest_version(self):
         """Recupera l'ultima versione disponibile di Data Dragon."""
@@ -38,7 +37,7 @@ class DataDragonDownloader:
             response.raise_for_status()
             versions = response.json()
             if versions:
-                latest_version = versions[0] # La prima versione nell'array è la più recente
+                latest_version = versions[0]
                 logger.info(f"Ultima versione di Data Dragon trovata: {latest_version}")
                 return latest_version
             else:
@@ -53,7 +52,6 @@ class DataDragonDownloader:
 
     def _get_file_url(self, data_type, champion_id=None):
         """Costruisce l'URL completo per il download del file JSON."""
-        # Rimane invariato rispetto all'ultima modifica
         if data_type == 'champion' and champion_id:
             return f"{self.BASE_URL}/{self.version}/data/{self.language}/champion/{champion_id}.json"
         elif data_type == 'champion':
@@ -67,7 +65,6 @@ class DataDragonDownloader:
 
     def _download_and_load_json(self, url, save_path):
         """Scarica un file JSON e lo carica in memoria."""
-        # Rimane invariato rispetto all'ultima modifica
         if not os.path.exists(save_path):
             logger.info(f"Scaricando da: {url} a {save_path}")
             try:
@@ -104,18 +101,10 @@ class DataDragonDownloader:
         Gestisce i diversi formati di risposta di Data Dragon.
         """
         logger.info(f"Data Dragon: Tentativo di recupero dati per tipo '{data_type}' (versione: {self.version})")
-
         file_name = f"{data_type}.json"
         
-        # Per championFull.json, il nome del file è già championFull.json
-        if data_type == 'championFull':
-            file_path = os.path.join(self.base_version_language_path, file_name)
-            url = self._get_file_url(data_type)
-        else:
-            # Per item, summoner, runesReforged, ecc.
-            file_path = os.path.join(self.base_version_language_path, file_name)
-            url = self._get_file_url(data_type)
-
+        file_path = os.path.join(self.base_version_language_path, file_name)
+        url = self._get_file_url(data_type)
 
         if not force_download and os.path.exists(file_path):
             logger.info(f"File {file_path} già presente. Saltando il download.")
@@ -124,7 +113,6 @@ class DataDragonDownloader:
             json_data = self._download_and_load_json(url, file_path)
 
         if json_data:
-            # Gestione specifica in base al tipo di dati
             if data_type in ['champion', 'item', 'summoner', 'profileicon', 'map', 'language', 'sticker', 'championFull']:
                 return json_data.get('data')
             elif data_type == 'runesReforged':
@@ -134,10 +122,8 @@ class DataDragonDownloader:
                 return json_data
         return None
 
-
     def _load_json_data(self, file_path):
         """Carica un file JSON esistente."""
-        # Rimane invariato rispetto all'ultima modifica
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 return json.load(f)
@@ -157,14 +143,11 @@ class DataDragonDownloader:
         Usa una cache interna per evitare di ricaricare il file JSON a ogni chiamata.
         """
         if self._champion_cache is None:
-            # Scarica o carica tutti i dati dei campioni se la cache è vuota
             champions_data = self.get_data('champion')
             if not champions_data:
                 logger.error("Impossibile recuperare i dati dei campioni da Data Dragon.")
                 return None
                 
-            # Popola la cache: mappa gli ID numerici ai dati del campione
             self._champion_cache = {int(champ['key']): champ for champ in champions_data.values()}
 
         return self._champion_cache.get(champion_id)
-

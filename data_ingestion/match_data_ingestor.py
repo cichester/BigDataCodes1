@@ -2,8 +2,9 @@
 
 import logging
 import json
+import re
+import time # Importa il modulo time per la misurazione
 from kafka import KafkaConsumer
-import os
 
 logger = logging.getLogger(__name__)
 
@@ -11,400 +12,153 @@ class MatchDataIngestor:
     def __init__(self, neo4j_connector, data_dragon_downloader):
         self.db_connector = neo4j_connector
         self.data_dragon_downloader = data_dragon_downloader
-        logger.info("MatchDataIngestor inizializzato per l'ingestione da flusso Kafka.")
-        
-    def close(self):
-        """Chiude la connessione al database Neo4j."""
-        self.db_connector.get_driver().close()
+        self.champion_lookup_map = self._build_champion_lookup_map()
+        logger.info(f"MatchDataIngestor inizializzato. Creata mappa di lookup con {len(self.champion_lookup_map)} voci.")
 
-    def ingest_matches_from_kafka(self, topic_name='lol-matches', bootstrap_servers='localhost:9092'):
+    # --- METODO DI TEST "LENTO" (UNO PER UNO) ---
+    def ingest_matches_from_kafka_single(self, topic_name='lol-matches', bootstrap_servers='localhost:9092'):
         """
-        Acquisisce partite in tempo reale da un topic Kafka, gestendo errori di decodifica JSON.
+        [METODO DI TEST] Consuma messaggi da Kafka e li ingerisce uno per uno.
         """
-        consumer = None
+        logger.info("--- AVVIO TEST: INGESTIONE SINGOLA ---")
+        start_time = time.time()
+        total_processed = 0
+        
         try:
             consumer = KafkaConsumer(
                 topic_name,
                 bootstrap_servers=bootstrap_servers,
                 auto_offset_reset='earliest',
-                group_id='neo4j-ingestor-group'
+                group_id='neo4j-ingestor-group-single', # Gruppo diverso per il test
+                consumer_timeout_ms=15000 # Termina dopo 15s di inattività
             )
-            logger.info(f"Consumatore Kafka connesso al topic '{topic_name}'. In attesa di messaggi...")
+            logger.info(f"Consumatore (singolo) connesso a '{topic_name}'.")
 
             for message in consumer:
                 try:
                     match_data = json.loads(message.value.decode('utf-8'))
-                    match_id = match_data.get('gameId', 'N/A')
-                    self._process_and_ingest_match(match_id, match_data)
-                    logger.info(f"Partita {match_id} ingerita con successo.")
-                except json.JSONDecodeError as e:
-                    logger.error(f"Errore di decodifica JSON per un messaggio dal topic. Messaggio ignorato. Errore: {e}")
-                except Exception as e:
-                    logger.error(f"Errore durante l'ingestione della partita: {e}")
-                    
+                    if match_data.get('gameMode') == 'CLASSIC':
+                        params = self._prepare_match_params(match_data)
+                        if params:
+                            # Invia un batch contenente una sola partita
+                            self._bulk_insert_matches([params])
+                            total_processed += 1
+                except json.JSONDecodeError:
+                    logger.warning(f"Messaggio non JSON. Ignoro.")
+            
         except Exception as e:
-            logger.error(f"Errore grave nel consumatore Kafka: {e}")
+            logger.critical(f"Errore grave nel consumatore (singolo): {e}", exc_info=True)
         finally:
-            if consumer and consumer.bootstrap_connected():
+            end_time = time.time()
+            self._print_performance_report("Ingestione Singola", start_time, end_time, total_processed)
+            if 'consumer' in locals() and consumer:
                 consumer.close()
-            self.close()
 
-    def _process_and_ingest_match(self, match_id: str, match_data: dict):
+    # --- METODO OTTIMIZZATO (MICRO-BATCH) ---
+    def ingest_matches_from_kafka(self, topic_name='lol-matches', bootstrap_servers='localhost:9092', batch_size=100, batch_timeout_seconds=5):
         """
-        Processa i dati di una singola partita e li ingesta in Neo4j.
+        [METODO OTTIMIZZATO] Consuma messaggi da Kafka in micro-batch.
         """
-        logger.debug(f"Processando dati per la partita: {match_id}")
+        logger.info("--- AVVIO TEST: INGESTIONE A MICRO-BATCH ---")
+        start_time = time.time()
+        total_processed = 0
 
-        with self.db_connector.get_driver().session() as session:
-            set_clauses = []
-            params = {'match_id': match_id}
-            
-            game_creation_timestamp = match_data.get('gameCreation')
-            if game_creation_timestamp is not None:
-                set_clauses.append("m.creation = datetime({epochMillis: $game_creation_timestamp})")
-                params['game_creation_timestamp'] = game_creation_timestamp
-            
-            game_duration = match_data.get('gameDuration')
-            if game_duration is not None:
-                set_clauses.append("m.duration = $game_duration")
-                params['game_duration'] = game_duration
-            
-            game_end_timestamp = match_data.get('gameEndTimestamp')
-            if game_end_timestamp is not None:
-                set_clauses.append("m.endTimestamp = datetime({epochMillis: $game_end_timestamp})")
-                params['game_end_timestamp'] = game_end_timestamp
-            
-            game_mode = match_data.get('gameMode')
-            if game_mode is not None:
-                set_clauses.append("m.mode = $game_mode")
-                params['game_mode'] = game_mode
-            
-            game_name = match_data.get('gameName')
-            if game_name is not None:
-                set_clauses.append("m.name = $game_name")
-                params['game_name'] = game_name
-
-            game_start_timestamp = match_data.get('gameStartTimestamp')
-            if game_start_timestamp is not None:
-                set_clauses.append("m.startTimestamp = datetime({epochMillis: $game_start_timestamp})")
-                params['game_start_timestamp'] = game_start_timestamp
-
-            game_type = match_data.get('gameType')
-            if game_type is not None:
-                set_clauses.append("m.type = $game_type")
-                params['game_type'] = game_type
-            
-            game_version = match_data.get('gameVersion')
-            if game_version is not None:
-                set_clauses.append("m.version = $game_version")
-                params['game_version'] = game_version
-
-            map_id = match_data.get('mapId')
-            if map_id is not None:
-                set_clauses.append("m.mapId = $map_id")
-                params['map_id'] = map_id
-
-            cypher_query = f"MERGE (m:Match {{id: $match_id}})"
-            if set_clauses:
-                set_clause_str = ", ".join(set_clauses)
-                cypher_query += f" ON CREATE SET {set_clause_str} ON MATCH SET {set_clause_str}"
-            
-            session.run(cypher_query, **params)
-            
-            participants_data = match_data.get('participants', [])
-            for participant in participants_data:
-                self._process_participant(session, match_id, participant)
-
-            teams_data = match_data.get('teams', [])
-            for team in teams_data:
-                self._process_team(session, match_id, team)
-
-            logger.debug(f"Ingestione dettagli completata per la partita: {match_id}")
-
-    def _process_participant(self, session, match_id: str, participant_data: dict):
-        puuid = participant_data.get('puuid')
-        summoner_id = participant_data.get('summonerId')
-        summoner_name = participant_data.get('summonerName')
-        champion_id = participant_data.get('championId')
-        champion_name = participant_data.get('championName')
-        team_id = participant_data.get('teamId')
-        team_position = participant_data.get('teamPosition')
-
-        challenges_data = participant_data.get('challenges', {})
-        damage_per_minute = challenges_data.get('damagePerMinute')
-        deaths_by_enemy_champs = challenges_data.get('deathsByEnemyChamps')
-        dragon_takedowns = challenges_data.get('dragonTakedowns')
-
-        if not champion_name and champion_id:
-            champion_info = self.data_dragon_downloader.get_champion_by_id(champion_id)
-            champion_name = champion_info.get('name') if champion_info else f"Unknown_Champion_{champion_id}"
-            logger.warning(f"ChampionName non trovato nel JSON per ID {champion_id}, recuperato da Data Dragon: {champion_name}")
-
-        # --- Nodo Player ---
-        session.run(
-            """
-            MERGE (p:Player {puuid: $puuid})
-            ON CREATE SET
-                p.summonerId = $summoner_id,
-                p.summonerName = $summoner_name
-            ON MATCH SET
-                p.summonerId = $summoner_id,
-                p.summonerName = $summoner_name
-            """,
-            puuid=puuid,
-            summoner_id=summoner_id,
-            summoner_name=summoner_name
-        )
-
-        # --- Nodo Champion e relazione PLAYED_AS ---
-        session.run(
-            """
-            MATCH (p:Player {puuid: $puuid})
-            MATCH (c:Champion {name: $champion_name})
-            MERGE (p)-[:PLAYED_AS]->(c)
-            """,
-            puuid=puuid,
-            champion_name=champion_name
-        )
-        
-        # --- Relazione Player PLAYED_IN Match con statistiche (ottimizzata) ---
-        session.run(
-            """
-            MATCH (p:Player {puuid: $puuid})
-            MATCH (m:Match {id: $match_id})
-            MERGE (p)-[r:PLAYED_IN]->(m)
-            ON CREATE SET
-                r.kills = $kills,
-                r.deaths = $deaths,
-                r.assists = $assists,
-                r.win = $win,
-                r.goldEarned = $goldEarned,
-                r.totalDamageDealtToChampions = $totalDamageDealtToChampions,
-                r.champLevel = $champLevel,
-                r.totalMinionsKilled = $totalMinionsKilled,
-                r.visionScore = $visionScore,
-                r.wardsPlaced = $wardsPlaced,
-                r.wardsKilled = $wardsKilled,
-                r.detectorWardsPlaced = $detectorWardsPlaced,
-                r.physicalDamageDealtToChampions = $physicalDamageDealtToChampions,
-                r.magicDamageDealtToChampions = $magicDamageDealtToChampions,
-                r.trueDamageDealtToChampions = $trueDamageDealtToChampions,
-                r.totalDamageDealt = $totalDamageDealt,
-                r.physicalDamageTaken = $physicalDamageTaken,
-                r.magicDamageTaken = $magicDamageTaken,
-                r.trueDamageTaken = $trueDamageTaken,
-                r.teamPosition = $teamPosition,
-                r.teamId = $teamId,
-                r.damagePerMinute = $damage_per_minute,
-                r.deathsByEnemyChamps = $deaths_by_enemy_champs,
-                r.dragonTakedowns = $dragon_takedowns
-            ON MATCH SET
-                r.kills = $kills,
-                r.deaths = $deaths,
-                r.assists = $assists,
-                r.win = $win,
-                r.goldEarned = $goldEarned,
-                r.totalDamageDealtToChampions = $totalDamageDealtToChampions,
-                r.champLevel = $champLevel,
-                r.totalMinionsKilled = $totalMinionsKilled,
-                r.visionScore = $visionScore,
-                r.wardsPlaced = $wardsPlaced,
-                r.wardsKilled = $wardsKilled,
-                r.detectorWardsPlaced = $detectorWardsPlaced,
-                r.physicalDamageDealtToChampions = $physicalDamageDealtToChampions,
-                r.magicDamageDealtToChampions = $magicDamageDealtToChampions,
-                r.trueDamageDealtToChampions = $trueDamageDealtToChampions,
-                r.totalDamageDealt = $totalDamageDealt,
-                r.physicalDamageTaken = $physicalDamageTaken,
-                r.magicDamageTaken = $magicDamageTaken,
-                r.trueDamageTaken = $trueDamageTaken,
-                r.teamPosition = $teamPosition,
-                r.teamId = $teamId,
-                r.damagePerMinute = $damage_per_minute,
-                r.deathsByEnemyChamps = $deaths_by_enemy_champs,
-                r.dragonTakedowns = $dragon_takedowns
-            """,
-            puuid=puuid,
-            match_id=match_id,
-            kills=participant_data.get('kills'),
-            deaths=participant_data.get('deaths'),
-            assists=participant_data.get('assists'),
-            win=participant_data.get('win'),
-            goldEarned=participant_data.get('goldEarned'),
-            totalDamageDealtToChampions=participant_data.get('totalDamageDealtToChampions'),
-            champLevel=participant_data.get('champLevel'),
-            totalMinionsKilled=participant_data.get('totalMinionsKilled'),
-            visionScore=participant_data.get('visionScore'),
-            wardsPlaced=participant_data.get('wardsPlaced'),
-            wardsKilled=participant_data.get('wardsKilled'),
-            detectorWardsPlaced=participant_data.get('detectorWardsPlaced'),
-            physicalDamageDealtToChampions=participant_data.get('physicalDamageDealtToChampions'),
-            magicDamageDealtToChampions=participant_data.get('magicDamageDealtToChampions'),
-            trueDamageDealtToChampions=participant_data.get('trueDamageDealtToChampions'),
-            totalDamageDealt=participant_data.get('totalDamageDealt'),
-            physicalDamageTaken=participant_data.get('physicalDamageTaken'),
-            magicDamageTaken=participant_data.get('magicDamageTaken'),
-            trueDamageTaken=participant_data.get('trueDamageTaken'),
-            teamPosition=team_position,
-            teamId=team_id,
-            damage_per_minute=damage_per_minute,
-            deaths_by_enemy_champs=deaths_by_enemy_champs,
-            dragon_takedowns=dragon_takedowns
-        )
-
-        # --- Relazione Player BELONGS_TO Team (ottimizzata) ---
-        session.run(
-            """
-            MATCH (p:Player {puuid: $puuid})
-            MATCH (t:Team {id: $team_id, matchId: $match_id})
-            MERGE (p)-[:BELONGS_TO]->(t)
-            """,
-            puuid=puuid,
-            team_id=team_id,
-            match_id=match_id
-        )
-
-        # --- Processa gli Items (query ottimizzata) ---
-        for i in range(7):
-            item_id = participant_data.get(f'item{i}')
-            if item_id and item_id != 0:
-                session.run(
-                    """
-                    MATCH (p:Player {puuid: $puuid})
-                    MATCH (m:Match {id: $match_id})
-                    MATCH (item:Item {id: $item_id})
-                    MERGE (p)-[:BOUGHT_ITEM_IN {matchId: $match_id}]->(item)
-                    """,
-                    puuid=puuid,
-                    match_id=match_id,
-                    item_id=item_id
-                )
-        
-        # --- Processa Summoner Spells (query ottimizzata) ---
-        summoner_spell1_id = participant_data.get('summoner1Id')
-        summoner_spell2_id = participant_data.get('summoner2Id')
-
-        if summoner_spell1_id:
-            session.run(
-                """
-                MATCH (p:Player {puuid: $puuid})
-                MATCH (m:Match {id: $match_id})
-                MATCH (ss:SummonerSpell {id: $summoner_spell_id})
-                MERGE (p)-[:USED_SUMMONER_SPELL_IN {matchId: $match_id, slot: 1}]->(ss)
-                """,
-                puuid=puuid,
-                match_id=match_id,
-                summoner_spell_id=summoner_spell1_id
+        try:
+            consumer = KafkaConsumer(
+                topic_name,
+                bootstrap_servers=bootstrap_servers,
+                auto_offset_reset='earliest',
+                group_id='neo4j-ingestor-group-batch',
+                consumer_timeout_ms= (batch_timeout_seconds + 5) * 1000 # Timeout leggermente più alto
             )
-        if summoner_spell2_id:
-            session.run(
-                """
-                MATCH (p:Player {puuid: $puuid})
-                MATCH (m:Match {id: $match_id})
-                MATCH (ss:SummonerSpell {id: $summoner_spell_id})
-                MERGE (p)-[:USED_SUMMONER_SPELL_IN {matchId: $match_id, slot: 2}]->(ss)
-                """,
-                puuid=puuid,
-                match_id=match_id,
-                summoner_spell_id=summoner_spell2_id
-            )
+            logger.info(f"Consumatore (batch) connesso a '{topic_name}'.")
 
-        # --- Processa Rune (perks) (query ottimizzata) ---
-        perks_data = participant_data.get('perks', {})
-        styles = perks_data.get('styles', [])
+            message_batch = []
+            while True:
+                messages = consumer.poll(timeout_ms=batch_timeout_seconds * 1000, max_records=batch_size)
+                if not messages:
+                    logger.info("Nessun nuovo messaggio. Rimango in attesa...")
+                    #break # Esce se non ci sono più messaggi dopo il timeout
 
-        for style in styles:
-            primary_style_id = style.get('style')
-            selections = style.get('selections', [])
-
-            if primary_style_id:
-                session.run(
-                    """
-                    MATCH (p:Player {puuid: $puuid})
-                    MATCH (m:Match {id: $match_id})
-                    MATCH (rp:RunePath {id: $rune_path_id})
-                    MERGE (p)-[:USED_RUNE_PATH_IN {matchId: $match_id}]->(rp)
-                    """,
-                    puuid=puuid,
-                    match_id=match_id,
-                    rune_path_id=primary_style_id
-                )
-
-            for selection in selections:
-                rune_id = selection.get('perk')
-                if rune_id:
-                    session.run(
-                        """
-                        MATCH (p:Player {puuid: $puuid})
-                        MATCH (m:Match {id: $match_id})
-                        MATCH (r:Rune {id: $rune_id})
-                        MERGE (p)-[:SELECTED_RUNE_IN {matchId: $match_id}]->(r)
-                        """,
-                        puuid=puuid,
-                        match_id=match_id,
-                        rune_id=rune_id
-                    )
-
-    def _process_team(self, session, match_id: str, team_data: dict):
-        """
-        Crea nodi Team e le relazioni con Match e obiettivi in modo ottimizzato.
-        """
-        team_id = team_data.get('teamId')
-        win = team_data.get('win')
-
-        # Step 1: Crea o aggiorna il nodo Team e la relazione con Match
-        session.run(
-            """
-            MATCH (m:Match {id: $match_id})
-            MERGE (t:Team {id: $team_id, matchId: $match_id})
-            ON CREATE SET t.win = $win
-            ON MATCH SET t.win = $win
-            MERGE (t)-[:PLAYED_IN]->(m)
-            """,
-            team_id=team_id,
-            match_id=match_id,
-            win=win
-        )
-
-        # Step 2: Processa obiettivi
-        objectives = team_data.get('objectives', {})
-        for objective_name, objective_data in objectives.items():
-            if objective_data.get('kills', 0) > 0:
-                session.run(
-                    """
-                    MATCH (m:Match {id: $match_id})
-                    MATCH (t:Team {id: $team_id, matchId: m.id})
-                    MERGE (o:Objective {name: $objective_name})
-                    MERGE (t)-[:SECURED {kills: $kills}]->(o)
-                    """,
-                    team_id=team_id,
-                    match_id=match_id,
-                    objective_name=objective_name,
-                    kills=objective_data.get('kills')
-                )
-
-        # Step 3: Processa i bans
-        bans = team_data.get('bans', [])
-        for ban in bans:
-            champion_id = ban.get('championId')
-            pick_turn = ban.get('pickTurn')
-            
-            if champion_id:
-                try:
-                    champion_info = self.data_dragon_downloader.get_champion_by_id(champion_id)
-                    champion_name = champion_info.get('name') if champion_info else f"Unknown_Champion_{champion_id}"
-                except AttributeError:
-                    champion_name = f"Unknown_Champion_{champion_id}"
-                    logger.error("ERRORE: get_champion_by_id non trovato in DataDragonDownloader. Il nome del campione sarà un placeholder.")
+                for topic_partition, records in messages.items():
+                    for record in records:
+                        try:
+                            message_batch.append(json.loads(record.value.decode('utf-8')))
+                        except json.JSONDecodeError:
+                            logger.warning(f"Messaggio non JSON. Ignoro.")
                 
-                session.run(
-                    """
-                    MATCH (t:Team {id: $team_id, matchId: $match_id})
-                    MATCH (c:Champion {name: $champion_name})
-                    MERGE (t)-[:BANNED {pickTurn: $pick_turn}]->(c)
-                    """,
-                    team_id=team_id,
-                    match_id=match_id,
-                    champion_name=champion_name,
-                    pick_turn=pick_turn
-                )
+                if message_batch:
+                    filtered_batch = [data for data in message_batch if data.get('gameMode') == 'CLASSIC']
+                    params_batch = [self._prepare_match_params(data) for data in filtered_batch]
+                    params_batch = [p for p in params_batch if p is not None]
+                    
+                    if params_batch:
+                        self._bulk_insert_matches(params_batch)
+                        total_processed += len(params_batch)
+
+                    message_batch = []
+        
+        except Exception as e:
+            logger.critical(f"Errore grave nel consumatore (batch): {e}", exc_info=True)
+        finally:
+            end_time = time.time()
+            self._print_performance_report("Ingestione a Micro-Batch", start_time, end_time, total_processed)
+            if 'consumer' in locals() and consumer:
+                consumer.close()
+
+    # --- METODI INTERNI (rimangono invariati) ---
+    def _prepare_match_params(self, match_data: dict) -> dict:
+        # Il tuo codice esistente va qui... (omesso per brevità)
+        match_id=match_data.get('gameId')
+        if not match_id:return None
+        teams_list=[]
+        for t_data in match_data.get('teams',[]):
+            banned_champion_keys=[str(ban.get('championId'))for ban in t_data.get('bans',[])if ban.get('championId',-1)!=-1]
+            teams_list.append({'teamId':t_data.get('teamId'),'win':t_data.get('win'),'bannedChampions':banned_champion_keys})
+        return{'match_props':{'id':match_id,'duration':match_data.get('gameDuration'),'gameMode':match_data.get('gameMode'),'creation':match_data.get('gameCreation')},'participants':[{'puuid':p.get('puuid'),'summonerName':p.get('summonerName'),'championName':self._get_canonical_champion_name(p.get('championName')),'teamId':p.get('teamId'),'stats':{'championName':self._get_canonical_champion_name(p.get('championName')),'win':p.get('win'),'kills':p.get('kills'),'deaths':p.get('deaths'),'assists':p.get('assists'),'goldEarned':p.get('goldEarned'),'role':'SUPPORT'if p.get('teamPosition')=='UTILITY'else p.get('teamPosition')}}for p in match_data.get('participants',[])if p.get('puuid')],'teams':teams_list}
+
+    def _bulk_insert_matches(self, all_matches_data: list):
+        # Il tuo codice esistente va qui... (omesso per brevità)
+        if not all_matches_data:return
+        logger.info(f"Invio di un batch di {len(all_matches_data)} partite al database...")
+        query="""UNWIND $all_matches AS match_data MERGE (m:Match {id: match_data.match_props.id})SET m.duration = match_data.match_props.duration, m.gameMode = match_data.match_props.gameMode, m.creation = datetime({epochMillis: match_data.match_props.creation})WITH m, match_data.participants AS participants, match_data.teams AS teams UNWIND participants AS p_data MERGE (p:Player {puuid: p_data.puuid})ON CREATE SET p.summonerName = p_data.summonerName WITH m, p, p_data, teams MERGE (c:Champion {name: p_data.championName})MERGE (p)-[rel:PLAYED_IN]->(m)SET rel += p_data.stats WITH m, teams UNWIND teams AS t_data MERGE (t:Team {matchId: m.id, teamId: t_data.teamId})SET t.win = t_data.win MERGE (t)-[:PARTICIPATED_IN]->(m)WITH m, t, t_data MATCH (p:Player)-[r:PLAYED_IN]->(m)WHERE r.teamId = t_data.teamId MERGE (p)-[:PLAYED_FOR]->(t)WITH t, t_data UNWIND t_data.bannedChampions AS banned_champ_key MATCH (banned_champ:Champion {key: banned_champ_key})MERGE (t)-[:BANNED]->(banned_champ)"""
+        params={'all_matches':all_matches_data}
+        try:self.db_connector.run_query(query,params);logger.info(f"Batch di {len(all_matches_data)} partite ingerito con successo.")
+        except Exception as e:logger.error(f"Errore durante l'esecuzione della query in batch: {e}",exc_info=True)
+        
+    def _print_performance_report(self, test_name, start_time, end_time, total_processed):
+        """Funzione di utilità per stampare i risultati del test."""
+        duration = end_time - start_time
+        throughput = total_processed / duration if duration > 0 else 0
+        
+        print("\n" + "="*50)
+        print(f"RISULTATI DEL TEST: {test_name}")
+        print("="*50)
+        print(f"Tempo totale di esecuzione: {duration:.2f} secondi")
+        print(f"Partite 'CLASSIC' totali ingerite: {total_processed}")
+        print(f"Throughput: {throughput:.2f} partite al secondo")
+        print("="*50 + "\n")
+        
+    def _normalize_name(self, name: str) -> str:
+        if not name: return ""
+        return re.sub(r'[^a-z0-9]', '', name.lower())
+
+    def _build_champion_lookup_map(self) -> dict:
+        try:
+            result = self.db_connector.run_query("MATCH (c:Champion) RETURN c.id AS id, c.name AS name")
+            lookup_map = {}
+            for record in result:
+                canonical_name = record['name']
+                normalized_id = self._normalize_name(record['id'])
+                lookup_map[normalized_id] = canonical_name
+                normalized_name = self._normalize_name(canonical_name)
+                lookup_map[normalized_name] = canonical_name
+            return lookup_map
+        except Exception as e:
+            logger.error(f"Impossibile costruire la mappa di lookup: {e}")
+            return {}
+
+    def _get_canonical_champion_name(self, messy_name: str) -> str:
+        if not messy_name: return "Unknown"
+        normalized = self._normalize_name(messy_name)
+        return self.champion_lookup_map.get(normalized, messy_name)

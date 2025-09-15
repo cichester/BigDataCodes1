@@ -5,3 +5,4 @@
 __pycache__/
 *.pyc
 kaggle_data/
+venv_lolkg/

@@ -82,7 +82,9 @@ class Neo4jConnector:
             "CREATE CONSTRAINT IF NOT EXISTS FOR (i:Item) REQUIRE i.id IS UNIQUE",
             "CREATE CONSTRAINT IF NOT EXISTS FOR (rp:RunePath) REQUIRE rp.id IS UNIQUE",
             "CREATE CONSTRAINT IF NOT EXISTS FOR (r:Rune) REQUIRE r.id IS UNIQUE",
-            "CREATE CONSTRAINT IF NOT EXISTS FOR (ss:SummonerSpell) REQUIRE ss.id IS UNIQUE"
+            "CREATE CONSTRAINT IF NOT EXISTS FOR (ss:SummonerSpell) REQUIRE ss.id IS UNIQUE",
+            "CREATE CONSTRAINT character_name_unique IF NOT EXISTS FOR (c:Character) REQUIRE c.name IS UNIQUE",
+            "CREATE CONSTRAINT champion_key_unique IF NOT EXISTS FOR (c:Champion) REQUIRE c.key IS UNIQUE"
         ]
         for query in constraints:
             try:
