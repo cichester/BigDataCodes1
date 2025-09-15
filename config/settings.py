@@ -31,3 +31,5 @@ if not NEO4J_PASSWORD:
 # --- Altre configurazioni (es. per Data Ingestion) ---
 MATCH_DATA_BASE_DIR = "G:\\Matches"
 # Puoi aggiungere qui altre configurazioni future, come limiti di partite da scaricare, ecc.
+LORE_FILES_PATH = os.getenv("LORE_FILES_PATH")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")

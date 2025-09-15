@@ -40,7 +40,8 @@ def produce_all_matches(producer, data_dir, topic_name='lol-matches'):
         #"europe_matches_1.json",
         #"americas_matches_3.json",
         #"asia_matches_4.json",
-        "americas_matches_reduced_500.json"
+        #"americas_matches_reduced_500.json",
+        "americas_matches_reduced_10k.json"
     ]
 
     for match_file_name in match_files:
