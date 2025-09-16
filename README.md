@@ -43,12 +43,12 @@ Attivare Neo4j tramite l'apposita applicazione Neo4j desktop, altrimenti configu
 Crea un file chiamato .env nella cartella principale del progetto e incollaci il seguente contenuto, sostituendo i valori con le tue credenziali e percorsi.
 
 # Credenziali per il database Neo4j
-NEO4J_URI="bolt://localhost:7687"
-NEO4J_USERNAME="neo4j"
-NEO4J_PASSWORD="LaTuaPassword"
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=LaTuaPassword
 
 # La tua chiave API per Google Gemini
-GOOGLE_API_KEY="AIzaSy...laTuaChiaveAPI..."
+GOOGLE_API_KEY=AIzaSy...laTuaChiaveAPI...
 
 # Il percorso ASSOLUTO alla cartella che contiene i file .txt della lore
 LORE_FILES_PATH="G:/BigDataCodes/champion_lore_data"
