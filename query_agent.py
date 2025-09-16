@@ -4,7 +4,7 @@ import logging
 from dotenv import load_dotenv
 
 # Importiamo tutto da langchain_community e langchain standard
-from langchain_community.graphs import Neo4jGraph
+from langchain_neo4j import Neo4jGraph
 from langchain.chains import GraphCypherQAChain
 from langchain_google_genai import ChatGoogleGenerativeAI
 
