@@ -39,6 +39,7 @@ Dopo aver eseguito questo comando, i servizi saranno in esecuzione in background
 
 Attivare Neo4j tramite l'apposita applicazione Neo4j desktop, altrimenti configurare il docker-compose in modo tale da poter avviare un'istanza di Neo4j.
 Una volta creato il db ferma l'esecuzione. Copiare il file **apoc-2025.05.0-core** all'interno della cartella **"C:\Users\IlTuoUtente\ .Neo4jDesktop2\Data\dbmss\dbms-IDDelTuoDBMS\plugins"**, facilmente raggiungibile cliccando sul simbolo della cartella presente nell'interfaccia di Neo4j Desktop. Poi, posizionati nella cartella **"C:\Users\IlTuoUtente\ .Neo4jDesktop2\Data\dbmss\dbms-IDDelTuoDBMS\conf"**, apri con l'editor di testo che preferisci il file **"neo4j"** ed aggiungi dbms.security.procedures.unrestricted=apoc.meta.*   , in questo modo l'ia potrà leggere il db ed interrogarlo.
+Riavviare dunque il GraphDB.
 
 ### e. Configurare le Variabili d'Ambiente
 Crea un file chiamato .env nella cartella principale del progetto e incollaci il seguente contenuto, sostituendo i valori con le tue credenziali e percorsi.
