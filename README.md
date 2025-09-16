@@ -31,19 +31,21 @@ Installa tutti i pacchetti necessari con un singolo comando:
 pip install -r requirements.txt
 
 ### d. Avviare l'Infrastruttura (Kafka & Neo4j)
-Il file docker-compose.yml fornito configurerà e avvierà i container per Kafka, Zookeeper e Neo4j.
+Il file docker-compose.yml fornito configurerà e avvierà i container per Kafka e Zookeeper.
 
 docker-compose up -d
 
 Dopo aver eseguito questo comando, i servizi saranno in esecuzione in background.
 
+Attivare Neo4j tramite l'apposita applicazione Neo4j desktop, altrimenti configurare il docker-compose in modo tale da poter avviare un'istanza di Neo4j.
+
 ### e. Configurare le Variabili d'Ambiente
 Crea un file chiamato .env nella cartella principale del progetto e incollaci il seguente contenuto, sostituendo i valori con le tue credenziali e percorsi.
 
-# Credenziali per il database Neo4j (quelle di default del docker-compose)
+# Credenziali per il database Neo4j
 NEO4J_URI="bolt://localhost:7687"
 NEO4J_USERNAME="neo4j"
-NEO4J_PASSWORD="password"
+NEO4J_PASSWORD="LaTuaPassword"
 
 # La tua chiave API per Google Gemini
 GOOGLE_API_KEY="AIzaSy...laTuaChiaveAPI..."
