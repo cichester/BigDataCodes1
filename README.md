@@ -88,7 +88,7 @@ Questo script avvia l'agente conversazionale che ti permette di interrogare il g
 
 python query_agent.py
 
-Attendi il messaggio "Agente di interrogazione pronto" e poi inizia a porre le tue domande.
+Attendi il messaggio "👤 La tua domanda:" e poi inizia a porre le tue domande.
 
 ## 4. Note Aggiuntive
 Pulizia dell'Ambiente Docker: Per fermare e rimuovere tutti i container e i volumi (inclusi i dati di Kafka e Neo4j), usa il seguente comando:
