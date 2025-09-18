@@ -106,25 +106,156 @@ class MatchDataIngestor:
             if 'consumer' in locals() and consumer:
                 consumer.close()
 
-    # --- METODI INTERNI (rimangono invariati) ---
+    def _process_and_ingest_batch(self, match_data_batch: list):
+        """
+        Prende un batch di messaggi, li pre-processa (filtrando per 'CLASSIC')
+        e li invia a Neo4j con una singola query.
+        """
+        all_matches_params = []
+        for match_data in match_data_batch:
+            if match_data.get('gameMode') == 'CLASSIC':
+                params = self._prepare_match_params(match_data)
+                if params:
+                    all_matches_params.append(params)
+        
+        if all_matches_params:
+            self._bulk_insert_matches(all_matches_params)
+
     def _prepare_match_params(self, match_data: dict) -> dict:
-        # Il tuo codice esistente va qui... (omesso per brevità)
-        match_id=match_data.get('gameId')
-        if not match_id:return None
-        teams_list=[]
-        for t_data in match_data.get('teams',[]):
-            banned_champion_keys=[str(ban.get('championId'))for ban in t_data.get('bans',[])if ban.get('championId',-1)!=-1]
-            teams_list.append({'teamId':t_data.get('teamId'),'win':t_data.get('win'),'bannedChampions':banned_champion_keys})
-        return{'match_props':{'id':match_id,'duration':match_data.get('gameDuration'),'gameMode':match_data.get('gameMode'),'creation':match_data.get('gameCreation')},'participants':[{'puuid':p.get('puuid'),'summonerName':p.get('summonerName'),'championName':self._get_canonical_champion_name(p.get('championName')),'teamId':p.get('teamId'),'stats':{'championName':self._get_canonical_champion_name(p.get('championName')),'win':p.get('win'),'kills':p.get('kills'),'deaths':p.get('deaths'),'assists':p.get('assists'),'goldEarned':p.get('goldEarned'),'role':'SUPPORT'if p.get('teamPosition')=='UTILITY'else p.get('teamPosition')}}for p in match_data.get('participants',[])if p.get('puuid')],'teams':teams_list}
+        """
+        Prepara i parametri per una singola partita, ora includendo anche
+        items, rune e summoner spells per ogni partecipante.
+        """
+        match_id = match_data.get('gameId')
+        if not match_id: return None
+
+        participants_list = []
+        seen_puuids = set()
+        for p_data in match_data.get('participants', []):
+            puuid = p_data.get('puuid')
+            if not puuid or puuid in seen_puuids: continue
+            seen_puuids.add(puuid)
+            
+            # --- NUOVA SEZIONE: Estrazione di Items, Spells e Runes ---
+            items = [str(p_data.get(f'item{i}')) for i in range(7) if p_data.get(f'item{i}', 0) != 0]
+            
+            summoner_spells = [
+                str(p_data.get('summoner1Id')),
+                str(p_data.get('summoner2Id'))
+            ]
+            summoner_spells = [s for s in summoner_spells if s] # Rimuovi eventuali None
+
+            runes = []
+            perks = p_data.get('perks', {})
+            for style in perks.get('styles', []):
+                for selection in style.get('selections', []):
+                    rune_id = selection.get('perk')
+                    if rune_id:
+                        runes.append(rune_id)
+            # --- FINE NUOVA SEZIONE ---
+
+            participants_list.append({
+                'puuid': puuid,
+                'summonerName': p_data.get('summonerName'),
+                'championName': self._get_canonical_champion_name(p_data.get('championName')),
+                'teamId': p_data.get('teamId'),
+                'stats': {
+                    'championName': self._get_canonical_champion_name(p_data.get('championName')),
+                    'teamId': p_data.get('teamId'),
+                    'win': p_data.get('win'), 'kills': p_data.get('kills'), 'deaths': p_data.get('deaths'),
+                    'assists': p_data.get('assists'), 'goldEarned': p_data.get('goldEarned'),
+                    'role': 'SUPPORT' if p_data.get('teamPosition') == 'UTILITY' else p_data.get('teamPosition'),
+                },
+                # Aggiungiamo le liste di ID al dizionario del partecipante
+                'items': items,
+                'summonerSpells': summoner_spells,
+                'runes': runes
+            })
+
+        teams_list = []
+        for t_data in match_data.get('teams', []):
+            banned_champion_keys = [str(ban.get('championId')) for ban in t_data.get('bans', []) if ban.get('championId', -1) != -1]
+            teams_list.append({'teamId': t_data.get('teamId'), 'win': t_data.get('win'), 'bannedChampions': banned_champion_keys})
+
+        return {
+            'match_props': { 'id': match_id, 'duration': match_data.get('gameDuration'), 'gameMode': match_data.get('gameMode'), 'creation': match_data.get('gameCreation') },
+            'participants': participants_list,
+            'teams': teams_list
+        }
 
     def _bulk_insert_matches(self, all_matches_data: list):
-        # Il tuo codice esistente va qui... (omesso per brevità)
-        if not all_matches_data:return
+        """
+        Query finale e completa che ingerisce tutti i dati di una partita,
+        con la sintassi Cypher corretta per il passaggio delle variabili.
+        """
+        if not all_matches_data: return
         logger.info(f"Invio di un batch di {len(all_matches_data)} partite al database...")
-        query="""UNWIND $all_matches AS match_data MERGE (m:Match {id: match_data.match_props.id})SET m.duration = match_data.match_props.duration, m.gameMode = match_data.match_props.gameMode, m.creation = datetime({epochMillis: match_data.match_props.creation})WITH m, match_data.participants AS participants, match_data.teams AS teams UNWIND participants AS p_data MERGE (p:Player {puuid: p_data.puuid})ON CREATE SET p.summonerName = p_data.summonerName WITH m, p, p_data, teams MERGE (c:Champion {name: p_data.championName})MERGE (p)-[rel:PLAYED_IN]->(m)SET rel += p_data.stats WITH m, teams UNWIND teams AS t_data MERGE (t:Team {matchId: m.id, teamId: t_data.teamId})SET t.win = t_data.win MERGE (t)-[:PARTICIPATED_IN]->(m)WITH m, t, t_data MATCH (p:Player)-[r:PLAYED_IN]->(m)WHERE r.teamId = t_data.teamId MERGE (p)-[:PLAYED_FOR]->(t)WITH t, t_data UNWIND t_data.bannedChampions AS banned_champ_key MATCH (banned_champ:Champion {key: banned_champ_key})MERGE (t)-[:BANNED]->(banned_champ)"""
-        params={'all_matches':all_matches_data}
-        try:self.db_connector.run_query(query,params);logger.info(f"Batch di {len(all_matches_data)} partite ingerito con successo.")
-        except Exception as e:logger.error(f"Errore durante l'esecuzione della query in batch: {e}",exc_info=True)
+        
+        
+        query = """
+        UNWIND $all_matches AS match_data
+        
+        // 1. Crea il nodo Match
+        MERGE (m:Match {id: match_data.match_props.id})
+        SET m.duration = match_data.match_props.duration, 
+            m.gameMode = match_data.match_props.gameMode, 
+            m.creation = datetime({epochMillis: match_data.match_props.creation})
+        
+        // 2. Passa avanti le variabili necessarie
+        WITH m, match_data.participants AS participants, match_data.teams AS teams
+        UNWIND participants AS p_data
+        
+        // 3. Crea i nodi Player e Champion
+        MERGE (p:Player {puuid: p_data.puuid})
+        ON CREATE SET p.summonerName = p_data.summonerName
+        MERGE (c:Champion {name: p_data.championName})
+        
+        // 4. Crea la relazione principale :PLAYED_IN
+        MERGE (p)-[rel:PLAYED_IN]->(m)
+        SET rel += p_data.stats
+        
+        // 5. Crea le relazioni per Items, Spells e Runes
+        // Per ogni passaggio, ci assicuriamo di portare avanti TUTTE le variabili necessarie
+        WITH m, p, p_data, teams
+        UNWIND p_data.items AS item_id
+        MATCH (i:Item {id: item_id})
+        MERGE (p)-[:BOUGHT]->(i)
+
+        WITH m, p, p_data, teams
+        UNWIND p_data.summonerSpells AS spell_key
+        MATCH (ss:SummonerSpell {key: spell_key})
+        MERGE (p)-[:USED_SPELL]->(ss)
+
+        WITH m, p, p_data, teams
+        UNWIND p_data.runes AS rune_id
+        MATCH (r:Rune {id: rune_id})
+        MERGE (p)-[:SELECTED_RUNE]->(r)
+
+        // 6. Ora che abbiamo finito con i singoli giocatori, possiamo processare i team.
+        // Dobbiamo usare 'collect' e 'unwind' per raggruppare i risultati per partita
+        // e poi processare i team, che ora è in scope.
+        WITH m, teams, collect(p) as players_in_match
+        UNWIND teams AS t_data
+        MERGE (t:Team {matchId: m.id, teamId: t_data.teamId})
+        SET t.win = t_data.win
+        MERGE (t)-[:PARTICIPATED_IN]->(m)
+        
+        WITH m, t, t_data
+        MATCH (p:Player)-[r:PLAYED_IN]->(m) WHERE r.teamId = t_data.teamId
+        MERGE (p)-[:PLAYED_FOR]->(t)
+        
+        WITH t, t_data
+        UNWIND t_data.bannedChampions AS banned_champ_key
+        MATCH (banned_champ:Champion {key: banned_champ_key})
+        MERGE (t)-[:BANNED]->(banned_champ)
+        """
+        
+        params = {'all_matches': all_matches_data}
+        try:
+            self.db_connector.run_query(query, params)
+            logger.info(f"Batch di {len(all_matches_data)} partite ingerito con successo.")
+        except Exception as e:
+            logger.error(f"Errore durante l'esecuzione della query in batch: {e}", exc_info=True)
         
     def _print_performance_report(self, test_name, start_time, end_time, total_processed):
         """Funzione di utilità per stampare i risultati del test."""
