@@ -11,8 +11,11 @@ from config.settings import NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD
 from neo4j_handler.connector import Neo4jConnector
 from utils.data_dragon_downloader import DataDragonDownloader
 from neo4j_handler.neo4j_ingester import (
-    ingest_champions_to_neo4j
-    # ... altri import di ingestione statica se ne hai
+    ingest_champions_to_neo4j,
+    ingest_items_to_neo4j,
+    ingest_runes_to_neo4j,
+    ingest_summoner_spells_to_neo4j
+    
 )
 from data_ingestion.match_data_ingestor import MatchDataIngestor
 # NOTA: LLMClient non viene più importato.
@@ -40,6 +43,21 @@ def main():
         if champion_data:
             ingest_champions_to_neo4j(db_connector, champion_data)
         logger.info("Ingestione dati statici completata.")
+        
+        item_data = downloader.get_data("item", force_download=False)
+        if item_data:
+            ingest_items_to_neo4j(db_connector, item_data)
+        logger.info("Ingestione dati degli oggetti completata.")
+        
+        rune_data = downloader.get_data("runesReforged", force_download=False)
+        if rune_data:
+            ingest_runes_to_neo4j(db_connector, rune_data)
+        logger.info("Ingestione dati delle rune completata.")
+        
+        summoner_spell_data = downloader.get_data("summoner", force_download=False)
+        if summoner_spell_data:
+            ingest_summoner_spells_to_neo4j(db_connector, summoner_spell_data)
+        logger.info("Ingestione dati degli incantesimi del evocatore completata.")
         
         # --- FASE 3: Ingestione della lore dal file JSON pre-elaborato ---
         logger.info("Inizio ingestione della lore pre-elaborata da file JSON.")
